@@ -178,7 +178,7 @@ const BibleReadingApp = () => {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
-          <p className="text-gray-400">2025 Lectionary</p>
+          <p className="text-gray-400">2025 St. Paul's Bloor Street Lectionary</p>
         </div>
 
         {/* Date Picker */}
