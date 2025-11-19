@@ -192,7 +192,7 @@ const BibleReadingApp = () => {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
-          <p className="text-gray-400">2025 Lectionary</p>
+          <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025)</p>
         </div>
 
         {/* Date Picker */}
@@ -297,7 +297,8 @@ const BibleReadingApp = () => {
 
         {/* Footer */}
         <div className="text-center text-sm text-gray-500 pt-4">
-          <p>Click any reading to open in Bible.com</p>
+          <p>Click any reading to open in Bible.com or the YouVersion app!</p>
+          <p className="text-gray-600">© {new Date().getFullYear()} Chris R. Chapman. All rights reserved.</p>
         </div>
       </div>
 
