@@ -230,6 +230,12 @@ export default function BibleReadingApp() {
         {/* Footer */}
         <div className="text-center text-sm text-gray-500 pt-6 space-y-3">
 
+          {/* Mobile hint */}
+          <div className="text-xs text-amber-400 flex items-center justify-center gap-1 md:hidden">
+            <span>💡</span>
+            <span>Swipe ← → to change days, double-tap for today</span>
+          </div>
+
           {/* New primary message */}
           <p className="text-gray-300 font-medium">
             This app works best when paired with the YouVersion Bible App.
