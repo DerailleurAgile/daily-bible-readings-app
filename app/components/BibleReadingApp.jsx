@@ -17,6 +17,25 @@ const BibleReadingApp = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
+
+  // Check if mobile and show swipe hint on first visit
+  useEffect(() => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const hasSeenHint = localStorage.getItem('hasSeenSwipeHint');
+    
+    if (isMobile && !hasSeenHint) {
+      setShowSwipeHint(true);
+      localStorage.setItem('hasSeenSwipeHint', 'true');
+      
+      // Auto-hide after 4 seconds
+      const timer = setTimeout(() => {
+        setShowSwipeHint(false);
+      }, 4000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, []);
 
   // Navigation functions
   const goToPreviousDay = () => {
@@ -262,6 +281,28 @@ const BibleReadingApp = () => {
 
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
+      {/* Swipe Hint Overlay (Mobile Only, First Visit) */}
+      {showSwipeHint && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
+          <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl px-8 py-6 mx-4 shadow-2xl border border-gray-700 animate-fadeIn">
+            <div className="flex items-center gap-6 text-gray-100">
+              <div className="flex flex-col items-center animate-swipeLeft">
+                <ChevronDown className="w-8 h-8 rotate-90 text-blue-400" />
+                <span className="text-sm mt-2">Swipe</span>
+              </div>
+              <div className="text-center">
+                <p className="text-lg font-semibold">Navigate Days</p>
+                <p className="text-sm text-gray-400 mt-1">Swipe left or right</p>
+              </div>
+              <div className="flex flex-col items-center animate-swipeRight">
+                <ChevronDown className="w-8 h-8 -rotate-90 text-blue-400" />
+                <span className="text-sm mt-2">Swipe</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
@@ -400,10 +441,9 @@ const BibleReadingApp = () => {
         <div className="text-center text-sm text-gray-500 pt-4 space-y-2">
           <p>Click any reading to open in Bible.com or the YouVersion app!</p>
           <p className="text-gray-600">© {new Date().getFullYear()} Chris R. Chapman. All rights reserved.</p>
-          {/* Navigation hints */}
-          <div className="pt-2 text-xs text-gray-600">
-            <p className="hidden md:block">💡 Use ← → arrow keys to navigate days</p>
-            <p className="md:hidden">💡 Swipe left or right to navigate days</p>
+          {/* Desktop navigation hint only */}
+          <div className="pt-2 text-xs text-gray-600 hidden md:block">
+            <p>💡 Use ← → arrow keys to navigate days</p>
           </div>
         </div>
       </div>
@@ -454,6 +494,32 @@ const BibleReadingApp = () => {
         }
         .animate-slideDown {
           animation: slideDown 0.3s ease-out;
+        }
+        @keyframes swipeLeft {
+          0%, 100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          50% {
+            transform: translateX(-20px);
+            opacity: 0.5;
+          }
+        }
+        .animate-swipeLeft {
+          animation: swipeLeft 1.5s ease-in-out infinite;
+        }
+        @keyframes swipeRight {
+          0%, 100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          50% {
+            transform: translateX(20px);
+            opacity: 0.5;
+          }
+        }
+        .animate-swipeRight {
+          animation: swipeRight 1.5s ease-in-out infinite;
         }
       `}</style>
     </div>
