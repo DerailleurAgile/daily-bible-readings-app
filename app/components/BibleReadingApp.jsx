@@ -9,6 +9,20 @@ const BibleReadingApp = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // Load saved translation preference on mount
+  useEffect(() => {
+    const savedTranslation = localStorage.getItem('bibleTranslation');
+    if (savedTranslation) {
+      setTranslation(savedTranslation);
+    }
+  }, []);
+
+  // Save translation preference whenever it changes
+  const handleTranslationChange = (newTranslation) => {
+    setTranslation(newTranslation);
+    localStorage.setItem('bibleTranslation', newTranslation);
+  };
+
   // Load readings from public folder on mount
   useEffect(() => {
     fetch('/prayer_readings_2025.json')
@@ -178,7 +192,7 @@ const BibleReadingApp = () => {
         {/* Header */}
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
-          <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025)</p>
+          <p className="text-gray-400">2025 Lectionary</p>
         </div>
 
         {/* Date Picker */}
@@ -211,7 +225,7 @@ const BibleReadingApp = () => {
           </label>
           <select
             value={translation}
-            onChange={(e) => setTranslation(e.target.value)}
+            onChange={(e) => handleTranslationChange(e.target.value)}
             className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="ESV">ESV - English Standard Version</option>
