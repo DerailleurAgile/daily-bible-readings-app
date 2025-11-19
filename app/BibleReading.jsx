@@ -1,8 +1,6 @@
-'use client';
-
 import BibleReadingApp from './components/BibleReadingApp';
 
-export default function Page() {
+export default function BibleReading() {
   return (
     <main className="min-h-screen">
       <BibleReadingApp />

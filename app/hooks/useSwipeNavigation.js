@@ -1,0 +1,41 @@
+'use client';
+
+import { useEffect } from 'react';
+
+export default function useSwipeNavigation({ goNext, goPrev }) {
+  useEffect(() => {
+    let touchStart = 0;
+    let touchEnd = 0;
+    let lastTap = 0;
+
+    const handleStart = (e) => {
+      touchStart = e.changedTouches[0].screenX;
+    };
+
+    const handleEnd = (e) => {
+      touchEnd = e.changedTouches[0].screenX;
+
+      // Double tap → today
+      const now = Date.now();
+      if (now - lastTap < 300) {
+        window.location.href = '/'; // or call resetToToday()
+        lastTap = 0;
+        return;
+      }
+      lastTap = now;
+
+      const diff = touchStart - touchEnd;
+      if (Math.abs(diff) > 50) {
+        diff > 0 ? goNext() : goPrev();
+      }
+    };
+
+    document.addEventListener('touchstart', handleStart);
+    document.addEventListener('touchend', handleEnd);
+
+    return () => {
+      document.removeEventListener('touchstart', handleStart);
+      document.removeEventListener('touchend', handleEnd);
+    };
+  }, [goNext, goPrev]);
+}
