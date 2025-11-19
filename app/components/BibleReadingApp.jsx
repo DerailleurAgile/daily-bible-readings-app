@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
-import { Calendar, Sun, Moon, Book, ExternalLink } from 'lucide-react';
+import { Calendar, Sun, Moon, Book, ExternalLink, Settings, ChevronDown, ChevronUp } from 'lucide-react';
 
 const BibleReadingApp = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -8,6 +10,7 @@ const BibleReadingApp = () => {
   const [readings, setReadings] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   // Load saved translation preference on mount
   useEffect(() => {
@@ -195,44 +198,67 @@ const BibleReadingApp = () => {
           <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025)</p>
         </div>
 
-        {/* Date Picker */}
-        <div className="bg-gray-900 rounded-lg p-4 space-y-3">
-          <div className="flex items-center justify-between">
-            <label className="flex items-center gap-2 text-sm font-medium text-gray-300">
-              <Calendar className="w-4 h-4" />
-              Select Date
-            </label>
-            <button
-              onClick={() => setSelectedDate(new Date())}
-              className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
-            >
-              Today
-            </button>
-          </div>
-          <input
-            type="date"
-            value={selectedDate.toISOString().split('T')[0]}
-            onChange={(e) => setSelectedDate(new Date(e.target.value + 'T00:00:00'))}
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <p className="text-sm text-gray-400">{formatDisplayDate(selectedDate)}</p>
-        </div>
-
-        {/* Translation Selector */}
-        <div className="bg-gray-900 rounded-lg p-4">
-          <label className="block text-sm font-medium text-gray-300 mb-2">
-            Bible Translation
-          </label>
-          <select
-            value={translation}
-            onChange={(e) => handleTranslationChange(e.target.value)}
-            className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        {/* Collapsible Settings */}
+        <div className="bg-gray-900 rounded-lg overflow-hidden">
+          <button
+            onClick={() => setSettingsOpen(!settingsOpen)}
+            className="w-full flex items-center justify-between p-4 hover:bg-gray-800/50 transition-colors"
           >
-            <option value="ESV">ESV - English Standard Version</option>
-            <option value="NIV">NIV - New International Version</option>
-            <option value="KJV">KJV - King James Version</option>
-            <option value="NRSVUE">NRSV - New Revised Standard Version</option>
-          </select>
+            <div className="flex items-center gap-2">
+              <Settings className="w-4 h-4 text-gray-400" />
+              <span className="text-sm font-medium text-gray-300">
+                {formatDisplayDate(selectedDate)} • {translation}
+              </span>
+            </div>
+            {settingsOpen ? (
+              <ChevronUp className="w-4 h-4 text-gray-400" />
+            ) : (
+              <ChevronDown className="w-4 h-4 text-gray-400" />
+            )}
+          </button>
+
+          {settingsOpen && (
+            <div className="p-4 pt-0 space-y-4 border-t border-gray-800 animate-slideDown">
+              {/* Date Picker */}
+              <div className="space-y-3 pt-4">
+                <div className="flex items-center justify-between">
+                  <label className="flex items-center gap-2 text-sm font-medium text-gray-300">
+                    <Calendar className="w-4 h-4" />
+                    Select Date
+                  </label>
+                  <button
+                    onClick={() => setSelectedDate(new Date())}
+                    className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                  >
+                    Today
+                  </button>
+                </div>
+                <input
+                  type="date"
+                  value={selectedDate.toISOString().split('T')[0]}
+                  onChange={(e) => setSelectedDate(new Date(e.target.value + 'T00:00:00'))}
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              {/* Translation Selector */}
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Bible Translation
+                </label>
+                <select
+                  value={translation}
+                  onChange={(e) => handleTranslationChange(e.target.value)}
+                  className="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="ESV">ESV - English Standard Version</option>
+                  <option value="NIV">NIV - New International Version</option>
+                  <option value="KJV">KJV - King James Version</option>
+                  <option value="NRSVUE">NRSVUE - New Revised Standard Version Updated Edition</option>
+                </select>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Session Buttons */}
@@ -296,7 +322,7 @@ const BibleReadingApp = () => {
         )}
 
         {/* Footer */}
-        <div className="text-center text-sm text-gray-500 pt-4">
+        <div className="text-center text-sm text-gray-500 pt-4 space-y-1">
           <p>Click any reading to open in Bible.com or the YouVersion app!</p>
           <p className="text-gray-600">© {new Date().getFullYear()} Chris R. Chapman. All rights reserved.</p>
         </div>
@@ -315,6 +341,19 @@ const BibleReadingApp = () => {
         }
         .animate-fadeIn {
           animation: fadeIn 0.3s ease-out;
+        }
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            max-height: 0;
+          }
+          to {
+            opacity: 1;
+            max-height: 500px;
+          }
+        }
+        .animate-slideDown {
+          animation: slideDown 0.3s ease-out;
         }
       `}</style>
     </div>
