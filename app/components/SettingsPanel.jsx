@@ -116,8 +116,8 @@ export default function SettingsPanel({
 
                 {/* Tooltip */}
                 {showTooltip && (
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-56 bg-gray-800 text-gray-100 text-xs rounded-md p-2 shadow-lg z-50 opacity-0 animate-fadeIn">
-                    Make sure this translation is downloaded in the Bible.com app so it can be found when you change it.
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-full bg-gray-800 text-gray-100 text-xs rounded-md p-2 shadow-lg z-50 opacity-0 animate-fadeIn">
+                    Make sure to download the selected translation in your Bible.com app!
                   </div>
                 )}
               </div>
