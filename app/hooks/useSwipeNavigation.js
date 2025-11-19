@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-export default function useSwipeNavigation({ goNext, goPrev }) {
+export default function useSwipeNavigation({ goNext, goPrev, resetToToday }) {
   useEffect(() => {
     let touchStart = 0;
     let touchEnd = 0;
@@ -18,7 +18,9 @@ export default function useSwipeNavigation({ goNext, goPrev }) {
       // Double tap → today
       const now = Date.now();
       if (now - lastTap < 300) {
-        window.location.href = '/'; // or call resetToToday()
+        if (resetToToday){
+            resetToToday();
+        }
         lastTap = 0;
         return;
       }
@@ -37,5 +39,5 @@ export default function useSwipeNavigation({ goNext, goPrev }) {
       document.removeEventListener('touchstart', handleStart);
       document.removeEventListener('touchend', handleEnd);
     };
-  }, [goNext, goPrev]);
+  }, [goNext, goPrev, resetToToday]);
 }

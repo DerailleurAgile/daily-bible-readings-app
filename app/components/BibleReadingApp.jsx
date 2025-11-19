@@ -78,8 +78,12 @@ export default function BibleReadingApp() {
     setSelectedDate(d);
   };
 
+  const resetToToday = () => {
+    setSelectedDate(getLocalDate());
+  };
+
   // Enable gestures & keyboard support
-  useSwipeNavigation({ goNext, goPrev });
+  useSwipeNavigation({ goNext, goPrev, resetToToday });
   useKeyboardNavigation({ goNext, goPrev });
 
   // Mobile swipe hint overlay
