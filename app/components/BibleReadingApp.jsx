@@ -8,6 +8,7 @@ import packageJson from '../../package.json';
 import useReadingProgress from '../hooks/useReadingProgress';
 import useSwipeNavigation from '../hooks/useSwipeNavigation';
 import useKeyboardNavigation from '../hooks/useKeyboardNavigation';
+import useMobilePlatform from '../hooks/useMobilePlatform';
 
 // Components
 import SettingsPanel from './SettingsPanel';
@@ -30,6 +31,7 @@ export default function BibleReadingApp() {
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
+  const platform = useMobilePlatform();
 
   // Translation preference
   const [translation, setTranslation] = useState('ESV');
@@ -224,16 +226,48 @@ export default function BibleReadingApp() {
             No readings for this date.
           </div>
         )}
-
+        
         {/* Footer */}
-        <div className="text-center text-sm text-gray-500 pt-4 space-y-2">
-          <p>Click any reading to open in Bible.com or the YouVersion app!</p>
+        <div className="text-center text-sm text-gray-500 pt-6 space-y-3">
+
+          {/* New primary message */}
+          <p className="text-gray-300 font-medium">
+            This app works best when paired with the YouVersion Bible App.
+          </p>
+
+          {/* Platform-based link */}
+          {platform === 'ios' && (
+            <a
+              href="https://apps.apple.com/ca/app/bible/id282935706"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline block"
+            >
+              Open in the Apple App Store
+            </a>
+          )}
+
+          {platform === 'android' && (
+            <a
+              href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 underline block"
+            >
+              Open in Google Play
+            </a>
+          )}
+
+          {/* Copyright */}
           <p className="text-gray-600">
             © {new Date().getFullYear()} Chris R. Chapman. All rights reserved.
           </p>
+
+          {/* Desktop navigation tip */}
           <div className="pt-2 text-xs text-gray-600 hidden md:block">
             <p>💡 Use ← and → arrow keys to navigate days</p>
           </div>
+
           <VersionTag/>
         </div>
 
