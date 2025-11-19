@@ -4,7 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, Sun, Moon, Book, ExternalLink, Settings, ChevronDown, ChevronUp } from 'lucide-react';
 
 const BibleReadingApp = () => {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  // Initialize with local date (no timezone issues)
+  const getLocalDate = () => {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  };
+  
+  const [selectedDate, setSelectedDate] = useState(getLocalDate());
   const [activeSession, setActiveSession] = useState(null);
   const [translation, setTranslation] = useState('ESV');
   const [readings, setReadings] = useState({});
@@ -227,7 +233,11 @@ const BibleReadingApp = () => {
                     Select Date
                   </label>
                   <button
-                    onClick={() => setSelectedDate(new Date())}
+                    onClick={() => {
+                      const today = new Date();
+                      const localDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+                      setSelectedDate(localDate);
+                    }}
                     className="text-xs text-blue-400 hover:text-blue-300 transition-colors"
                   >
                     Today
