@@ -261,7 +261,7 @@ const BibleReadingApp = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 p-6">
+    <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
       <div className="max-w-2xl mx-auto space-y-6">
         {/* Header */}
         <div className="text-center space-y-2">
@@ -397,9 +397,34 @@ const BibleReadingApp = () => {
         )}
 
         {/* Footer */}
-        <div className="text-center text-sm text-gray-500 pt-4 space-y-1">
+        <div className="text-center text-sm text-gray-500 pt-4 space-y-2">
           <p>Click any reading to open in Bible.com or the YouVersion app!</p>
           <p className="text-gray-600">© {new Date().getFullYear()} Chris R. Chapman. All rights reserved.</p>
+          {/* Navigation hints */}
+          <div className="pt-2 text-xs text-gray-600">
+            <p className="hidden md:block">💡 Use ← → arrow keys to navigate days</p>
+            <p className="md:hidden">💡 Swipe left or right to navigate days</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Navigation Bar */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 p-4 z-50">
+        <div className="max-w-2xl mx-auto flex items-center justify-center gap-4">
+          <button
+            onClick={goToPreviousDay}
+            className="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
+          >
+            <ChevronDown className="w-4 h-4 rotate-90" />
+            <span className="font-medium">Previous</span>
+          </button>
+          <button
+            onClick={goToNextDay}
+            className="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
+          >
+            <span className="font-medium">Next</span>
+            <ChevronDown className="w-4 h-4 -rotate-90" />
+          </button>
         </div>
       </div>
 
