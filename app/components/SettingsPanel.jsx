@@ -1,6 +1,7 @@
 'use client';
 
-import { Calendar, Settings, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Calendar, Settings, ChevronDown, ChevronUp, Info } from 'lucide-react';
 
 export default function SettingsPanel({
   selectedDate,
@@ -10,6 +11,10 @@ export default function SettingsPanel({
   settingsOpen,
   setSettingsOpen,
 }) {
+  const [showTooltip, setShowTooltip] = useState(false);
+  const tooltipTimeoutRef = useRef(null);
+  const containerRef = useRef(null);
+
   const formatDisplayDate = (date) =>
     date.toLocaleDateString('en-US', {
       weekday: 'long',
@@ -23,6 +28,25 @@ export default function SettingsPanel({
     const today = new Date(d.getFullYear(), d.getMonth(), d.getDate());
     setSelectedDate(today);
   };
+
+  // Auto-hide tooltip after 5 seconds
+  useEffect(() => {
+    if (showTooltip) {
+      tooltipTimeoutRef.current = setTimeout(() => setShowTooltip(false), 5000);
+    }
+    return () => clearTimeout(tooltipTimeoutRef.current);
+  }, [showTooltip]);
+
+  // Hide tooltip if clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setShowTooltip(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <div className="bg-gray-900 rounded-lg overflow-hidden">
@@ -75,9 +99,28 @@ export default function SettingsPanel({
           </div>
 
           {/* Translation Selector */}
-          <div>
-            <label className="block text-sm font-medium text-gray-300 mb-2">
+          <div className="relative" ref={containerRef}>
+            <label className="flex items-center gap-1 text-sm font-medium text-gray-300 mb-1">
               Bible Translation
+
+              {/* Info icon - mobile only */}
+              <div className="relative block md:hidden">
+                <button
+                  type="button"
+                  className="p-1"
+                  onClick={() => setShowTooltip((prev) => !prev)}
+                  aria-label="Translation info"
+                >
+                  <Info className="w-4 h-4 text-gray-400 cursor-pointer" />
+                </button>
+
+                {/* Tooltip */}
+                {showTooltip && (
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-56 bg-gray-800 text-gray-100 text-xs rounded-md p-2 shadow-lg z-50 opacity-0 animate-fadeIn">
+                    Make sure this translation is downloaded in the Bible.com app so it can be found when you change it.
+                  </div>
+                )}
+              </div>
             </label>
 
             <select
@@ -88,14 +131,30 @@ export default function SettingsPanel({
               <option value="ESV">ESV - English Standard Version</option>
               <option value="NIV">NIV - New International Version</option>
               <option value="KJV">KJV - King James Version</option>
-              <option value="NRSVUE">
-                NRSVUE - NRSV Updated Edition
-              </option>
+              <option value="NRSVUE">NRSVUE - NRSV Updated Edition</option>
             </select>
           </div>
-
         </div>
       )}
+
+      {/* Fade-in animation */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(4px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out forwards;
+        }
+
+        @keyframes slideDown {
+          from { opacity: 0; max-height: 0; }
+          to { opacity: 1; max-height: 500px; }
+        }
+        .animate-slideDown {
+          animation: slideDown 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 }

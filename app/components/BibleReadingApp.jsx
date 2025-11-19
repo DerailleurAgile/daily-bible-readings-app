@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Calendar, Sun, Moon, Book, ExternalLink, Settings, ChevronDown, ChevronUp } from 'lucide-react';
+import packageJson from '../../package.json';
 
 // Hooks
 import useReadingProgress from '../hooks/useReadingProgress';
@@ -13,6 +14,10 @@ import SettingsPanel from './SettingsPanel';
 import SwipeHint from './SwipeHint';
 import ReadingSession from './ReadingSession';
 import BottomNavigation from './BottomNavigation';
+
+export function VersionTag() {
+  return <span>v {packageJson.version}</span>;
+}
 
 export default function BibleReadingApp() {
 
@@ -229,6 +234,7 @@ export default function BibleReadingApp() {
           <div className="pt-2 text-xs text-gray-600 hidden md:block">
             <p>💡 Use ← and → arrow keys to navigate days</p>
           </div>
+          <VersionTag/>
         </div>
 
       </div>
