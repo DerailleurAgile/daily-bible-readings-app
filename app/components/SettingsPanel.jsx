@@ -148,30 +148,35 @@ export default function SettingsPanel({
       )}
 
       {/* QR Code Modal */}
-      {showQR && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-          <div className="bg-gray-900 rounded-lg p-6 relative w-80 text-center">
-            <button
-              className="absolute top-2 right-2 text-gray-400 hover:text-gray-200"
-              onClick={() => setShowQR(false)}
-              aria-label="Close"
-            >
-              <X className="w-5 h-5" />
-            </button>
+        {showQR && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                <div className="bg-gray-900 rounded-lg p-6 relative w-80 flex flex-col items-center">
+                <button
+                    className="absolute top-2 right-2 text-gray-400 hover:text-gray-200"
+                    onClick={() => setShowQR(false)}
+                    aria-label="Close"
+                >
+                    <X className="w-5 h-5" />
+                </button>
 
-            <h3 className="text-gray-100 font-semibold mb-4">Share this app</h3>
-            <QRCodeCanvas
-              value={typeof window !== 'undefined' ? window.location.href : ''}
-              size={200}
-              bgColor="#1f2937"
-              fgColor="#f3f4f6"
-            />
-            <p className="text-xs text-gray-400 mt-2">
-              Scan the QR code to open the app on your device.
-            </p>
-          </div>
-        </div>
-      )}
+                <h3 className="text-gray-100 font-semibold mb-4 text-center">Share this app</h3>
+                
+                <QRCodeCanvas
+                    value={typeof window !== 'undefined' ? window.location.href : ''}
+                    size={200}
+                    bgColor="#1f2937"
+                    fgColor="#f3f4f6"
+                    className="block mb-2" // ensures canvas is block and respects flex centering
+                />
+                
+                <p className="text-xs text-gray-400 mt-2 text-center">
+                    Scan the QR code to open the app on your device.
+                </p>
+                </div>
+            </div>
+        )}
+
+
 
       {/* Fade-in animation */}
       <style jsx>{`
