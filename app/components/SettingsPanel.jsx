@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { Calendar, Settings, ChevronDown, ChevronUp, Info } from 'lucide-react';
+import { Calendar, Settings, ChevronDown, ChevronUp, Info, Share2, X } from 'lucide-react';
+import { QRCodeCanvas } from 'qrcode.react';
 
 export default function SettingsPanel({
   selectedDate,
@@ -12,6 +13,7 @@ export default function SettingsPanel({
   setSettingsOpen,
 }) {
   const [showTooltip, setShowTooltip] = useState(false);
+  const [showQR, setShowQR] = useState(false);
   const tooltipTimeoutRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -71,7 +73,7 @@ export default function SettingsPanel({
       {/* Body */}
       {settingsOpen && (
         <div className="p-4 pt-0 space-y-4 border-t border-gray-800 animate-slideDown">
-          
+
           {/* Date Selector */}
           <div className="space-y-3 pt-4">
             <div className="flex items-center justify-between">
@@ -116,11 +118,10 @@ export default function SettingsPanel({
 
                 {/* Tooltip */}
                 {showTooltip && (
-                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-56 bg-gray-700 border border-gray-600 text-gray-100 text-xs rounded-md p-3 shadow-xl z-50 opacity-0 animate-fadeIn">
-                        Make sure to download the selected translation in your Bible.com app!
-                    </div>
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-96 bg-gray-700 border border-gray-600 text-gray-100 text-xs rounded-md p-3 shadow-xl z-50 opacity-0 animate-fadeIn">
+                    Make sure to download the selected translation in your Bible.com app!
+                  </div>
                 )}
-
               </div>
             </label>
 
@@ -134,6 +135,40 @@ export default function SettingsPanel({
               <option value="KJV">KJV - King James Version</option>
               <option value="NRSVUE">NRSVUE - NRSV Updated Edition</option>
             </select>
+
+            {/* Share QR button */}
+            <button
+              className="mt-2 flex items-center gap-1 text-xs text-blue-400 hover:text-blue-300"
+              onClick={() => setShowQR(true)}
+            >
+              <Share2 className="w-4 h-4" /> Share App
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* QR Code Modal */}
+      {showQR && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-gray-900 rounded-lg p-6 relative w-80 text-center">
+            <button
+              className="absolute top-2 right-2 text-gray-400 hover:text-gray-200"
+              onClick={() => setShowQR(false)}
+              aria-label="Close"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-gray-100 font-semibold mb-4">Share this app</h3>
+            <QRCodeCanvas
+              value={typeof window !== 'undefined' ? window.location.href : ''}
+              size={200}
+              bgColor="#1f2937"
+              fgColor="#f3f4f6"
+            />
+            <p className="text-xs text-gray-400 mt-2">
+              Scan the QR code to open the app on your device.
+            </p>
           </div>
         </div>
       )}
