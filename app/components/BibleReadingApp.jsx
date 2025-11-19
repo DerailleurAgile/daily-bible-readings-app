@@ -28,10 +28,10 @@ const BibleReadingApp = () => {
       setShowSwipeHint(true);
       localStorage.setItem('hasSeenSwipeHint', 'true');
       
-      // Auto-hide after 4 seconds
+      // Auto-hide after 6 seconds
       const timer = setTimeout(() => {
         setShowSwipeHint(false);
-      }, 4000);
+      }, 6000);
       
       return () => clearTimeout(timer);
     }
@@ -283,9 +283,9 @@ const BibleReadingApp = () => {
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
       {/* Swipe Hint Overlay (Mobile Only, First Visit) */}
       {showSwipeHint && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
-          <div className="bg-gray-900/90 backdrop-blur-sm rounded-2xl px-8 py-6 mx-4 shadow-2xl border border-gray-700 animate-fadeIn">
-            <div className="flex items-center gap-6 text-gray-100">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="bg-gray-900/95 backdrop-blur-sm rounded-2xl px-8 py-6 mx-4 shadow-2xl border border-gray-700 animate-fadeIn">
+            <div className="flex items-center gap-6 text-gray-100 mb-6">
               <div className="flex flex-col items-center animate-swipeLeft">
                 <ChevronDown className="w-8 h-8 rotate-90 text-blue-400" />
                 <span className="text-sm mt-2">Swipe</span>
@@ -299,6 +299,12 @@ const BibleReadingApp = () => {
                 <span className="text-sm mt-2">Swipe</span>
               </div>
             </div>
+            <button
+              onClick={() => setShowSwipeHint(false)}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            >
+              Got it!
+            </button>
           </div>
         </div>
       )}
@@ -453,14 +459,14 @@ const BibleReadingApp = () => {
         <div className="max-w-2xl mx-auto flex items-center justify-center gap-4">
           <button
             onClick={goToPreviousDay}
-            className="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
+            className="flex-1 max-w-[160px] flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
           >
             <ChevronDown className="w-4 h-4 rotate-90" />
             <span className="font-medium">Previous</span>
           </button>
           <button
             onClick={goToNextDay}
-            className="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
+            className="flex-1 max-w-[160px] flex items-center justify-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors text-gray-100 active:scale-95"
           >
             <span className="font-medium">Next</span>
             <ChevronDown className="w-4 h-4 -rotate-90" />
