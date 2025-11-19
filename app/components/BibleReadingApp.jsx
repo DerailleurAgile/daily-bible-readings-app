@@ -18,6 +18,19 @@ const BibleReadingApp = () => {
   const [error, setError] = useState(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
+  // Navigation functions
+  const goToPreviousDay = () => {
+    const newDate = new Date(selectedDate);
+    newDate.setDate(newDate.getDate() - 1);
+    setSelectedDate(newDate);
+  };
+
+  const goToNextDay = () => {
+    const newDate = new Date(selectedDate);
+    newDate.setDate(newDate.getDate() + 1);
+    setSelectedDate(newDate);
+  };
+
   // Load saved translation preference on mount
   useEffect(() => {
     const savedTranslation = localStorage.getItem('bibleTranslation');
@@ -25,6 +38,58 @@ const BibleReadingApp = () => {
       setTranslation(savedTranslation);
     }
   }, []);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        goToPreviousDay();
+      } else if (e.key === 'ArrowRight') {
+        goToNextDay();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedDate]);
+
+  // Touch/swipe navigation
+  useEffect(() => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    const handleTouchStart = (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    };
+
+    const handleTouchEnd = (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    };
+
+    const handleSwipe = () => {
+      const swipeThreshold = 50; // minimum distance for swipe
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swiped left - go to next day
+          goToNextDay();
+        } else {
+          // Swiped right - go to previous day
+          goToPreviousDay();
+        }
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart);
+    document.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      document.removeEventListener('touchstart', handleTouchStart);
+      document.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [selectedDate]);
 
   // Save translation preference whenever it changes
   const handleTranslationChange = (newTranslation) => {
