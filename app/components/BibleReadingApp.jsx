@@ -76,6 +76,7 @@ const BibleReadingApp = () => {
   useEffect(() => {
     let touchStartX = 0;
     let touchEndX = 0;
+    let lastTapTime = 0;
 
     const handleTouchStart = (e) => {
       touchStartX = e.changedTouches[0].screenX;
@@ -83,7 +84,21 @@ const BibleReadingApp = () => {
 
     const handleTouchEnd = (e) => {
       touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
+      
+      // Check for double tap
+      const currentTime = new Date().getTime();
+      const tapInterval = currentTime - lastTapTime;
+      
+      if (tapInterval < 300 && tapInterval > 0) {
+        // Double tap detected - reset to today
+        const today = new Date();
+        const localDate = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        setSelectedDate(localDate);
+        lastTapTime = 0; // Reset to prevent triple-tap triggering
+      } else {
+        lastTapTime = currentTime;
+        handleSwipe();
+      }
     };
 
     const handleSwipe = () => {
@@ -293,6 +308,7 @@ const BibleReadingApp = () => {
               <div className="text-center">
                 <p className="text-lg font-semibold">Navigate Days</p>
                 <p className="text-sm text-gray-400 mt-1">Swipe left or right</p>
+                <p className="text-xs text-gray-500 mt-2">Double-tap to return to today</p>
               </div>
               <div className="flex flex-col items-center animate-swipeRight">
                 <ChevronDown className="w-8 h-8 -rotate-90 text-blue-400" />
