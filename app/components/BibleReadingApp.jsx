@@ -75,7 +75,7 @@ const BibleReadingApp = () => {
       'ESV': '59',
       'NIV': '111',
       'KJV': '1',
-      'NRSV': '2016'
+      'NRSVUE': '3523'
     };
     return versionMap[trans] || '59';
   };
@@ -217,7 +217,7 @@ const BibleReadingApp = () => {
             <option value="ESV">ESV - English Standard Version</option>
             <option value="NIV">NIV - New International Version</option>
             <option value="KJV">KJV - King James Version</option>
-            <option value="NRSV">NRSV - New Revised Standard Version</option>
+            <option value="NRSVUE">NRSV - New Revised Standard Version</option>
           </select>
         </div>
 
