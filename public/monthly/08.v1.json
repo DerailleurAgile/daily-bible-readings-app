@@ -1,0 +1,1247 @@
+{
+  "08-01": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 81",
+          "book": "Psalm",
+          "chapter": "81"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 1:57-80",
+          "book": "Luke",
+          "chapter": "1",
+          "verses": "57-80"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 82",
+          "book": "Psalm",
+          "chapter": "82"
+        },
+        {
+          "reference": "Psalm 83",
+          "book": "Psalm",
+          "chapter": "83"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 3:1-6",
+          "book": "Hebrews",
+          "chapter": "3",
+          "verses": "1-6"
+        }
+      ]
+    }
+  },
+  "08-02": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 84",
+          "book": "Psalm",
+          "chapter": "84"
+        },
+        {
+          "reference": "Psalm 85",
+          "book": "Psalm",
+          "chapter": "85"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 2:1-7",
+          "book": "Luke",
+          "chapter": "2",
+          "verses": "1-7"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 86",
+          "book": "Psalm",
+          "chapter": "86"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 3:7-13",
+          "book": "Hebrews",
+          "chapter": "3",
+          "verses": "7-13"
+        }
+      ]
+    }
+  },
+  "08-03": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 87",
+          "book": "Psalm",
+          "chapter": "87"
+        },
+        {
+          "reference": "Psalm 88",
+          "book": "Psalm",
+          "chapter": "88"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 2:8-21",
+          "book": "Luke",
+          "chapter": "2",
+          "verses": "8-21"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "Hebrews 3:14-19",
+          "book": "Hebrews",
+          "chapter": "3",
+          "verses": "14-19"
+        }
+      ]
+    }
+  },
+  "08-04": {
+    "AM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "Luke 2:22-40",
+          "book": "Luke",
+          "chapter": "2",
+          "verses": "22-40"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 90",
+          "book": "Psalm",
+          "chapter": "90"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 4:1-13",
+          "book": "Hebrews",
+          "chapter": "4",
+          "verses": "1-13"
+        }
+      ]
+    }
+  },
+  "08-05": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 91",
+          "book": "Psalm",
+          "chapter": "91"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 2:41-52",
+          "book": "Luke",
+          "chapter": "2",
+          "verses": "41-52"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 92",
+          "book": "Psalm",
+          "chapter": "92"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 4:14-5:4",
+          "book": "Hebrews",
+          "chapter": "4",
+          "verses": "14-5:4"
+        }
+      ]
+    }
+  },
+  "08-06": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 93",
+          "book": "Psalm",
+          "chapter": "93"
+        },
+        {
+          "reference": "Psalm 94",
+          "book": "Psalm",
+          "chapter": "94"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 3:1-22",
+          "book": "Luke",
+          "chapter": "3",
+          "verses": "1-22"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 95",
+          "book": "Psalm",
+          "chapter": "95"
+        },
+        {
+          "reference": "Psalm 96",
+          "book": "Psalm",
+          "chapter": "96"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 5:5-10",
+          "book": "Hebrews",
+          "chapter": "5",
+          "verses": "5-10"
+        }
+      ]
+    }
+  },
+  "08-07": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 97",
+          "book": "Psalm",
+          "chapter": "97"
+        },
+        {
+          "reference": "Psalm 98",
+          "book": "Psalm",
+          "chapter": "98"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 3:23-38",
+          "book": "Luke",
+          "chapter": "3",
+          "verses": "23-38"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 99",
+          "book": "Psalm",
+          "chapter": "99"
+        },
+        {
+          "reference": "Psalm 100",
+          "book": "Psalm",
+          "chapter": "100"
+        },
+        {
+          "reference": "Psalm 101",
+          "book": "Psalm",
+          "chapter": "101"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 5:11-6:8",
+          "book": "Hebrews",
+          "chapter": "5",
+          "verses": "11-6:8"
+        }
+      ]
+    }
+  },
+  "08-08": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 102",
+          "book": "Psalm",
+          "chapter": "102"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 4:1-13",
+          "book": "Luke",
+          "chapter": "4",
+          "verses": "1-13"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 103",
+          "book": "Psalm",
+          "chapter": "103"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 6:9-12",
+          "book": "Hebrews",
+          "chapter": "6",
+          "verses": "9-12"
+        }
+      ]
+    }
+  },
+  "08-09": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 104:1-18",
+          "book": "Psalm",
+          "chapter": "104",
+          "verses": "1-18"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 4:14-30",
+          "book": "Luke",
+          "chapter": "4",
+          "verses": "14-30"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 104:19-35",
+          "book": "Psalm",
+          "chapter": "104",
+          "verses": "19-35"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 6:13-20",
+          "book": "Hebrews",
+          "chapter": "6",
+          "verses": "13-20"
+        }
+      ]
+    }
+  },
+  "08-10": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 105:1-22",
+          "book": "Psalm",
+          "chapter": "105",
+          "verses": "1-22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 4:31-37",
+          "book": "Luke",
+          "chapter": "4",
+          "verses": "31-37"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 105:23-44",
+          "book": "Psalm",
+          "chapter": "105",
+          "verses": "23-44"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 7:1-10",
+          "book": "Hebrews",
+          "chapter": "7",
+          "verses": "1-10"
+        }
+      ]
+    }
+  },
+  "08-11": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 106:1-25",
+          "book": "Psalm",
+          "chapter": "106",
+          "verses": "1-25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 4:38-44",
+          "book": "Luke",
+          "chapter": "4",
+          "verses": "38-44"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 106:26-46",
+          "book": "Psalm",
+          "chapter": "106",
+          "verses": "26-46"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 7:11-19",
+          "book": "Hebrews",
+          "chapter": "7",
+          "verses": "11-19"
+        }
+      ]
+    }
+  },
+  "08-12": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 107:1-22",
+          "book": "Psalm",
+          "chapter": "107",
+          "verses": "1-22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 5:1-11",
+          "book": "Luke",
+          "chapter": "5",
+          "verses": "1-11"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 107:23-43",
+          "book": "Psalm",
+          "chapter": "107",
+          "verses": "23-43"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 7:20-25",
+          "book": "Hebrews",
+          "chapter": "7",
+          "verses": "20-25"
+        }
+      ]
+    }
+  },
+  "08-13": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 108",
+          "book": "Psalm",
+          "chapter": "108"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 5:12-16",
+          "book": "Luke",
+          "chapter": "5",
+          "verses": "12-16"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 109",
+          "book": "Psalm",
+          "chapter": "109"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 7:26-28",
+          "book": "Hebrews",
+          "chapter": "7",
+          "verses": "26-28"
+        }
+      ]
+    }
+  },
+  "08-14": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 110",
+          "book": "Psalm",
+          "chapter": "110"
+        },
+        {
+          "reference": "Psalm 111",
+          "book": "Psalm",
+          "chapter": "111"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 5:17-26",
+          "book": "Luke",
+          "chapter": "5",
+          "verses": "17-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 112",
+          "book": "Psalm",
+          "chapter": "112"
+        },
+        {
+          "reference": "Psalm 113",
+          "book": "Psalm",
+          "chapter": "113"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 8:1-7",
+          "book": "Hebrews",
+          "chapter": "8",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "08-15": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 114",
+          "book": "Psalm",
+          "chapter": "114"
+        },
+        {
+          "reference": "Psalm 115",
+          "book": "Psalm",
+          "chapter": "115"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 5:27-39",
+          "book": "Luke",
+          "chapter": "5",
+          "verses": "27-39"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 116",
+          "book": "Psalm",
+          "chapter": "116"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 8:8-13",
+          "book": "Hebrews",
+          "chapter": "8",
+          "verses": "8-13"
+        }
+      ]
+    }
+  },
+  "08-16": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 117",
+          "book": "Psalm",
+          "chapter": "117"
+        },
+        {
+          "reference": "Psalm 118:1-13",
+          "book": "Psalm",
+          "chapter": "118",
+          "verses": "1-13"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 6:1-11",
+          "book": "Luke",
+          "chapter": "6",
+          "verses": "1-11"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 118:14-29",
+          "book": "Psalm",
+          "chapter": "118",
+          "verses": "14-29"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 9:1-10",
+          "book": "Hebrews",
+          "chapter": "9",
+          "verses": "1-10"
+        }
+      ]
+    }
+  },
+  "08-17": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:1-16",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "1-16"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 6:12-26",
+          "book": "Luke",
+          "chapter": "6",
+          "verses": "12-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:17-32",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "17-32"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 9:11-14",
+          "book": "Hebrews",
+          "chapter": "9",
+          "verses": "11-14"
+        }
+      ]
+    }
+  },
+  "08-18": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:33-48",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "33-48"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 6:27-36",
+          "book": "Luke",
+          "chapter": "6",
+          "verses": "27-36"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:49-64",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "49-64"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 9:15-22",
+          "book": "Hebrews",
+          "chapter": "9",
+          "verses": "15-22"
+        }
+      ]
+    }
+  },
+  "08-19": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:65-80",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "65-80"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 6:37-42",
+          "book": "Luke",
+          "chapter": "6",
+          "verses": "37-42"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:81-96",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "81-96"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 9:23-28",
+          "book": "Hebrews",
+          "chapter": "9",
+          "verses": "23-28"
+        }
+      ]
+    }
+  },
+  "08-20": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:97-112",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "97-112"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 6:43-49",
+          "book": "Luke",
+          "chapter": "6",
+          "verses": "43-49"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:113-128",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "113-128"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:1-4",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "1-4"
+        }
+      ]
+    }
+  },
+  "08-21": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:129-144",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "129-144"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 7:1-10",
+          "book": "Luke",
+          "chapter": "7",
+          "verses": "1-10"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:145-160",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "145-160"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:5-14",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "5-14"
+        }
+      ]
+    }
+  },
+  "08-22": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:161-176",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "161-176"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 7:11-17",
+          "book": "Luke",
+          "chapter": "7",
+          "verses": "11-17"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 120",
+          "book": "Psalm",
+          "chapter": "120"
+        },
+        {
+          "reference": "Psalm 121",
+          "book": "Psalm",
+          "chapter": "121"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:15-18",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "15-18"
+        }
+      ]
+    }
+  },
+  "08-23": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 122",
+          "book": "Psalm",
+          "chapter": "122"
+        },
+        {
+          "reference": "Psalm 123",
+          "book": "Psalm",
+          "chapter": "123"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 7:18-35",
+          "book": "Luke",
+          "chapter": "7",
+          "verses": "18-35"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 124",
+          "book": "Psalm",
+          "chapter": "124"
+        },
+        {
+          "reference": "Psalm 125",
+          "book": "Psalm",
+          "chapter": "125"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:19-25",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "19-25"
+        }
+      ]
+    }
+  },
+  "08-24": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 126",
+          "book": "Psalm",
+          "chapter": "126"
+        },
+        {
+          "reference": "Psalm 127",
+          "book": "Psalm",
+          "chapter": "127"
+        },
+        {
+          "reference": "Psalm 128",
+          "book": "Psalm",
+          "chapter": "128"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 7:36-50",
+          "book": "Luke",
+          "chapter": "7",
+          "verses": "36-50"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 129",
+          "book": "Psalm",
+          "chapter": "129"
+        },
+        {
+          "reference": "Psalm 130",
+          "book": "Psalm",
+          "chapter": "130"
+        },
+        {
+          "reference": "Psalm 131",
+          "book": "Psalm",
+          "chapter": "131"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:26-31",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "26-31"
+        }
+      ]
+    }
+  },
+  "08-25": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 132",
+          "book": "Psalm",
+          "chapter": "132"
+        },
+        {
+          "reference": "Psalm 133",
+          "book": "Psalm",
+          "chapter": "133"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 8:1-15",
+          "book": "Luke",
+          "chapter": "8",
+          "verses": "1-15"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 134",
+          "book": "Psalm",
+          "chapter": "134"
+        },
+        {
+          "reference": "Psalm 135",
+          "book": "Psalm",
+          "chapter": "135"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 10:32-39",
+          "book": "Hebrews",
+          "chapter": "10",
+          "verses": "32-39"
+        }
+      ]
+    }
+  },
+  "08-26": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 136",
+          "book": "Psalm",
+          "chapter": "136"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 8:16-25",
+          "book": "Luke",
+          "chapter": "8",
+          "verses": "16-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 137",
+          "book": "Psalm",
+          "chapter": "137"
+        },
+        {
+          "reference": "Psalm 138",
+          "book": "Psalm",
+          "chapter": "138"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 11:1-7",
+          "book": "Hebrews",
+          "chapter": "11",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "08-27": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 139",
+          "book": "Psalm",
+          "chapter": "139"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 8:26-39",
+          "book": "Luke",
+          "chapter": "8",
+          "verses": "26-39"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 140",
+          "book": "Psalm",
+          "chapter": "140"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 11:8-16",
+          "book": "Hebrews",
+          "chapter": "11",
+          "verses": "8-16"
+        }
+      ]
+    }
+  },
+  "08-28": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 141",
+          "book": "Psalm",
+          "chapter": "141"
+        },
+        {
+          "reference": "Psalm 142",
+          "book": "Psalm",
+          "chapter": "142"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 8:40-56",
+          "book": "Luke",
+          "chapter": "8",
+          "verses": "40-56"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 143",
+          "book": "Psalm",
+          "chapter": "143"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 11:17-22",
+          "book": "Hebrews",
+          "chapter": "11",
+          "verses": "17-22"
+        }
+      ]
+    }
+  },
+  "08-29": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 144",
+          "book": "Psalm",
+          "chapter": "144"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 9:1-17",
+          "book": "Luke",
+          "chapter": "9",
+          "verses": "1-17"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 145",
+          "book": "Psalm",
+          "chapter": "145"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 11:23-38",
+          "book": "Hebrews",
+          "chapter": "11",
+          "verses": "23-38"
+        }
+      ]
+    }
+  },
+  "08-30": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 146",
+          "book": "Psalm",
+          "chapter": "146"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 9:18-27",
+          "book": "Luke",
+          "chapter": "9",
+          "verses": "18-27"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 147",
+          "book": "Psalm",
+          "chapter": "147"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 12:1-2",
+          "book": "Hebrews",
+          "chapter": "12",
+          "verses": "1-2"
+        }
+      ]
+    }
+  },
+  "08-31": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 148",
+          "book": "Psalm",
+          "chapter": "148"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 9:28-36",
+          "book": "Luke",
+          "chapter": "9",
+          "verses": "28-36"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 149",
+          "book": "Psalm",
+          "chapter": "149"
+        },
+        {
+          "reference": "Psalm 150",
+          "book": "Psalm",
+          "chapter": "150"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Hebrews 12:3-11",
+          "book": "Hebrews",
+          "chapter": "12",
+          "verses": "3-11"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1221 @@
+{
+  "06-01": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 81",
+          "book": "Psalm",
+          "chapter": "81"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 3:1-21",
+          "book": "John",
+          "chapter": "3",
+          "verses": "1-21"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 82",
+          "book": "Psalm",
+          "chapter": "82"
+        },
+        {
+          "reference": "Psalm 83",
+          "book": "Psalm",
+          "chapter": "83"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philippians 4:2-9",
+          "book": "Philippians",
+          "chapter": "4",
+          "verses": "2-9"
+        }
+      ]
+    }
+  },
+  "06-02": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 84",
+          "book": "Psalm",
+          "chapter": "84"
+        },
+        {
+          "reference": "Psalm 85",
+          "book": "Psalm",
+          "chapter": "85"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 3:22-36",
+          "book": "John",
+          "chapter": "3",
+          "verses": "22-36"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 86",
+          "book": "Psalm",
+          "chapter": "86"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philippians 4:10-23",
+          "book": "Philippians",
+          "chapter": "4",
+          "verses": "10-23"
+        }
+      ]
+    }
+  },
+  "06-03": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 87",
+          "book": "Psalm",
+          "chapter": "87"
+        },
+        {
+          "reference": "Psalm 88",
+          "book": "Psalm",
+          "chapter": "88"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 4:1-26",
+          "book": "John",
+          "chapter": "4",
+          "verses": "1-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "Colossians 1:1-14",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "1-14"
+        }
+      ]
+    }
+  },
+  "06-04": {
+    "AM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "John 4:27-45",
+          "book": "John",
+          "chapter": "4",
+          "verses": "27-45"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 90",
+          "book": "Psalm",
+          "chapter": "90"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 1:15-23",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "15-23"
+        }
+      ]
+    }
+  },
+  "06-05": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 91",
+          "book": "Psalm",
+          "chapter": "91"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 4:46-54",
+          "book": "John",
+          "chapter": "4",
+          "verses": "46-54"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 92",
+          "book": "Psalm",
+          "chapter": "92"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 1:24-2:5",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "24-2:5"
+        }
+      ]
+    }
+  },
+  "06-06": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 93",
+          "book": "Psalm",
+          "chapter": "93"
+        },
+        {
+          "reference": "Psalm 94",
+          "book": "Psalm",
+          "chapter": "94"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 5:1-18",
+          "book": "John",
+          "chapter": "5",
+          "verses": "1-18"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 95",
+          "book": "Psalm",
+          "chapter": "95"
+        },
+        {
+          "reference": "Psalm 96",
+          "book": "Psalm",
+          "chapter": "96"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 2:6-15",
+          "book": "Colossians",
+          "chapter": "2",
+          "verses": "6-15"
+        }
+      ]
+    }
+  },
+  "06-07": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 97",
+          "book": "Psalm",
+          "chapter": "97"
+        },
+        {
+          "reference": "Psalm 98",
+          "book": "Psalm",
+          "chapter": "98"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 5:19-29",
+          "book": "John",
+          "chapter": "5",
+          "verses": "19-29"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 99",
+          "book": "Psalm",
+          "chapter": "99"
+        },
+        {
+          "reference": "Psalm 100",
+          "book": "Psalm",
+          "chapter": "100"
+        },
+        {
+          "reference": "Psalm 101",
+          "book": "Psalm",
+          "chapter": "101"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 2:16-23",
+          "book": "Colossians",
+          "chapter": "2",
+          "verses": "16-23"
+        }
+      ]
+    }
+  },
+  "06-08": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 102",
+          "book": "Psalm",
+          "chapter": "102"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 5:30-47",
+          "book": "John",
+          "chapter": "5",
+          "verses": "30-47"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 103",
+          "book": "Psalm",
+          "chapter": "103"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 3:1-4",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "1-4"
+        }
+      ]
+    }
+  },
+  "06-09": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 104:1-18",
+          "book": "Psalm",
+          "chapter": "104",
+          "verses": "1-18"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 6:1-15",
+          "book": "John",
+          "chapter": "6",
+          "verses": "1-15"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 104:19-35",
+          "book": "Psalm",
+          "chapter": "104",
+          "verses": "19-35"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 3:5-11",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "5-11"
+        }
+      ]
+    }
+  },
+  "06-10": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 105:1-22",
+          "book": "Psalm",
+          "chapter": "105",
+          "verses": "1-22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 6:26-24",
+          "book": "John",
+          "chapter": "6",
+          "verses": "26-24"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 105:23-44",
+          "book": "Psalm",
+          "chapter": "105",
+          "verses": "23-44"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 3:12-17",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "12-17"
+        }
+      ]
+    }
+  },
+  "06-11": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 106:1-25",
+          "book": "Psalm",
+          "chapter": "106",
+          "verses": "1-25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 6:25-51",
+          "book": "John",
+          "chapter": "6",
+          "verses": "25-51"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 106:26-46",
+          "book": "Psalm",
+          "chapter": "106",
+          "verses": "26-46"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 3:18-4:6",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "18-4:6"
+        }
+      ]
+    }
+  },
+  "06-12": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 107:1-22",
+          "book": "Psalm",
+          "chapter": "107",
+          "verses": "1-22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 6:52-71",
+          "book": "John",
+          "chapter": "6",
+          "verses": "52-71"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 107:23-43",
+          "book": "Psalm",
+          "chapter": "107",
+          "verses": "23-43"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Colossians 4:7-18",
+          "book": "Colossians",
+          "chapter": "4",
+          "verses": "7-18"
+        }
+      ]
+    }
+  },
+  "06-13": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 108",
+          "book": "Psalm",
+          "chapter": "108"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 7:1-24",
+          "book": "John",
+          "chapter": "7",
+          "verses": "1-24"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 109",
+          "book": "Psalm",
+          "chapter": "109"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 1:1-10",
+          "book": "1 Thessalonians",
+          "chapter": "1",
+          "verses": "1-10"
+        }
+      ]
+    }
+  },
+  "06-14": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 110",
+          "book": "Psalm",
+          "chapter": "110"
+        },
+        {
+          "reference": "Psalm 111",
+          "book": "Psalm",
+          "chapter": "111"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 7:25-36",
+          "book": "John",
+          "chapter": "7",
+          "verses": "25-36"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 112",
+          "book": "Psalm",
+          "chapter": "112"
+        },
+        {
+          "reference": "Psalm 113",
+          "book": "Psalm",
+          "chapter": "113"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 2:1-8",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "06-15": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 114",
+          "book": "Psalm",
+          "chapter": "114"
+        },
+        {
+          "reference": "Psalm 115",
+          "book": "Psalm",
+          "chapter": "115"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 7:37-52",
+          "book": "John",
+          "chapter": "7",
+          "verses": "37-52"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 116",
+          "book": "Psalm",
+          "chapter": "116"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 2:9-16",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "9-16"
+        }
+      ]
+    }
+  },
+  "06-16": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 117",
+          "book": "Psalm",
+          "chapter": "117"
+        },
+        {
+          "reference": "Psalm 118:1-13",
+          "book": "Psalm",
+          "chapter": "118",
+          "verses": "1-13"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 7:53-8:11",
+          "book": "John",
+          "chapter": "7",
+          "verses": "53-8:11"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 118:14-29",
+          "book": "Psalm",
+          "chapter": "118",
+          "verses": "14-29"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 2:17-3:5",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "17-3:5"
+        }
+      ]
+    }
+  },
+  "06-17": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:1-16",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "1-16"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 8:12-20",
+          "book": "John",
+          "chapter": "8",
+          "verses": "12-20"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:17-32",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "17-32"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 3:6-13",
+          "book": "1 Thessalonians",
+          "chapter": "3",
+          "verses": "6-13"
+        }
+      ]
+    }
+  },
+  "06-18": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:33-48",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "33-48"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 8:21-30",
+          "book": "John",
+          "chapter": "8",
+          "verses": "21-30"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:49-64",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "49-64"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 4:1-8",
+          "book": "1 Thessalonians",
+          "chapter": "4",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "06-19": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:65-80",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "65-80"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 8:31-47",
+          "book": "John",
+          "chapter": "8",
+          "verses": "31-47"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:81-96",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "81-96"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 4:9-18",
+          "book": "1 Thessalonians",
+          "chapter": "4",
+          "verses": "9-18"
+        }
+      ]
+    }
+  },
+  "06-20": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:97-112",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "97-112"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 8:48-59",
+          "book": "John",
+          "chapter": "8",
+          "verses": "48-59"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:113-128",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "113-128"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 5:1-11",
+          "book": "1 Thessalonians",
+          "chapter": "5",
+          "verses": "1-11"
+        }
+      ]
+    }
+  },
+  "06-21": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:129-144",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "129-144"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 9:1-12",
+          "book": "John",
+          "chapter": "9",
+          "verses": "1-12"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:145-160",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "145-160"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Thessalonians 5:12-28",
+          "book": "1 Thessalonians",
+          "chapter": "5",
+          "verses": "12-28"
+        }
+      ]
+    }
+  },
+  "06-22": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 119:161-176",
+          "book": "Psalm",
+          "chapter": "119",
+          "verses": "161-176"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 9:13-23",
+          "book": "John",
+          "chapter": "9",
+          "verses": "13-23"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 120",
+          "book": "Psalm",
+          "chapter": "120"
+        },
+        {
+          "reference": "Psalm 121",
+          "book": "Psalm",
+          "chapter": "121"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Thessalonians 1:1-12",
+          "book": "2 Thessalonians",
+          "chapter": "1",
+          "verses": "1-12"
+        }
+      ]
+    }
+  },
+  "06-23": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 122",
+          "book": "Psalm",
+          "chapter": "122"
+        },
+        {
+          "reference": "Psalm 123",
+          "book": "Psalm",
+          "chapter": "123"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 9:24-41",
+          "book": "John",
+          "chapter": "9",
+          "verses": "24-41"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 124",
+          "book": "Psalm",
+          "chapter": "124"
+        },
+        {
+          "reference": "Psalm 125",
+          "book": "Psalm",
+          "chapter": "125"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Thessalonians 2:1-12",
+          "book": "2 Thessalonians",
+          "chapter": "2",
+          "verses": "1-12"
+        }
+      ]
+    }
+  },
+  "06-24": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 126",
+          "book": "Psalm",
+          "chapter": "126"
+        },
+        {
+          "reference": "Psalm 127",
+          "book": "Psalm",
+          "chapter": "127"
+        },
+        {
+          "reference": "Psalm 128",
+          "book": "Psalm",
+          "chapter": "128"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 10:1-21",
+          "book": "John",
+          "chapter": "10",
+          "verses": "1-21"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 129",
+          "book": "Psalm",
+          "chapter": "129"
+        },
+        {
+          "reference": "Psalm 130",
+          "book": "Psalm",
+          "chapter": "130"
+        },
+        {
+          "reference": "Psalm 131",
+          "book": "Psalm",
+          "chapter": "131"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Thessalonians 2:13-17",
+          "book": "2 Thessalonians",
+          "chapter": "2",
+          "verses": "13-17"
+        }
+      ]
+    }
+  },
+  "06-25": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 132",
+          "book": "Psalm",
+          "chapter": "132"
+        },
+        {
+          "reference": "Psalm 133",
+          "book": "Psalm",
+          "chapter": "133"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 10:22-42",
+          "book": "John",
+          "chapter": "10",
+          "verses": "22-42"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 134",
+          "book": "Psalm",
+          "chapter": "134"
+        },
+        {
+          "reference": "Psalm 135",
+          "book": "Psalm",
+          "chapter": "135"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Thessalonians 3:1-5",
+          "book": "2 Thessalonians",
+          "chapter": "3",
+          "verses": "1-5"
+        }
+      ]
+    }
+  },
+  "06-26": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 136",
+          "book": "Psalm",
+          "chapter": "136"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:1-16",
+          "book": "John",
+          "chapter": "11",
+          "verses": "1-16"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 137",
+          "book": "Psalm",
+          "chapter": "137"
+        },
+        {
+          "reference": "Psalm 138",
+          "book": "Psalm",
+          "chapter": "138"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Thessalonians 3:6-18",
+          "book": "2 Thessalonians",
+          "chapter": "3",
+          "verses": "6-18"
+        }
+      ]
+    }
+  },
+  "06-27": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 139",
+          "book": "Psalm",
+          "chapter": "139"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:17-27",
+          "book": "John",
+          "chapter": "11",
+          "verses": "17-27"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 140",
+          "book": "Psalm",
+          "chapter": "140"
+        },
+        {
+          "reference": "Psalm 141",
+          "book": "Psalm",
+          "chapter": "141"
+        },
+        {
+          "reference": "Psalm 142",
+          "book": "Psalm",
+          "chapter": "142"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 1:1-11",
+          "book": "1 Timothy",
+          "chapter": "1",
+          "verses": "1-11"
+        }
+      ]
+    }
+  },
+  "06-28": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 143",
+          "book": "Psalm",
+          "chapter": "143"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:28-37",
+          "book": "John",
+          "chapter": "11",
+          "verses": "28-37"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 144",
+          "book": "Psalm",
+          "chapter": "144"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 1:12-20",
+          "book": "1 Timothy",
+          "chapter": "1",
+          "verses": "12-20"
+        }
+      ]
+    }
+  },
+  "06-29": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 145",
+          "book": "Psalm",
+          "chapter": "145"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:38-44",
+          "book": "John",
+          "chapter": "11",
+          "verses": "38-44"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 146",
+          "book": "Psalm",
+          "chapter": "146"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 2:1-7",
+          "book": "1 Timothy",
+          "chapter": "2",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "06-30": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 147",
+          "book": "Psalm",
+          "chapter": "147"
+        },
+        {
+          "reference": "Psalm 148",
+          "book": "Psalm",
+          "chapter": "148"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:45-57",
+          "book": "John",
+          "chapter": "11",
+          "verses": "45-57"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 149",
+          "book": "Psalm",
+          "chapter": "149"
+        },
+        {
+          "reference": "Psalm 150",
+          "book": "Psalm",
+          "chapter": "150"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 2:8-15",
+          "book": "1 Timothy",
+          "chapter": "2",
+          "verses": "8-15"
+        }
+      ]
+    }
+  }
+}

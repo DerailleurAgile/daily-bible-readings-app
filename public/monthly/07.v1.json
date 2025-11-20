@@ -1,0 +1,1208 @@
+{
+  "07-01": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 1",
+          "book": "Psalm",
+          "chapter": "1"
+        },
+        {
+          "reference": "Psalm 2",
+          "book": "Psalm",
+          "chapter": "2"
+        },
+        {
+          "reference": "Psalm 3",
+          "book": "Psalm",
+          "chapter": "3"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 12:1-8",
+          "book": "John",
+          "chapter": "12",
+          "verses": "1-8"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 4",
+          "book": "Psalm",
+          "chapter": "4"
+        },
+        {
+          "reference": "Psalm 5",
+          "book": "Psalm",
+          "chapter": "5"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 3:1-7",
+          "book": "1 Timothy",
+          "chapter": "3",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "07-02": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 6",
+          "book": "Psalm",
+          "chapter": "6"
+        },
+        {
+          "reference": "Psalm 7",
+          "book": "Psalm",
+          "chapter": "7"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 12:9-19",
+          "book": "John",
+          "chapter": "12",
+          "verses": "9-19"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 8",
+          "book": "Psalm",
+          "chapter": "8"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 3:8-13",
+          "book": "1 Timothy",
+          "chapter": "3",
+          "verses": "8-13"
+        }
+      ]
+    }
+  },
+  "07-03": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 9",
+          "book": "Psalm",
+          "chapter": "9"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 12:20-36",
+          "book": "John",
+          "chapter": "12",
+          "verses": "20-36"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 10",
+          "book": "Psalm",
+          "chapter": "10"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 3:14-16",
+          "book": "1 Timothy",
+          "chapter": "3",
+          "verses": "14-16"
+        }
+      ]
+    }
+  },
+  "07-04": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 11",
+          "book": "Psalm",
+          "chapter": "11"
+        },
+        {
+          "reference": "Psalm 12",
+          "book": "Psalm",
+          "chapter": "12"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 12:37-43",
+          "book": "John",
+          "chapter": "12",
+          "verses": "37-43"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 13",
+          "book": "Psalm",
+          "chapter": "13"
+        },
+        {
+          "reference": "Psalm 14",
+          "book": "Psalm",
+          "chapter": "14"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 4:1-5",
+          "book": "1 Timothy",
+          "chapter": "4",
+          "verses": "1-5"
+        }
+      ]
+    }
+  },
+  "07-05": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 15",
+          "book": "Psalm",
+          "chapter": "15"
+        },
+        {
+          "reference": "Psalm 16",
+          "book": "Psalm",
+          "chapter": "16"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 12:44-50",
+          "book": "John",
+          "chapter": "12",
+          "verses": "44-50"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 17",
+          "book": "Psalm",
+          "chapter": "17"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 4:6-16",
+          "book": "1 Timothy",
+          "chapter": "4",
+          "verses": "6-16"
+        }
+      ]
+    }
+  },
+  "07-06": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 18:1-25",
+          "book": "Psalm",
+          "chapter": "18",
+          "verses": "1-25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 13:1-20",
+          "book": "John",
+          "chapter": "13",
+          "verses": "1-20"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "1 Timothy 5:1-8",
+          "book": "1 Timothy",
+          "chapter": "5",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "07-07": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 19",
+          "book": "Psalm",
+          "chapter": "19"
+        },
+        {
+          "reference": "Psalm 20",
+          "book": "Psalm",
+          "chapter": "20"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 13:21-30",
+          "book": "John",
+          "chapter": "13",
+          "verses": "21-30"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 21",
+          "book": "Psalm",
+          "chapter": "21"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 5:9-16",
+          "book": "1 Timothy",
+          "chapter": "5",
+          "verses": "9-16"
+        }
+      ]
+    }
+  },
+  "07-08": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 22",
+          "book": "Psalm",
+          "chapter": "22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 13:31-38",
+          "book": "John",
+          "chapter": "13",
+          "verses": "31-38"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 23",
+          "book": "Psalm",
+          "chapter": "23"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 5:17-6:2",
+          "book": "1 Timothy",
+          "chapter": "5",
+          "verses": "17-6:2"
+        }
+      ]
+    }
+  },
+  "07-09": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 24",
+          "book": "Psalm",
+          "chapter": "24"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 14:1-14",
+          "book": "John",
+          "chapter": "14",
+          "verses": "1-14"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 25",
+          "book": "Psalm",
+          "chapter": "25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 6:3-10",
+          "book": "1 Timothy",
+          "chapter": "6",
+          "verses": "3-10"
+        }
+      ]
+    }
+  },
+  "07-10": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 26",
+          "book": "Psalm",
+          "chapter": "26"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 14:15-31",
+          "book": "John",
+          "chapter": "14",
+          "verses": "15-31"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 27",
+          "book": "Psalm",
+          "chapter": "27"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 Timothy 6:11-21",
+          "book": "1 Timothy",
+          "chapter": "6",
+          "verses": "11-21"
+        }
+      ]
+    }
+  },
+  "07-11": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 28",
+          "book": "Psalm",
+          "chapter": "28"
+        },
+        {
+          "reference": "Psalm 29",
+          "book": "Psalm",
+          "chapter": "29"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 15:1-17",
+          "book": "John",
+          "chapter": "15",
+          "verses": "1-17"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 30",
+          "book": "Psalm",
+          "chapter": "30"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 1:1-7",
+          "book": "2 Timothy",
+          "chapter": "1",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "07-12": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 31",
+          "book": "Psalm",
+          "chapter": "31"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 15:18-16:4",
+          "book": "John",
+          "chapter": "15",
+          "verses": "18-16:4"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 32",
+          "book": "Psalm",
+          "chapter": "32"
+        },
+        {
+          "reference": "Psalm 33",
+          "book": "Psalm",
+          "chapter": "33"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 1:8-18",
+          "book": "2 Timothy",
+          "chapter": "1",
+          "verses": "8-18"
+        }
+      ]
+    }
+  },
+  "07-13": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 34",
+          "book": "Psalm",
+          "chapter": "34"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 16:5-15",
+          "book": "John",
+          "chapter": "16",
+          "verses": "5-15"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 35",
+          "book": "Psalm",
+          "chapter": "35"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 2:1-7",
+          "book": "2 Timothy",
+          "chapter": "2",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "07-14": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 36",
+          "book": "Psalm",
+          "chapter": "36"
+        },
+        {
+          "reference": "Psalm 37:1-17",
+          "book": "Psalm",
+          "chapter": "37",
+          "verses": "1-17"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 16:16-24",
+          "book": "John",
+          "chapter": "16",
+          "verses": "16-24"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "2 Timothy 2:8-13",
+          "book": "2 Timothy",
+          "chapter": "2",
+          "verses": "8-13"
+        }
+      ]
+    }
+  },
+  "07-15": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 38",
+          "book": "Psalm",
+          "chapter": "38"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 16:25-33",
+          "book": "John",
+          "chapter": "16",
+          "verses": "25-33"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 39",
+          "book": "Psalm",
+          "chapter": "39"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 2:14-19",
+          "book": "2 Timothy",
+          "chapter": "2",
+          "verses": "14-19"
+        }
+      ]
+    }
+  },
+  "07-16": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 40",
+          "book": "Psalm",
+          "chapter": "40"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 17:1-26",
+          "book": "John",
+          "chapter": "17",
+          "verses": "1-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 41",
+          "book": "Psalm",
+          "chapter": "41"
+        },
+        {
+          "reference": "Psalm 42",
+          "book": "Psalm",
+          "chapter": "42"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 2:20-26",
+          "book": "2 Timothy",
+          "chapter": "2",
+          "verses": "20-26"
+        }
+      ]
+    }
+  },
+  "07-17": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 43",
+          "book": "Psalm",
+          "chapter": "43"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 18:1-11",
+          "book": "John",
+          "chapter": "18",
+          "verses": "1-11"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 44",
+          "book": "Psalm",
+          "chapter": "44"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 3:1-9",
+          "book": "2 Timothy",
+          "chapter": "3",
+          "verses": "1-9"
+        }
+      ]
+    }
+  },
+  "07-18": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 45",
+          "book": "Psalm",
+          "chapter": "45"
+        },
+        {
+          "reference": "Psalm 46",
+          "book": "Psalm",
+          "chapter": "46"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 18:12-27",
+          "book": "John",
+          "chapter": "18",
+          "verses": "12-27"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 47",
+          "book": "Psalm",
+          "chapter": "47"
+        },
+        {
+          "reference": "Psalm 48",
+          "book": "Psalm",
+          "chapter": "48"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 3:10-17",
+          "book": "2 Timothy",
+          "chapter": "3",
+          "verses": "10-17"
+        }
+      ]
+    }
+  },
+  "07-19": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 49",
+          "book": "Psalm",
+          "chapter": "49"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 18:28-40",
+          "book": "John",
+          "chapter": "18",
+          "verses": "28-40"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 50",
+          "book": "Psalm",
+          "chapter": "50"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 4:1-8",
+          "book": "2 Timothy",
+          "chapter": "4",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "07-20": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 51",
+          "book": "Psalm",
+          "chapter": "51"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 19:1-16",
+          "book": "John",
+          "chapter": "19",
+          "verses": "1-16"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 52",
+          "book": "Psalm",
+          "chapter": "52"
+        },
+        {
+          "reference": "Psalm 53",
+          "book": "Psalm",
+          "chapter": "53"
+        },
+        {
+          "reference": "Psalm 54",
+          "book": "Psalm",
+          "chapter": "54"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 Timothy 4:9-22",
+          "book": "2 Timothy",
+          "chapter": "4",
+          "verses": "9-22"
+        }
+      ]
+    }
+  },
+  "07-21": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 55",
+          "book": "Psalm",
+          "chapter": "55"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 19:17-30",
+          "book": "John",
+          "chapter": "19",
+          "verses": "17-30"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 56",
+          "book": "Psalm",
+          "chapter": "56"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Titus 1:1-9",
+          "book": "Titus",
+          "chapter": "1",
+          "verses": "1-9"
+        }
+      ]
+    }
+  },
+  "07-22": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 57",
+          "book": "Psalm",
+          "chapter": "57"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 19:31-42",
+          "book": "John",
+          "chapter": "19",
+          "verses": "31-42"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 58",
+          "book": "Psalm",
+          "chapter": "58"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Titus 1:10-16",
+          "book": "Titus",
+          "chapter": "1",
+          "verses": "10-16"
+        }
+      ]
+    }
+  },
+  "07-23": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 59",
+          "book": "Psalm",
+          "chapter": "59"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 20:1-10",
+          "book": "John",
+          "chapter": "20",
+          "verses": "1-10"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 60",
+          "book": "Psalm",
+          "chapter": "60"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Titus 2:1-10",
+          "book": "Titus",
+          "chapter": "2",
+          "verses": "1-10"
+        }
+      ]
+    }
+  },
+  "07-24": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 61",
+          "book": "Psalm",
+          "chapter": "61"
+        },
+        {
+          "reference": "Psalm 62",
+          "book": "Psalm",
+          "chapter": "62"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 20:11-18",
+          "book": "John",
+          "chapter": "20",
+          "verses": "11-18"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 63",
+          "book": "Psalm",
+          "chapter": "63"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Titus 2:11-15",
+          "book": "Titus",
+          "chapter": "2",
+          "verses": "11-15"
+        }
+      ]
+    }
+  },
+  "07-25": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 64",
+          "book": "Psalm",
+          "chapter": "64"
+        },
+        {
+          "reference": "Psalm 65",
+          "book": "Psalm",
+          "chapter": "65"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 20:19-31",
+          "book": "John",
+          "chapter": "20",
+          "verses": "19-31"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 66",
+          "book": "Psalm",
+          "chapter": "66"
+        },
+        {
+          "reference": "Psalm 67",
+          "book": "Psalm",
+          "chapter": "67"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Titus 3:1-15",
+          "book": "Titus",
+          "chapter": "3",
+          "verses": "1-15"
+        }
+      ]
+    }
+  },
+  "07-26": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 68",
+          "book": "Psalm",
+          "chapter": "68"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 21:1-14",
+          "book": "John",
+          "chapter": "21",
+          "verses": "1-14"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 69",
+          "book": "Psalm",
+          "chapter": "69"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philemon 1:1-25",
+          "book": "Philemon",
+          "chapter": "1",
+          "verses": "1-25"
+        }
+      ]
+    }
+  },
+  "07-27": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 70",
+          "book": "Psalm",
+          "chapter": "70"
+        },
+        {
+          "reference": "Psalm 71",
+          "book": "Psalm",
+          "chapter": "71"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 21:15-19",
+          "book": "John",
+          "chapter": "21",
+          "verses": "15-19"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 72",
+          "book": "Psalm",
+          "chapter": "72"
+        }
+      ],
+      "lesson": []
+    }
+  },
+  "07-28": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 73",
+          "book": "Psalm",
+          "chapter": "73"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 21:20-25",
+          "book": "John",
+          "chapter": "21",
+          "verses": "20-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 74",
+          "book": "Psalm",
+          "chapter": "74"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philemon 1:3-14",
+          "book": "Philemon",
+          "chapter": "1",
+          "verses": "3-14"
+        }
+      ]
+    }
+  },
+  "07-29": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 75",
+          "book": "Psalm",
+          "chapter": "75"
+        },
+        {
+          "reference": "Psalm 76",
+          "book": "Psalm",
+          "chapter": "76"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 1:1-25",
+          "book": "Luke",
+          "chapter": "1",
+          "verses": "1-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 77",
+          "book": "Psalm",
+          "chapter": "77"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philemon 2:1-4",
+          "book": "Philemon",
+          "chapter": "2",
+          "verses": "1-4"
+        }
+      ]
+    }
+  },
+  "07-30": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 78:1-55",
+          "book": "Psalm",
+          "chapter": "78",
+          "verses": "1-55"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 1:26-38",
+          "book": "Luke",
+          "chapter": "1",
+          "verses": "26-38"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 78:56-72",
+          "book": "Psalm",
+          "chapter": "78",
+          "verses": "56-72"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philemon 2:5-9",
+          "book": "Philemon",
+          "chapter": "2",
+          "verses": "5-9"
+        }
+      ]
+    }
+  },
+  "07-31": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 79",
+          "book": "Psalm",
+          "chapter": "79"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Luke 1:39-56",
+          "book": "Luke",
+          "chapter": "1",
+          "verses": "39-56"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 80",
+          "book": "Psalm",
+          "chapter": "80"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Philemon 2:10-18",
+          "book": "Philemon",
+          "chapter": "2",
+          "verses": "10-18"
+        }
+      ]
+    }
+  }
+}

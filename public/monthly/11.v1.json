@@ -1,0 +1,1179 @@
+{
+  "11-01": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 1",
+          "book": "Psalm",
+          "chapter": "1"
+        },
+        {
+          "reference": "Psalm 2",
+          "book": "Psalm",
+          "chapter": "2"
+        },
+        {
+          "reference": "Psalm 3",
+          "book": "Psalm",
+          "chapter": "3"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 3:11-26",
+          "book": "Acts",
+          "chapter": "3",
+          "verses": "11-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 4",
+          "book": "Psalm",
+          "chapter": "4"
+        },
+        {
+          "reference": "Psalm 5",
+          "book": "Psalm",
+          "chapter": "5"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 John 5:1-5",
+          "book": "1 John",
+          "chapter": "5",
+          "verses": "1-5"
+        }
+      ]
+    }
+  },
+  "11-02": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 6",
+          "book": "Psalm",
+          "chapter": "6"
+        },
+        {
+          "reference": "Psalm 7",
+          "book": "Psalm",
+          "chapter": "7"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 4:1-12",
+          "book": "Acts",
+          "chapter": "4",
+          "verses": "1-12"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 8",
+          "book": "Psalm",
+          "chapter": "8"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 John 5:6-12",
+          "book": "1 John",
+          "chapter": "5",
+          "verses": "6-12"
+        }
+      ]
+    }
+  },
+  "11-03": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 9",
+          "book": "Psalm",
+          "chapter": "9"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 4:13-22",
+          "book": "Acts",
+          "chapter": "4",
+          "verses": "13-22"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 10",
+          "book": "Psalm",
+          "chapter": "10"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "1 John 5:13-21",
+          "book": "1 John",
+          "chapter": "5",
+          "verses": "13-21"
+        }
+      ]
+    }
+  },
+  "11-04": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 11",
+          "book": "Psalm",
+          "chapter": "11"
+        },
+        {
+          "reference": "Psalm 12",
+          "book": "Psalm",
+          "chapter": "12"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 4:23-31",
+          "book": "Acts",
+          "chapter": "4",
+          "verses": "23-31"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 13",
+          "book": "Psalm",
+          "chapter": "13"
+        },
+        {
+          "reference": "Psalm 14",
+          "book": "Psalm",
+          "chapter": "14"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "2 John 1:1-13",
+          "book": "2 John",
+          "chapter": "1",
+          "verses": "1-13"
+        }
+      ]
+    }
+  },
+  "11-05": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 15",
+          "book": "Psalm",
+          "chapter": "15"
+        },
+        {
+          "reference": "Psalm 16",
+          "book": "Psalm",
+          "chapter": "16"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 4:32-37",
+          "book": "Acts",
+          "chapter": "4",
+          "verses": "32-37"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 17",
+          "book": "Psalm",
+          "chapter": "17"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "3 John 1:1-15",
+          "book": "3 John",
+          "chapter": "1",
+          "verses": "1-15"
+        }
+      ]
+    }
+  },
+  "11-06": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 18:1-25",
+          "book": "Psalm",
+          "chapter": "18",
+          "verses": "1-25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 5:1-11",
+          "book": "Acts",
+          "chapter": "5",
+          "verses": "1-11"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "Jude 1:1-16",
+          "book": "Jude",
+          "chapter": "1",
+          "verses": "1-16"
+        }
+      ]
+    }
+  },
+  "11-07": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 19",
+          "book": "Psalm",
+          "chapter": "19"
+        },
+        {
+          "reference": "Psalm 20",
+          "book": "Psalm",
+          "chapter": "20"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 5:12-26",
+          "book": "Acts",
+          "chapter": "5",
+          "verses": "12-26"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 21",
+          "book": "Psalm",
+          "chapter": "21"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Jude 1:17-25",
+          "book": "Jude",
+          "chapter": "1",
+          "verses": "17-25"
+        }
+      ]
+    }
+  },
+  "11-08": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 22",
+          "book": "Psalm",
+          "chapter": "22"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 5:27-42",
+          "book": "Acts",
+          "chapter": "5",
+          "verses": "27-42"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 23",
+          "book": "Psalm",
+          "chapter": "23"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 1:1-3",
+          "book": "Revelation",
+          "chapter": "1",
+          "verses": "1-3"
+        }
+      ]
+    }
+  },
+  "11-09": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 24",
+          "book": "Psalm",
+          "chapter": "24"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 6:1-7",
+          "book": "Acts",
+          "chapter": "6",
+          "verses": "1-7"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 25",
+          "book": "Psalm",
+          "chapter": "25"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 1:4-8",
+          "book": "Revelation",
+          "chapter": "1",
+          "verses": "4-8"
+        }
+      ]
+    }
+  },
+  "11-10": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 26",
+          "book": "Psalm",
+          "chapter": "26"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 6:8-15",
+          "book": "Acts",
+          "chapter": "6",
+          "verses": "8-15"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 27",
+          "book": "Psalm",
+          "chapter": "27"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 1:9-20",
+          "book": "Revelation",
+          "chapter": "1",
+          "verses": "9-20"
+        }
+      ]
+    }
+  },
+  "11-11": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 28",
+          "book": "Psalm",
+          "chapter": "28"
+        },
+        {
+          "reference": "Psalm 29",
+          "book": "Psalm",
+          "chapter": "29"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 7:1-16",
+          "book": "Acts",
+          "chapter": "7",
+          "verses": "1-16"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 30",
+          "book": "Psalm",
+          "chapter": "30"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 2:1-7",
+          "book": "Revelation",
+          "chapter": "2",
+          "verses": "1-7"
+        }
+      ]
+    }
+  },
+  "11-12": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 31",
+          "book": "Psalm",
+          "chapter": "31"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 7:17-34",
+          "book": "Acts",
+          "chapter": "7",
+          "verses": "17-34"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 32",
+          "book": "Psalm",
+          "chapter": "32"
+        },
+        {
+          "reference": "Psalm 33",
+          "book": "Psalm",
+          "chapter": "33"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 2:8-11",
+          "book": "Revelation",
+          "chapter": "2",
+          "verses": "8-11"
+        }
+      ]
+    }
+  },
+  "11-13": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 34",
+          "book": "Psalm",
+          "chapter": "34"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 7:35-53",
+          "book": "Acts",
+          "chapter": "7",
+          "verses": "35-53"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 35",
+          "book": "Psalm",
+          "chapter": "35"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 2:12-17",
+          "book": "Revelation",
+          "chapter": "2",
+          "verses": "12-17"
+        }
+      ]
+    }
+  },
+  "11-14": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 36",
+          "book": "Psalm",
+          "chapter": "36"
+        },
+        {
+          "reference": "Psalm 37:1-17",
+          "book": "Psalm",
+          "chapter": "37",
+          "verses": "1-17"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 7:54-8:3",
+          "book": "Acts",
+          "chapter": "7",
+          "verses": "54-8:3"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [],
+      "lesson": [
+        {
+          "reference": "Revelation 2:18-29",
+          "book": "Revelation",
+          "chapter": "2",
+          "verses": "18-29"
+        }
+      ]
+    }
+  },
+  "11-15": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 38",
+          "book": "Psalm",
+          "chapter": "38"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 8:4-25",
+          "book": "Acts",
+          "chapter": "8",
+          "verses": "4-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 39",
+          "book": "Psalm",
+          "chapter": "39"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 3:1-6",
+          "book": "Revelation",
+          "chapter": "3",
+          "verses": "1-6"
+        }
+      ]
+    }
+  },
+  "11-16": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 40",
+          "book": "Psalm",
+          "chapter": "40"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 8:26-40",
+          "book": "Acts",
+          "chapter": "8",
+          "verses": "26-40"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 41",
+          "book": "Psalm",
+          "chapter": "41"
+        },
+        {
+          "reference": "Psalm 42",
+          "book": "Psalm",
+          "chapter": "42"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 3:7-13",
+          "book": "Revelation",
+          "chapter": "3",
+          "verses": "7-13"
+        }
+      ]
+    }
+  },
+  "11-17": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 43",
+          "book": "Psalm",
+          "chapter": "43"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 9:1-19",
+          "book": "Acts",
+          "chapter": "9",
+          "verses": "1-19"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 44",
+          "book": "Psalm",
+          "chapter": "44"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 3:14-22",
+          "book": "Revelation",
+          "chapter": "3",
+          "verses": "14-22"
+        }
+      ]
+    }
+  },
+  "11-18": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 45",
+          "book": "Psalm",
+          "chapter": "45"
+        },
+        {
+          "reference": "Psalm 46",
+          "book": "Psalm",
+          "chapter": "46"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 9:20-31",
+          "book": "Acts",
+          "chapter": "9",
+          "verses": "20-31"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 47",
+          "book": "Psalm",
+          "chapter": "47"
+        },
+        {
+          "reference": "Psalm 48",
+          "book": "Psalm",
+          "chapter": "48"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 4:1-6",
+          "book": "Revelation",
+          "chapter": "4",
+          "verses": "1-6"
+        }
+      ]
+    }
+  },
+  "11-19": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 49",
+          "book": "Psalm",
+          "chapter": "49"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 9:32-43",
+          "book": "Acts",
+          "chapter": "9",
+          "verses": "32-43"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 50",
+          "book": "Psalm",
+          "chapter": "50"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 4:7-11",
+          "book": "Revelation",
+          "chapter": "4",
+          "verses": "7-11"
+        }
+      ]
+    }
+  },
+  "11-20": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 51",
+          "book": "Psalm",
+          "chapter": "51"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 10:1-23",
+          "book": "Acts",
+          "chapter": "10",
+          "verses": "1-23"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 52",
+          "book": "Psalm",
+          "chapter": "52"
+        },
+        {
+          "reference": "Psalm 53",
+          "book": "Psalm",
+          "chapter": "53"
+        },
+        {
+          "reference": "Psalm 54",
+          "book": "Psalm",
+          "chapter": "54"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 5:1-5",
+          "book": "Revelation",
+          "chapter": "5",
+          "verses": "1-5"
+        }
+      ]
+    }
+  },
+  "11-21": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 55",
+          "book": "Psalm",
+          "chapter": "55"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 10:24-33",
+          "book": "Acts",
+          "chapter": "10",
+          "verses": "24-33"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 56",
+          "book": "Psalm",
+          "chapter": "56"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 5:6-10",
+          "book": "Revelation",
+          "chapter": "5",
+          "verses": "6-10"
+        }
+      ]
+    }
+  },
+  "11-22": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 57",
+          "book": "Psalm",
+          "chapter": "57"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 10:34-48",
+          "book": "Acts",
+          "chapter": "10",
+          "verses": "34-48"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 58",
+          "book": "Psalm",
+          "chapter": "58"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 5:11-14",
+          "book": "Revelation",
+          "chapter": "5",
+          "verses": "11-14"
+        }
+      ]
+    }
+  },
+  "11-23": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 59",
+          "book": "Psalm",
+          "chapter": "59"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 11:1-18",
+          "book": "Acts",
+          "chapter": "11",
+          "verses": "1-18"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 60",
+          "book": "Psalm",
+          "chapter": "60"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 6:1-8",
+          "book": "Revelation",
+          "chapter": "6",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "11-24": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 61",
+          "book": "Psalm",
+          "chapter": "61"
+        },
+        {
+          "reference": "Psalm 62",
+          "book": "Psalm",
+          "chapter": "62"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 11:19-30",
+          "book": "Acts",
+          "chapter": "11",
+          "verses": "19-30"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 63",
+          "book": "Psalm",
+          "chapter": "63"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 6:9-11",
+          "book": "Revelation",
+          "chapter": "6",
+          "verses": "9-11"
+        }
+      ]
+    }
+  },
+  "11-25": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 64",
+          "book": "Psalm",
+          "chapter": "64"
+        },
+        {
+          "reference": "Psalm 65",
+          "book": "Psalm",
+          "chapter": "65"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 12:1-17",
+          "book": "Acts",
+          "chapter": "12",
+          "verses": "1-17"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 66",
+          "book": "Psalm",
+          "chapter": "66"
+        },
+        {
+          "reference": "Psalm 67",
+          "book": "Psalm",
+          "chapter": "67"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 6:12-17",
+          "book": "Revelation",
+          "chapter": "6",
+          "verses": "12-17"
+        }
+      ]
+    }
+  },
+  "11-26": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 68",
+          "book": "Psalm",
+          "chapter": "68"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 12:18-25",
+          "book": "Acts",
+          "chapter": "12",
+          "verses": "18-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 69",
+          "book": "Psalm",
+          "chapter": "69"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 7:1-8",
+          "book": "Revelation",
+          "chapter": "7",
+          "verses": "1-8"
+        }
+      ]
+    }
+  },
+  "11-27": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 70",
+          "book": "Psalm",
+          "chapter": "70"
+        },
+        {
+          "reference": "Psalm 71",
+          "book": "Psalm",
+          "chapter": "71"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 13:1-25",
+          "book": "Acts",
+          "chapter": "13",
+          "verses": "1-25"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 72",
+          "book": "Psalm",
+          "chapter": "72"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 7:9-12",
+          "book": "Revelation",
+          "chapter": "7",
+          "verses": "9-12"
+        }
+      ]
+    }
+  },
+  "11-28": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 73",
+          "book": "Psalm",
+          "chapter": "73"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 13:26-43",
+          "book": "Acts",
+          "chapter": "13",
+          "verses": "26-43"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 74",
+          "book": "Psalm",
+          "chapter": "74"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 7:13-17",
+          "book": "Revelation",
+          "chapter": "7",
+          "verses": "13-17"
+        }
+      ]
+    }
+  },
+  "11-29": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 75",
+          "book": "Psalm",
+          "chapter": "75"
+        },
+        {
+          "reference": "Psalm 76",
+          "book": "Psalm",
+          "chapter": "76"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 13:44-14:7",
+          "book": "Acts",
+          "chapter": "13",
+          "verses": "44-14:7"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 77",
+          "book": "Psalm",
+          "chapter": "77"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 8:1-5",
+          "book": "Revelation",
+          "chapter": "8",
+          "verses": "1-5"
+        }
+      ]
+    }
+  },
+  "11-30": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 78:1-55",
+          "book": "Psalm",
+          "chapter": "78",
+          "verses": "1-55"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Acts 14:8-28",
+          "book": "Acts",
+          "chapter": "14",
+          "verses": "8-28"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
+        {
+          "reference": "Psalm 78:56-72",
+          "book": "Psalm",
+          "chapter": "78",
+          "verses": "56-72"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "Revelation 8:6-12",
+          "book": "Revelation",
+          "chapter": "8",
+          "verses": "6-12"
+        }
+      ]
+    }
+  }
+}
