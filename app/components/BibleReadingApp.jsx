@@ -15,6 +15,7 @@ import SettingsPanel from './SettingsPanel';
 import SwipeHint from './SwipeHint';
 import ReadingSession from './ReadingSession';
 import BottomNavigation from './BottomNavigation';
+import FeedbackForm from './FeedbackForm';
 
 export function VersionTag() {
   return <span>v {packageJson.version}</span>;
@@ -32,6 +33,9 @@ export default function BibleReadingApp() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
   const platform = useMobilePlatform();
+
+  // Feedback form state
+  const [showFeedback, setShowFeedback] = useState(false);
 
   // Translation preference
   const [translation, setTranslation] = useState('ESV');
@@ -264,6 +268,18 @@ export default function BibleReadingApp() {
             </a>
           )}
 
+          {/* Feedback button */}
+          <button
+            onClick={() => setShowFeedback(true)}
+            className="text-blue-400 underline text-sm"
+          >
+            Send Feedback
+          </button>
+          {/* Render FeedbackForm when showFeedback is true */}
+          {showFeedback && (
+            <FeedbackForm onClose={() => setShowFeedback(false)} />
+          )}
+          
           {/* Copyright */}
           <p className="text-gray-600">
             © {new Date().getFullYear()} Chris R. Chapman. All rights reserved.
