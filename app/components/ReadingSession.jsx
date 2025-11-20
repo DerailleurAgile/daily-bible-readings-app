@@ -1,7 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Sun, Moon, Book, ExternalLink } from 'lucide-react';
+import {
+  Sun,
+  Moon,
+  Book,
+  BookOpenCheck,
+  ExternalLink
+} from 'lucide-react';
 
 // Converts a reading record into a Bible.com URL based on translation
 function getBibleUrl(reading, translation) {
@@ -53,8 +59,8 @@ function getBibleUrl(reading, translation) {
 }
 
 export default function ReadingSession({
-  sessionKey,            // 'AM' or 'PM'
-  sessionData,           // { psalms: [...], lesson: [...] }
+  sessionKey,
+  sessionData,
   dateKey,
   isComplete,
   toggleComplete,
@@ -78,12 +84,10 @@ export default function ReadingSession({
         target="_blank"
         rel="noopener noreferrer"
         onClick={(e) => {
-          // mark as completed if currently unmarked
-          // toggleComplete(dateKey, sessionKey, type, reading.reference);
-            if (completed) {
-                e.preventDefault(); // don’t open link if we’re unmarking
-            }
-            toggleComplete(dateKey, sessionKey, type, reading.reference);
+          if (completed) {
+            e.preventDefault();
+          }
+          toggleComplete(dateKey, sessionKey, type, reading.reference);
         }}
         className={`
           flex items-center justify-between p-3 rounded-lg transition-colors group
@@ -91,13 +95,19 @@ export default function ReadingSession({
         `}
       >
         <div className="flex items-center gap-3">
-          <Book className={completed ? 'w-4 h-4 text-green-400' : 'w-4 h-4 text-blue-400'} />
+          {completed ? (
+            <BookOpenCheck className="w-4 h-4 text-green-400" />
+          ) : (
+            <Book className="w-4 h-4 text-blue-400" />
+          )}
           <span className="text-gray-100">{reading.reference}</span>
         </div>
+
         <ExternalLink
-          className={completed
-            ? 'w-4 h-4 text-green-400'
-            : 'w-4 h-4 text-gray-400 group-hover:text-blue-400'
+          className={
+            completed
+              ? 'w-4 h-4 text-green-400'
+              : 'w-4 h-4 text-gray-400 group-hover:text-blue-400'
           }
         />
       </a>

@@ -170,7 +170,7 @@ export default function BibleReadingApp() {
 
   // Enable gestures & keyboard support
   useSwipeNavigation({ goNext, goPrev, resetToToday });
-  useKeyboardNavigation({ goNext, goPrev });
+  useKeyboardNavigation({ goNext, goPrev, resetToToday });
 
   // Mobile swipe hint overlay
   const [showSwipeHint, setShowSwipeHint] = useState(false);
@@ -317,12 +317,12 @@ export default function BibleReadingApp() {
           {/* Mobile hint */}
           <div className="text-xs text-amber-400 flex items-center justify-center gap-1 md:hidden">
             <span>💡</span>
-            <span>Swipe ← → to change days, double-tap for today</span>
+            <span>← Swipe → to change days, or double-tap for today</span>
           </div>
 
           {/* Desktop navigation tip */}
           <div className="pt-2 text-xs text-amber-400 hidden md:block">
-            <p>💡 Use ← and → arrow keys to navigate days</p>
+            <p>💡 Use ← and → keys to change days, and ↑ to jump back to today</p>
           </div>
 
           {/* New primary message */}
