@@ -10,6 +10,7 @@ import useSwipeNavigation from '../hooks/useSwipeNavigation';
 import useKeyboardNavigation from '../hooks/useKeyboardNavigation';
 import useMobilePlatform from '../hooks/useMobilePlatform';
 import useReadingsForMonth from '../hooks/useReadingsForMonth';
+import useAppVersionCheck from '../hooks/useAppVersionCheck';
 
 // Components
 import SettingsPanel from './SettingsPanel';
@@ -29,6 +30,7 @@ export default function BibleReadingApp() {
     return new Date(now.getFullYear(), now.getMonth(), now.getDate());
   };
 
+  const { updateAvailable, latestVersion } = useAppVersionCheck();
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
@@ -217,6 +219,20 @@ export default function BibleReadingApp() {
   // === MAIN RENDER ===
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
+
+      {updateAvailable && (
+        <div className="bg-yellow-900/40 border border-yellow-500 p-3 rounded mb-4 text-center text-yellow-100">
+          ⚠️ A new version of the app is available.{' '}
+          <button
+            onClick={() => window.location.reload()}
+            className="underline font-semibold"
+          >
+            Click here to refresh
+          </button>
+          {' '}and get the latest updates.
+        </div>
+      )}
+
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
       <div className="max-w-2xl mx-auto space-y-6">
