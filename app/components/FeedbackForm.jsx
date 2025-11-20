@@ -34,7 +34,7 @@ export default function FeedbackForm({ open, onClose }) {
       <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 max-w-md w-full animate-fadeIn">
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-lg font-semibold text-gray-100">
-            Send Feedback
+            Tell me what you think!
           </h2>
           <button onClick={onClose}>
             <X className="text-gray-500 hover:text-gray-300" />
@@ -52,7 +52,7 @@ export default function FeedbackForm({ open, onClose }) {
               rows={5}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Tell me what’s working or what needs improvement..."
+              placeholder="What’s working for you or needs improvement...?"
             />
 
             <button

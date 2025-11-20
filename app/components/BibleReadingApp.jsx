@@ -165,6 +165,16 @@ export default function BibleReadingApp() {
         <div className="text-center space-y-2">
           <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
           <p className="text-gray-400">St. Paul’s Bloor Street Lectionary (2025)</p>
+          <button
+            onClick={() => setShowFeedback(true)}
+            className="text-blue-400 underline text-sm"
+          >
+            What do you think of the app?
+          </button>
+          {/* Render FeedbackForm when showFeedback is true */}
+          {showFeedback && (
+            <FeedbackForm onClose={() => setShowFeedback(false)} />
+          )}
         </div>
 
         {/* Settings panel */}
@@ -242,7 +252,7 @@ export default function BibleReadingApp() {
 
           {/* New primary message */}
           <p className="text-gray-300 font-medium">
-            This app works best when paired with the YouVersion Bible App.
+            This app works best when paired with the <b>YouVersion Bible App.</b>
           </p>
 
           {/* Platform-based link */}
@@ -268,18 +278,6 @@ export default function BibleReadingApp() {
             </a>
           )}
 
-          {/* Feedback button */}
-          <button
-            onClick={() => setShowFeedback(true)}
-            className="text-blue-400 underline text-sm"
-          >
-            Send Feedback
-          </button>
-          {/* Render FeedbackForm when showFeedback is true */}
-          {showFeedback && (
-            <FeedbackForm onClose={() => setShowFeedback(false)} />
-          )}
-          
           {/* Copyright */}
           <p className="text-gray-600">
             © {new Date().getFullYear()} Chris R. Chapman. All rights reserved.
