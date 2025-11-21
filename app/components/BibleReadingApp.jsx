@@ -152,7 +152,8 @@ export default function BibleReadingApp() {
   }, [currentMonth, dateKey, monthCache, monthReadings]);
 
   // === Reading progress ===
-  const { isComplete, toggleComplete } = useReadingProgress();
+  // Now with translation support
+  const { isComplete, toggleComplete } = useReadingProgress(translation);
 
   // Navigation helpers – using startTransition to avoid visible re-renders
   const goPrev = () => {

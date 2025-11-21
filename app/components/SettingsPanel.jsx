@@ -177,11 +177,7 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What’s New?</strong></p>
               <ul className="list-disc list-inside space-y-1">
-                <li>This About panel!</li>
-                <li>New icon for tracking read passages</li>
-                <li>New version notification system</li>
-                <li>Lazy-loading of readings by month</li>
-                <li>General UI tidying</li>
+                <li>Added database support for future features.</li>
               </ul>
             </div>
 
