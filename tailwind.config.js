@@ -48,6 +48,11 @@ module.exports = {
             opacity: '0.5',
           },
         },
+        pulseScaleOnce: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+          '100%': { transform: 'scale(1)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 0.3s ease-out',
