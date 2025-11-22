@@ -1,23 +1,27 @@
 'use client';
 
-import React, { useState, useEffect, startTransition } from 'react';
-import { Sun, Moon, Church } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import packageJson from '../../package.json';
 
 // Hooks
-import useReadingProgress from '../hooks/useReadingProgress';
-import useSwipeNavigation from '../hooks/useSwipeNavigation';
+import useAppVersionCheck from '../hooks/useAppVersionCheck';
+import useDateNavigation from '../hooks/useDateNavigation';
 import useKeyboardNavigation from '../hooks/useKeyboardNavigation';
 import useMobilePlatform from '../hooks/useMobilePlatform';
+import useMonthCache from '../hooks/useMonthCache';
+import useReadingProgress from '../hooks/useReadingProgress';
 import useReadingsForMonth from '../hooks/useReadingsForMonth';
-import useAppVersionCheck from '../hooks/useAppVersionCheck';
+import useSwipeNavigation from '../hooks/useSwipeNavigation';
 
 // Components
+import AppFooter from './AppFooter';
+import AppHeader from './AppHeader';
+import FeedbackForm from './FeedbackForm';
+import ReadingSession from './ReadingSession';
+import SessionSelector from './SessionSelector';
 import SettingsPanel from './SettingsPanel';
 import SwipeHint from './SwipeHint';
-import ReadingSession from './ReadingSession';
-import BottomNavigation from './BottomNavigation';
-import FeedbackForm from './FeedbackForm';
+import UpdateBanner from './UpdateBanner';
 
 export function VersionTag() {
   return <span>v {packageJson.version}</span>;
@@ -30,17 +34,15 @@ export default function BibleReadingApp() {
     return new Date(now.getFullYear(), now.getMonth(), now.getDate());
   };
 
-  const { updateAvailable, latestVersion } = useAppVersionCheck();
+  const { updateAvailable } = useAppVersionCheck();
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
   const platform = useMobilePlatform();
   const [showFeedback, setShowFeedback] = useState(false);
+  const [showSwipeHint, setShowSwipeHint] = useState(false);
 
-  // Month cache: { "01": { "01-01": {...}, ... }, "02": {...} }
-  const [monthCache, setMonthCache] = useState({});
-
-  // Visible/readings state — don't switch visible readings until new data is ready
+  // Visible/readings state
   const [displayDateKey, setDisplayDateKey] = useState(() => {
     const d = getLocalDate();
     const m = String(d.getMonth() + 1).padStart(2, '0');
@@ -55,74 +57,22 @@ export default function BibleReadingApp() {
     const saved = localStorage.getItem('bibleTranslation');
     if (saved) setTranslation(saved);
   }, []);
+  
   const handleTranslationChange = (v) => {
     setTranslation(v);
     localStorage.setItem('bibleTranslation', v);
   };
 
-  // === Determine current month ===
+  // Determine current month
   const currentMonth = String(selectedDate.getMonth() + 1).padStart(2, '0');
 
-  // === Lazy-load monthly data via hook (which may consult an in-memory cache or localStorage) ===
-  // The hook returns monthReadings for currentMonth when available.
+  // Lazy-load monthly data
   const { readings: monthReadings, loading, error } = useReadingsForMonth(currentMonth);
 
-  // When monthReadings arrives, stash into monthCache under the month key
-  useEffect(() => {
-    if (monthReadings) {
-      setMonthCache((prev) => {
-        // Avoid replacing if identical reference (small optimization)
-        if (prev[currentMonth] === monthReadings) return prev;
-        return { ...prev, [currentMonth]: monthReadings };
-      });
-    }
-  }, [currentMonth, monthReadings]);
+  // Month caching with preloading
+  const monthCache = useMonthCache(currentMonth, monthReadings);
 
-  // === Preload previous + next + current month in background AND update monthCache when fetched ===
-  useEffect(() => {
-    const monthNum = parseInt(currentMonth, 10);
-
-    const preloadMonths = [
-      currentMonth, // ensure current is attempted
-      String((monthNum % 12) + 1).padStart(2, '0'),        // next
-      String((monthNum + 10) % 12 + 1).padStart(2, '0'),   // previous
-    ];
-
-    preloadMonths.forEach((m) => {
-      if (monthCache[m]) return; // already in memory
-
-      const key = `readings_${m}_v1`;
-      const local = localStorage.getItem(key);
-      if (local) {
-        try {
-          const parsed = JSON.parse(local);
-          setMonthCache((prev) => ({ ...prev, [m]: parsed }));
-          return;
-        } catch {
-          // fallthrough to fetch if parse fails
-        }
-      }
-
-      // fetch and store in both localStorage and in-memory cache
-      fetch(`/monthly/${m}.v1.json`)
-        .then((res) => {
-          if (!res.ok) throw new Error('Failed to preload month ' + m);
-          return res.json();
-        })
-        .then((data) => {
-          try {
-            localStorage.setItem(key, JSON.stringify(data));
-          } catch {}
-          setMonthCache((prev) => ({ ...prev, [m]: data }));
-        })
-        .catch(() => {
-          /* silently ignore preload errors */
-        });
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentMonth]); // intentionally only depend on currentMonth
-
-  // === Derive date keys ===
+  // Derive date keys
   const getDateKey = (date) => {
     const m = String(date.getMonth() + 1).padStart(2, '0');
     const d = String(date.getDate()).padStart(2, '0');
@@ -130,9 +80,8 @@ export default function BibleReadingApp() {
   };
   const dateKey = getDateKey(selectedDate);
 
-  // === Update the visible/displayReadings only when data is available for the selected date ===
+  // Update visible readings when data is available
   useEffect(() => {
-    // If the month is already cached in memory and contains the selected date, show it immediately
     const monthData = monthCache[currentMonth];
     if (monthData && monthData[dateKey]) {
       setDisplayReadings(monthData[dateKey]);
@@ -140,43 +89,23 @@ export default function BibleReadingApp() {
       return;
     }
 
-    // If hook provided monthReadings and it contains the date, use it
     if (monthReadings && monthReadings[dateKey]) {
       setDisplayReadings(monthReadings[dateKey]);
       setDisplayDateKey(dateKey);
-      return;
     }
-
-    // Otherwise: don't change displayReadings yet — keep showing whatever is currently displayed
-    // This prevents the UI from blanking while we wait for the new month to load.
   }, [currentMonth, dateKey, monthCache, monthReadings]);
 
-  // === Reading progress ===
-  // Now with translation support
+  // Reading progress
   const { isComplete, toggleComplete } = useReadingProgress(translation);
 
-  // Navigation helpers – using startTransition to avoid visible re-renders
-  const goPrev = () => {
-    const d = new Date(selectedDate);
-    d.setDate(d.getDate() - 1);
-    startTransition(() => setSelectedDate(d));
-  };
-
-  const goNext = () => {
-    const d = new Date(selectedDate);
-    d.setDate(d.getDate() + 1);
-    startTransition(() => setSelectedDate(d));
-  };
-
-  const resetToToday = () =>
-    startTransition(() => setSelectedDate(getLocalDate()));
+  // Navigation
+  const { goPrev, goNext, resetToToday } = useDateNavigation(selectedDate, setSelectedDate, getLocalDate);
 
   // Enable gestures & keyboard support
   useSwipeNavigation({ goNext, goPrev, resetToToday });
   useKeyboardNavigation({ goNext, goPrev, resetToToday });
 
   // Mobile swipe hint overlay
-  const [showSwipeHint, setShowSwipeHint] = useState(false);
   useEffect(() => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const seen = localStorage.getItem('hasSeenSwipeHint');
@@ -187,7 +116,7 @@ export default function BibleReadingApp() {
     }
   }, []);
 
-  // === Hard load screen ONLY if we have no visible data at all (very first load) ===
+  // Loading screen
   if (!displayReadings && loading && Object.keys(monthCache).length === 0) {
     return (
       <div className="min-h-screen bg-gray-950 flex items-center justify-center">
@@ -199,7 +128,7 @@ export default function BibleReadingApp() {
     );
   }
 
-  // === Error screen (only if nothing visible) ===
+  // Error screen
   if (error && !displayReadings) {
     return (
       <div className="min-h-screen bg-gray-950 flex items-center justify-center p-6">
@@ -217,171 +146,50 @@ export default function BibleReadingApp() {
     );
   }
 
-  // === MAIN RENDER ===
+  // Main render
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
-
-      {updateAvailable && (
-        <div className="bg-yellow-900/40 border border-yellow-500 p-3 rounded mb-4 text-center text-yellow-100">
-          ⚠️ A new version of the app is available.{' '}
-          <button
-            onClick={() => window.location.reload()}
-            className="underline font-semibold"
-          >
-            Click here to refresh
-          </button>
-          {' '}and get the latest updates.
-        </div>
-      )}
-
+      <UpdateBanner updateAvailable={updateAvailable} />
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
       <div className="max-w-2xl mx-auto space-y-6">
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <Church className="w-10 h-10 mx-auto text-blue-400" />
-          <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
-          <p className="text-gray-400">St. Paul’s Bloor Street Lectionary (2025)</p>
-          <button
-            onClick={() => setShowFeedback(true)}
-            className="text-blue-400 underline text-sm"
-          >
-            What do you think of the app?
-          </button>
-          {showFeedback && <FeedbackForm onClose={() => setShowFeedback(false)} />}
-        </div>
+        <AppHeader onFeedbackClick={() => setShowFeedback(true)} />
+        {showFeedback && <FeedbackForm onClose={() => setShowFeedback(false)} />}
 
-        {/* Settings */}
         <SettingsPanel
           selectedDate={selectedDate}
-          setSelectedDate={(d) => startTransition(() => setSelectedDate(d))}
+          setSelectedDate={setSelectedDate}
           translation={translation}
           handleTranslationChange={handleTranslationChange}
           settingsOpen={settingsOpen}
           setSettingsOpen={setSettingsOpen}
         />
 
-        {/* Morning + Evening */}
-        {displayReadings ? (
-          <>
-            <div className="grid grid-cols-2 gap-4">
-              <button
-                onClick={() =>
-                  setActiveSession(activeSession === 'AM' ? null : 'AM')
-                }
-                className={`p-6 rounded-lg border-2 transition-all ${
-                  activeSession === 'AM'
-                    ? 'bg-amber-500/10 border-amber-500 shadow-lg shadow-amber-500/20'
-                    : 'bg-gray-900 border-gray-700 hover:border-amber-500/50'
-                }`}
-              >
-                <Sun
-                  className={`w-8 h-8 mx-auto mb-2 ${
-                    activeSession === 'AM' ? 'text-amber-400' : 'text-gray-400'
-                  }`}
-                />
-                <div className="text-lg font-semibold">Morning</div>
-                <div className="text-xs text-gray-400 mt-1">
-                  {displayReadings.AM.psalms.length +
-                    displayReadings.AM.lesson.length}{' '}
-                  readings
-                </div>
-              </button>
+        <SessionSelector
+          displayReadings={displayReadings}
+          activeSession={activeSession}
+          setActiveSession={setActiveSession}
+        />
 
-              <button
-                onClick={() =>
-                  setActiveSession(activeSession === 'PM' ? null : 'PM')
-                }
-                className={`p-6 rounded-lg border-2 transition-all ${
-                  activeSession === 'PM'
-                    ? 'bg-blue-500/10 border-blue-500 shadow-lg shadow-blue-500/20'
-                    : 'bg-gray-900 border-gray-700 hover:border-blue-500/50'
-                }`}
-              >
-                <Moon
-                  className={`w-8 h-8 mx-auto mb-2 ${
-                    activeSession === 'PM' ? 'text-blue-400' : 'text-gray-400'
-                  }`}
-                />
-                <div className="text-lg font-semibold">Evening</div>
-                <div className="text-xs text-gray-400 mt-1">
-                  {displayReadings.PM.psalms.length +
-                    displayReadings.PM.lesson.length}{' '}
-                  readings
-                </div>
-              </button>
-            </div>
+        {activeSession && displayReadings?.[activeSession] && (
+          <ReadingSession
+            sessionKey={activeSession}
+            sessionData={displayReadings[activeSession]}
+            dateKey={displayDateKey}
+            isComplete={isComplete}
+            toggleComplete={toggleComplete}
+            translation={translation}
+          />
+        )}
 
-            {activeSession && displayReadings[activeSession] && (
-              <ReadingSession
-                sessionKey={activeSession}
-                sessionData={displayReadings[activeSession]}
-                dateKey={displayDateKey}
-                isComplete={isComplete}
-                toggleComplete={toggleComplete}
-                translation={translation}
-              />
-            )}
-          </>
-        ) : (
+        {!displayReadings && (
           <div className="bg-gray-900 rounded-lg p-6 text-center text-gray-400">
             Loading readings for this date...
           </div>
         )}
 
-         {/* Footer */}
-        <div className="text-center text-sm text-gray-500 pt-6 space-y-2">
-
-          {/* Mobile hint */}
-          <div className="text-xs text-amber-400 flex items-center justify-center gap-1 md:hidden">
-            <span>💡</span>
-            <span>← Swipe → to change days, or double-tap for today</span>
-          </div>
-
-          {/* Desktop navigation tip */}
-          <div className="pt-2 text-xs text-amber-400 hidden md:block">
-            <p>💡 Use ← and → keys to change days, and ↑ to jump back to today</p>
-          </div>
-
-          {/* New primary message */}
-          <p className="text-gray-300 font-medium">
-            This app works best when paired with the <b>YouVersion Bible App.</b>
-          </p>
-
-          {/* Platform-based link */}
-          {platform === 'ios' && (
-            <a
-              href="https://apps.apple.com/ca/app/bible/id282935706"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline block"
-            >
-              Open in the Apple App Store
-            </a>
-          )}
-
-          {platform === 'android' && (
-            <a
-              href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 underline block"
-            >
-              Open in Google Play
-            </a>
-          )}
-
-          {/* Copyright */}
-          <p className="text-gray-600">
-            © {new Date().getFullYear()} Chris R. Chapman. All rights reserved.
-          </p>
-
-          <VersionTag/>
-        </div>
-
+        <AppFooter platform={platform} />
       </div>
-
-      {/* <BottomNavigation goNext={goNext} goPrev={goPrev} /> */}
     </div>
   );
 }
