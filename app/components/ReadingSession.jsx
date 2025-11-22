@@ -60,6 +60,15 @@ function getBibleUrl(reading, translation) {
   return `https://www.bible.com/bible/${version}/${abbrev}.${reading.chapter}${verses}.${translation}`;
 }
 
+// Format dateKey (MM-DD) to display format
+function formatDateKey(dateKey) {
+  const [month, day] = dateKey.split('-');
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
+                      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const monthName = monthNames[parseInt(month, 10) - 1];
+  return `${monthName} ${parseInt(day, 10)}`;
+}
+
 export default function ReadingSession({
   sessionKey,
   sessionData,
@@ -75,6 +84,7 @@ export default function ReadingSession({
     : <Moon className="w-5 h-5 text-blue-400" />;
 
   const label = sessionKey === 'AM' ? 'Morning' : 'Evening';
+  const formattedDate = formatDateKey(dateKey);
 
   const renderReading = (reading, type) => {
     const completed = isComplete(dateKey, sessionKey, type, reading.reference);
@@ -119,7 +129,9 @@ export default function ReadingSession({
     <div className="bg-gray-900 rounded-lg p-6">
       <div className="flex items-center gap-2 mb-4">
         {icon}
-        <h2 className="text-xl font-semibold leading-none m-0">{label} Readings</h2>
+        <h2 className="text-xl font-semibold leading-none m-0">
+          {label} Readings for {formattedDate}
+        </h2>
       </div>
 
       <div className="space-y-4 animate-fadeIn">
