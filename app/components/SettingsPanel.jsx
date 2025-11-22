@@ -178,6 +178,7 @@ export default function SettingsPanel({
               <p><strong>What’s New?</strong></p>
               <ul className="list-disc list-inside space-y-1">
                 <li>Added database support for future features.</li>
+                <li>New icons for heading and undo read state.</li>
               </ul>
             </div>
 

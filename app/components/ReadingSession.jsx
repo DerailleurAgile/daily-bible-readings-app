@@ -7,7 +7,8 @@ import {
   Moon,
   Book,
   BookOpenCheck,
-  ExternalLink
+  ExternalLink,
+  RotateCcw
 } from 'lucide-react';
 
 // Converts a reading record into a Bible.com URL based on translation
@@ -104,13 +105,12 @@ export default function ReadingSession({
           <span className="text-gray-100">{reading.reference}</span>
         </div>
 
-        <ExternalLink
-          className={
-            completed
-              ? 'w-4 h-4 text-green-400'
-              : 'w-4 h-4 text-gray-400 group-hover:text-blue-400'
-          }
-        />
+        {/* Change icon based on completion status */}
+        {completed ? (
+          <RotateCcw className="w-4 h-4 text-red-400 group-hover:text-red-300" />
+        ) : (
+          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-400" />
+        )}
       </a>
     );
   };
