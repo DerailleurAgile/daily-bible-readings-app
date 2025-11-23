@@ -177,7 +177,8 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What’s New?</strong></p>
               <ul className="list-disc list-inside space-y-1">
-                <li>Added date formatting to reading session headers.</li>
+                <li>Added date to reading session headers.</li>
+                <li>Changed favicon to match header.</li>
               </ul>
             </div>
 
