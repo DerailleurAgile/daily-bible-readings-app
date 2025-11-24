@@ -5,48 +5,54 @@ export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
 
   useEffect(() => {
-  const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
+    const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
 
-  // First: Old v1 cleanup for those who haven't cleared the old cache yet
-  const v1CleanupKey = `cache_cleaned_v1`;
-  if (!localStorage.getItem(v1CleanupKey)) {
-    for (let i = 1; i <= 12; i++) {
-      const month = String(i).padStart(2, '0');
-      localStorage.removeItem(`readings_${month}_v1`);
+    // v1 Cleanup: Remove all v1 cached months
+    const v1CleanupKey = `cache_cleaned_v1`;
+    if (!localStorage.getItem(v1CleanupKey)) {
+      for (let i = 1; i <= 12; i++) {
+        const month = String(i).padStart(2, '0');
+        localStorage.removeItem(`readings_${month}_v1`);
+      }
+      localStorage.setItem(v1CleanupKey, 'true');
     }
-    localStorage.setItem(v1CleanupKey, 'true');
-  }
 
-  // 2. Next: Targeted cleanup for known broken files
-  const cleanupTarget = async () => {
-    try {
-      const res = await fetch('/version.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error('Failed to fetch version.json');
-      const { appVersion } = await res.json();
-      if (!appVersion) return;
+    // v2 Targeted Cleanup: Remove specific months/files that need refresh
+    const cleanupTarget = async () => {
+      try {
+        const res = await fetch('/version.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('Failed to fetch version.json');
+        const { appVersion } = await res.json();
+        if (!appVersion) return;
 
-      const cleanupKey = `cache_cleaned_for_${appVersion}`;
-      if (localStorage.getItem(cleanupKey)) return;
+        const cleanupKey = `cache_cleaned_for_${appVersion}`;
+        if (localStorage.getItem(cleanupKey)) return;
 
-      // Hardcode the months/files you need re-fetched
-      const FILES_TO_RESET = ['12'];
+        // Hardcode the months/files you need re-fetched
+        const FILES_TO_RESET = ['12']; // add more months if needed
 
-      FILES_TO_RESET.forEach((month) => {
-        const key = `readings_${month}_${version}`;
-        localStorage.removeItem(key);
-      });
+        FILES_TO_RESET.forEach((month) => {
+          const key = `readings_${month}_${version}`;
+          localStorage.removeItem(key);
 
-      localStorage.setItem(cleanupKey, 'true');
-    } catch (err) {
-      console.warn('Targeted cleanup failed:', err);
-    }
-  };
+          // Also remove from monthCache so preload will fetch fresh
+          setMonthCache((prev) => {
+            const newCache = { ...prev };
+            delete newCache[month];
+            return newCache;
+          });
+        });
 
-  cleanupTarget();
-}, []);
+        localStorage.setItem(cleanupKey, 'true');
+      } catch (err) {
+        console.warn('Targeted cleanup failed:', err);
+      }
+    };
 
+    cleanupTarget();
+  }, []);
 
-  // Store monthReadings in cache when it arrives
+  // Store current month readings in cache...
   useEffect(() => {
     if (monthReadings) {
       setMonthCache((prev) => {
@@ -56,7 +62,7 @@ export default function useMonthCache(currentMonth, monthReadings) {
     }
   }, [currentMonth, monthReadings]);
 
-  // Preload adjacent months for smoother navigation
+  // Preload previous and next months...
   useEffect(() => {
     const monthNum = parseInt(currentMonth, 10);
     const preloadMonths = [
@@ -66,11 +72,13 @@ export default function useMonthCache(currentMonth, monthReadings) {
     ];
 
     preloadMonths.forEach((m) => {
-      if (monthCache[m]) return;
-
       const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
       const key = `readings_${m}_${version}`;
       const local = localStorage.getItem(key);
+
+      // Fetch if monthCache does not exist or storage was cleared
+      if (monthCache[m] && local) return;
+
       if (local) {
         try {
           const parsed = JSON.parse(local);
