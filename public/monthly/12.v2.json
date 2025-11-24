@@ -149,8 +149,9 @@
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 89",
+          "reference": "Psalm 89:1-25",
           "book": "Psalm",
+          "chapter": "89",
           "verses": "1-25"
         }
       ],
@@ -168,8 +169,9 @@
     "AM": {
       "psalms": [
         {
-          "reference": "Psalm 89",
+          "reference": "Psalm 89:26-51",
           "book": "Psalm",
+          "chapter": "89",
           "verses": "26-51"
         }
       ],

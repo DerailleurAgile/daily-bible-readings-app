@@ -4,21 +4,47 @@ import { useState, useEffect } from 'react';
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
 
-  // One-time cleanup of old v1 cache
   useEffect(() => {
-    const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
-    const cleanupKey = `cache_cleaned_${version}`;
-    const cleaned = localStorage.getItem(cleanupKey);
-    
-    if (!cleaned) {
-      // Remove all old v1 cached months
-      for (let i = 1; i <= 12; i++) {
-        const month = String(i).padStart(2, '0');
-        localStorage.removeItem(`readings_${month}_v1`);
-      }
-      localStorage.setItem(cleanupKey, 'true');
+  const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
+
+  // First: Old v1 cleanup for those who haven't cleared the old cache yet
+  const v1CleanupKey = `cache_cleaned_v1`;
+  if (!localStorage.getItem(v1CleanupKey)) {
+    for (let i = 1; i <= 12; i++) {
+      const month = String(i).padStart(2, '0');
+      localStorage.removeItem(`readings_${month}_v1`);
     }
-  }, []);
+    localStorage.setItem(v1CleanupKey, 'true');
+  }
+
+  // 2. Next: Targeted cleanup for known broken files
+  const cleanupTarget = async () => {
+    try {
+      const res = await fetch('/version.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('Failed to fetch version.json');
+      const { appVersion } = await res.json();
+      if (!appVersion) return;
+
+      const cleanupKey = `cache_cleaned_for_${appVersion}`;
+      if (localStorage.getItem(cleanupKey)) return;
+
+      // Hardcode the months/files you need re-fetched
+      const FILES_TO_RESET = ['12'];
+
+      FILES_TO_RESET.forEach((month) => {
+        const key = `readings_${month}_${version}`;
+        localStorage.removeItem(key);
+      });
+
+      localStorage.setItem(cleanupKey, 'true');
+    } catch (err) {
+      console.warn('Targeted cleanup failed:', err);
+    }
+  };
+
+  cleanupTarget();
+}, []);
+
 
   // Store monthReadings in cache when it arrives
   useEffect(() => {
