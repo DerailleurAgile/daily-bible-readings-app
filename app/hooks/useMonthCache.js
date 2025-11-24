@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
 
-  // One-time cleanup for corrected December file
-  if (!localStorage.getItem('cache_cleaned_december_fix')) {
+  // December cache cleanup fix on aisle 12...
+  if (typeof window !== 'undefined' && !localStorage.getItem('cache_cleaned_december_fix')) {
     localStorage.removeItem('readings_12_v2');
     localStorage.setItem('cache_cleaned_december_fix', 'true');
   }
