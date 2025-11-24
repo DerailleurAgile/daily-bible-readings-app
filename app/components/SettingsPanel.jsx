@@ -179,6 +179,7 @@ export default function SettingsPanel({
               <ul className="list-disc list-outside ml-5 space-y-1">
                 <li className="pl-2">Refactored reading completion logic for improved reliability.</li>
                 <li className="pl-2">Added anonymous user sessions to track progress without sign-in.</li>
+                <li className="pl-2">Fixed a bug in the lectionary for the Dec 01 PM Lesson.</li>
               </ul>
             </div>
 
