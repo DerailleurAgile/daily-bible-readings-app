@@ -147,7 +147,13 @@
       ]
     },
     "PM": {
-      "psalms": [],
+      "psalms": [
+        {
+          "reference": "Psalm 89",
+          "book": "Psalm",
+          "chapter": "1-25"
+        }
+      ],
       "lesson": [
         {
           "reference": "Revelation 11:1-14",
@@ -160,7 +166,13 @@
   },
   "12-05": {
     "AM": {
-      "psalms": [],
+      "psalms": [
+        {
+          "reference": "Psalm 89",
+          "book": "Psalm",
+          "chapter": "26-51"
+        }
+      ],
       "lesson": [
         {
           "reference": "Acts 16:25-40",
