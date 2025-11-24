@@ -3,6 +3,13 @@ import { useState, useEffect } from 'react';
 
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
+
+  // One-time cleanup for corrected December file
+  if (!localStorage.getItem('cache_cleaned_december_fix')) {
+    localStorage.removeItem('readings_12_v2');
+    localStorage.setItem('cache_cleaned_december_fix', 'true');
+  }
+
   useEffect(() => {
     // v1 Cleanup: Remove all v1 cached months
     if (!localStorage.getItem('cache_cleaned_v1')) {
@@ -11,12 +18,6 @@ export default function useMonthCache(currentMonth, monthReadings) {
         localStorage.removeItem(`readings_${month}_v1`);
       }
       localStorage.setItem('cache_cleaned_v1', 'true');
-    }
-
-    // One-time cleanup for corrected December file
-    if (!localStorage.getItem('cache_cleaned_december_fix')) {
-      localStorage.removeItem('readings_12_v2');
-      localStorage.setItem('cache_cleaned_december_fix', 'true');
     }
   }, []);
     
