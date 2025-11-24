@@ -3,54 +3,23 @@ import { useState, useEffect } from 'react';
 
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
-
   useEffect(() => {
-    const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v2';
-
     // v1 Cleanup: Remove all v1 cached months
-    const v1CleanupKey = `cache_cleaned_v1`;
-    if (!localStorage.getItem(v1CleanupKey)) {
+    if (!localStorage.getItem('cache_cleaned_v1')) {
       for (let i = 1; i <= 12; i++) {
         const month = String(i).padStart(2, '0');
         localStorage.removeItem(`readings_${month}_v1`);
       }
-      localStorage.setItem(v1CleanupKey, 'true');
+      localStorage.setItem('cache_cleaned_v1', 'true');
     }
 
-    // v2 Targeted Cleanup: Remove specific months/files that need refresh
-    const cleanupTarget = async () => {
-      try {
-        const res = await fetch('/version.json', { cache: 'no-store' });
-        if (!res.ok) throw new Error('Failed to fetch version.json');
-        const { appVersion } = await res.json();
-        if (!appVersion) return;
-
-        const cleanupKey = `cache_cleaned_for_${appVersion}`;
-        if (localStorage.getItem(cleanupKey)) return;
-
-        // Hardcode the months/files you need re-fetched
-        const FILES_TO_RESET = ['12']; // add more months if needed
-
-        FILES_TO_RESET.forEach((month) => {
-          const key = `readings_${month}_${version}`;
-          localStorage.removeItem(key);
-
-          // Also remove from monthCache so preload will fetch fresh
-          setMonthCache((prev) => {
-            const newCache = { ...prev };
-            delete newCache[month];
-            return newCache;
-          });
-        });
-
-        localStorage.setItem(cleanupKey, 'true');
-      } catch (err) {
-        console.warn('Targeted cleanup failed:', err);
-      }
-    };
-
-    cleanupTarget();
+    // One-time cleanup for corrected December file
+    if (!localStorage.getItem('cache_cleaned_december_fix')) {
+      localStorage.removeItem('readings_12_v2');
+      localStorage.setItem('cache_cleaned_december_fix', 'true');
+    }
   }, []);
+    
 
   // Store current month readings in cache...
   useEffect(() => {

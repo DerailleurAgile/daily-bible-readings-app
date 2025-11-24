@@ -1,6 +1,6 @@
 {
   "name": "daily-bible-readings-app",
-  "version": "0.5.8 Alpha",
+  "version": "0.5.9 Alpha",
   "private": true,
   "scripts": {
     "dev": "next dev",
