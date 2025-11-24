@@ -176,9 +176,9 @@ export default function SettingsPanel({
 
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What’s New?</strong></p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>Added date to reading session headers.</li>
-                <li>Changed favicon to match header.</li>
+              <ul className="list-disc list-outside ml-5 space-y-1">
+                <li className="pl-2">Refactored reading completion logic for improved reliability.</li>
+                <li className="pl-2">Added anonymous user sessions to track progress without sign-in.</li>
               </ul>
             </div>
 
