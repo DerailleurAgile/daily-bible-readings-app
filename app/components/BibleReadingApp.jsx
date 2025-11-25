@@ -179,6 +179,7 @@ export default function BibleReadingApp() {
             isComplete={isComplete}
             toggleComplete={toggleComplete}
             translation={translation}
+            selectedYear={selectedDate.getFullYear()}
           />
         )}
 

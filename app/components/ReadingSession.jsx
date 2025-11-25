@@ -75,7 +75,8 @@ export default function ReadingSession({
   dateKey,
   isComplete,
   toggleComplete,
-  translation
+  translation,
+  selectedYear // NEW! Added selectedYear prop
 }) {
   if (!sessionData) return null;
 
@@ -86,8 +87,9 @@ export default function ReadingSession({
   const label = sessionKey === 'AM' ? 'Morning' : 'Evening';
   const formattedDate = formatDateKey(dateKey);
 
+  // NEW! Passing in selectedYear to isComplete and toggleComplete
   const renderReading = (reading, type) => {
-    const completed = isComplete(dateKey, sessionKey, type, reading.reference);
+    const completed = isComplete(dateKey, sessionKey, type, reading.reference, selectedYear);
 
     return (
       <a
