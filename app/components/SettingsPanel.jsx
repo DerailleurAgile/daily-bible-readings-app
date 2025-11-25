@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Calendar, Settings, ChevronDown, ChevronUp, Info, Share2, X } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
+import packageJson from '../../package.json';
 
 export default function SettingsPanel({
   selectedDate,
@@ -167,20 +168,17 @@ export default function SettingsPanel({
             </h3>
 
             <p className="text-sm text-gray-300 text-center mb-4">
-              St. Paul's Bloor St. Anglican Church Lectionary (2025)  
+              St. Paul's Bloor Street Anglican Church Lectionary (2025)  
               <br />
               <span className="text-xs text-amber-300">
-                Version {process.env.NEXT_PUBLIC_APP_VERSION}
+                Version {packageJson.version}
               </span>
             </p>
 
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What’s New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li className="pl-2">Refactored reading completion logic for improved reliability.</li>
-                <li className="pl-2">Added anonymous user sessions to track progress without sign-in.</li>
-                <li className="pl-2">Fixed a bug in the lectionary for the Dec 01 PM Lesson.</li>
-                <li className="pl-2">Fixed a bug in the lectionary for the Dec 04 PM Psalm and Dec 05 AM Psam.</li>
+                <li className="pl-2">Fixed inconsistencies in monthly lectionary readings files where verses spanned two chapters and could not be read in the Bible.com app.</li>
               </ul>
             </div>
 

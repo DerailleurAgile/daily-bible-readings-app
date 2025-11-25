@@ -1,24 +1,25 @@
-//
 import type { NextConfig } from "next";
 import { version } from './package.json';
 
 const nextConfig: NextConfig = {
-  compress: true, // Enable gzip compression
+  compress: true,
 
-  // Expose the app version to the client-side code
   env: {
     NEXT_PUBLIC_APP_VERSION: version.trim(),
   },
 
-  // Configure cache headers for lectionary data files
   async headers() {
     return [
       {
-        source: '/monthly/:path*',
+        // This provides aggressive caching for monthly lectionary files.
+        source: '/monthly/:file.json',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=0, must-revalidate',
+            // Immutable = never revalidate (safe because filename changes)
+            // I've moved to this to address Android Chrome issues with
+            // revalidation of these files.
+            value: 'public, max-age=31536000, immutable',
           },
         ],
       },

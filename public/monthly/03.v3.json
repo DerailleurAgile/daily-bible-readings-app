@@ -677,10 +677,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 23:37-24:14",
+          "reference": "Matthew 23:37-39",
           "book": "Matthew",
           "chapter": "23",
-          "verses": "37-24:14"
+          "verses": "37-39"
+        },
+        {
+          "reference": "Matthew 24:1-14",
+          "book": "Matthew",
+          "chapter": "24",
+          "verses": "1-14"
         }
       ]
     },
@@ -1113,10 +1119,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 26:69-27:10",
+          "reference": "Matthew 26:69-75",
           "book": "Matthew",
           "chapter": "26",
-          "verses": "69-27:10"
+          "verses": "69-75"
+        },
+        {
+          "reference": "Matthew 27:1-10",
+          "book": "Matthew",
+          "chapter": "27",
+          "verses": "1-10"
         }
       ]
     },
