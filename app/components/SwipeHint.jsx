@@ -12,7 +12,7 @@ export default function SwipeHint({ onClose }) {
         <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
           <div className="animate-swipeFinger">
             <Pointer 
-              className="w-12 h-12 text-blue-400 drop-shadow-lg" 
+              className="w-6 h-6 text-blue-400 drop-shadow-lg" 
               style={{
                 position: 'absolute',
                 top: '50%',
