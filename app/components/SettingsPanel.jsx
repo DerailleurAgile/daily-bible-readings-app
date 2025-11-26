@@ -178,7 +178,8 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What’s New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li><b>Huge update!</b> Your current reading progress has been migrated to a new format that can span multiple years. This will allow for tracking reading the same lectionary across multiple years as well as tracking reading streaks and catching up on missed days.</li>
+                <li>Minor adjustments to icons in the reading session panel to make them easier to see.</li>
+                <li>Update to the swipe hint instructions for new mobile users.</li>
               </ul>
             </div>
 

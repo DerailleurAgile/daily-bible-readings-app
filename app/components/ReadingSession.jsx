@@ -10,6 +10,9 @@ import {
   ExternalLink,
   RotateCcw
 } from 'lucide-react';
+import OpenBookWithCross from './OpenBookWithCross';
+import ClosedBookWithCross from './ClosedBookWithCross';
+
 
 // Converts a reading record into a Bible.com URL based on translation
 function getBibleUrl(reading, translation) {
@@ -110,18 +113,20 @@ export default function ReadingSession({
       >
         <div className="flex items-center gap-3">
           {completed ? (
-            <BookOpenCheck className="w-4 h-4 text-green-400" />
+            <BookOpenCheck className="w-6 h-6 text-green-400" />
+            // <OpenBookWithCross className="w-6 h-6 text-green-400" />
           ) : (
-            <Book className="w-4 h-4 text-blue-400" />
+            // <Book className="w-4 h-4 text-blue-400" />
+            <ClosedBookWithCross className="w-6 h-6 text-blue-400" />
           )}
           <span className="text-gray-100">{reading.reference}</span>
         </div>
 
         {/* Change icon based on completion status */}
         {completed ? (
-          <RotateCcw className="w-4 h-4 text-red-400 group-hover:text-red-300" />
+          <RotateCcw className="w-6 h-6 text-red-400 group-hover:text-red-300" />
         ) : (
-          <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-400" />
+          <ExternalLink className="w-6 h-6 text-gray-400 group-hover:text-blue-400" />
         )}
       </a>
     );
