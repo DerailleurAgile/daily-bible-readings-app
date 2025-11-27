@@ -22,6 +22,7 @@ import SessionSelector from './SessionSelector';
 import SettingsPanel from './SettingsPanel';
 import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
+import SlideOver from './SlideOver';
 
 export function VersionTag() {
   return <span>v {packageJson.version}</span>;
@@ -152,19 +153,23 @@ export default function BibleReadingApp() {
       <UpdateBanner updateAvailable={updateAvailable} />
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
-      <div className="max-w-2xl mx-auto space-y-6">
-        <AppHeader onFeedbackClick={() => setShowFeedback(true)} />
+      <div className="max-w-2xl mx-auto space-y-6 relative">
+        <AppHeader 
+          onFeedbackClick={() => setShowFeedback(true)} 
+          onSettingsClick={() => setSettingsOpen(true)}
+        />
         {showFeedback && <FeedbackForm onClose={() => setShowFeedback(false)} />}
 
-        <SettingsPanel
-          selectedDate={selectedDate}
-          setSelectedDate={setSelectedDate}
-          translation={translation}
-          handleTranslationChange={handleTranslationChange}
-          settingsOpen={settingsOpen}
-          setSettingsOpen={setSettingsOpen}
-        />
-
+        <SlideOver isOpen={settingsOpen} onClose={() => setSettingsOpen(false)}>
+          <SettingsPanel
+            selectedDate={selectedDate}
+            setSelectedDate={setSelectedDate}
+            translation={translation}
+            handleTranslationChange={handleTranslationChange}
+            settingsOpen={settingsOpen}
+            setSettingsOpen={setSettingsOpen}
+          />
+        </SlideOver>
         <SessionSelector
           displayReadings={displayReadings}
           activeSession={activeSession}

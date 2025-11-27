@@ -10,10 +10,7 @@ export interface DeviceInfo {
   browser: string;
 }
 
-/**
- * Captures the user's device and browser information.
- * Returns a DeviceInfo object ready for storing in Supabase.
- */
+// Captures user's device information
 export function getDeviceInfo(): DeviceInfo {
   const parser: UAParserType = new UAParser();
 
