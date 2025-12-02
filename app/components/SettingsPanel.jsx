@@ -197,8 +197,7 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li>NEW: Moved setting panel to a slide-over modal for better usability.</li>
-                <li>NEW: Added device ID display and copy feature for easier support.</li>
+                <li>NEW! Added hamburger icon to header for settings access.</li>
               </ul>
             </div>
 

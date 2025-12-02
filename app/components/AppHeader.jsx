@@ -1,17 +1,17 @@
 // app/components/AppHeader.jsx
-import { Church, Settings } from 'lucide-react';
+import { Church, Menu } from 'lucide-react';
 
 export default function AppHeader({ onFeedbackClick, onSettingsClick }) {
   return (
     <div className="relative text-center space-y-2">
 
-      {/* Settings icon in top-right */}
+      {/* Hamburger menu icon in top-left */}
       <button
         onClick={onSettingsClick}
-        className="absolute top-0 right-0 p-2 text-gray-300 hover:text-white"
-        aria-label="Open settings"
+        className="absolute top-0 left-0 p-2 text-gray-300 hover:text-white transition-colors"
+        aria-label="Open menu"
       >
-        <Settings className="w-6 h-6" />
+        <Menu className="w-6 h-6" />
       </button>
 
       {/* Centered app icon/title */}
