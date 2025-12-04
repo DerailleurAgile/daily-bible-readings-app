@@ -1,6 +1,6 @@
 {
   "name": "daily-bible-readings-app",
-  "version": "0.7.4 Alpha",
+  "version": "0.7.5 Alpha",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,10 +14,10 @@
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
     "lucide-react": "^0.554.0",
-    "next": "16.0.3",
+    "next": "^16.0.7",
     "qrcode.react": "^4.2.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "ua-parser-js": "^2.0.6"
   },
   "devDependencies": {
