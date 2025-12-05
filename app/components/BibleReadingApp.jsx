@@ -96,8 +96,8 @@ export default function BibleReadingApp() {
     }
   }, [currentMonth, dateKey, monthCache, monthReadings]);
 
-  // Reading progress
-  const { isComplete, toggleComplete } = useReadingProgress(translation);
+  // Reading progress with explanation cache
+  const { isComplete, toggleComplete, getExplanation, saveExplanation } = useReadingProgress(translation);
 
   // Navigation
   const { goPrev, goNext, resetToToday } = useDateNavigation(selectedDate, setSelectedDate, getLocalDate);
@@ -185,6 +185,8 @@ export default function BibleReadingApp() {
             toggleComplete={toggleComplete}
             translation={translation}
             selectedYear={selectedDate.getFullYear()}
+            getExplanation={getExplanation}
+            saveExplanation={saveExplanation}
           />
         )}
 

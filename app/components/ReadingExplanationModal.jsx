@@ -4,7 +4,9 @@ import { X, Loader2, Info } from 'lucide-react';
 export default function ReadingExplanationModal({ 
   reference, 
   isOpen, 
-  onClose 
+  onClose,
+  getExplanation,
+  saveExplanation
 }) {
   const [explanation, setExplanation] = useState('');
   const [loading, setLoading] = useState(false);
@@ -12,7 +14,13 @@ export default function ReadingExplanationModal({
 
   React.useEffect(() => {
     if (isOpen && !explanation && !loading) {
-      fetchExplanation();
+      // Check cache first
+      const cached = getExplanation(reference);
+      if (cached) {
+        setExplanation(cached);
+      } else {
+        fetchExplanation();
+      }
     }
   }, [isOpen]);
 
@@ -31,6 +39,9 @@ export default function ReadingExplanationModal({
       
       const data = await response.json();
       setExplanation(data.explanation);
+      
+      // Save to cache
+      saveExplanation(reference, data.explanation);
     } catch (err) {
       setError('Unable to load explanation. Please try again.');
       console.error(err);
@@ -38,6 +49,14 @@ export default function ReadingExplanationModal({
       setLoading(false);
     }
   };
+
+  // Reset state when modal closes
+  React.useEffect(() => {
+    if (!isOpen) {
+      setExplanation('');
+      setError(null);
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 

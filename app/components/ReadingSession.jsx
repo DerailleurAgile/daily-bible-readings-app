@@ -1,17 +1,16 @@
 'use client';
 
-// app/components/ReadingSession.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Sun,
   Moon,
-  Book,
   BookOpenCheck,
   ExternalLink,
-  RotateCcw
+  RotateCcw,
+  Info
 } from 'lucide-react';
-import OpenBookWithCross from './OpenBookWithCross';
 import ClosedBookWithCross from './ClosedBookWithCross';
+import ReadingExplanationModal from './ReadingExplanationModal';
 
 
 // Converts a reading record into a Bible.com URL based on translation
@@ -79,7 +78,9 @@ export default function ReadingSession({
   isComplete,
   toggleComplete,
   translation,
-  selectedYear
+  selectedYear,
+  getExplanation,
+  saveExplanation
 }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedReference, setSelectedReference] = useState('');
@@ -188,6 +189,8 @@ export default function ReadingSession({
         reference={selectedReference}
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
+        getExplanation={getExplanation}
+        saveExplanation={saveExplanation}
       />
     </>
   );
