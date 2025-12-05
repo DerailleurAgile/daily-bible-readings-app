@@ -3,6 +3,7 @@
 // This hook manages reading progress with activity dates, including
 // checking completion and toggling readings, and persists data to localStorage,
 // as well as logging activity to a backend API.
+
 import { useEffect, useState } from "react";
 import { ensureUserSession } from "@/lib/supabaseClient";
 
@@ -22,12 +23,10 @@ function getDeviceId() {
   return id;
 }
 
-// Get today's date in YYYY-MM-DD format
 function getTodayDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
-// Clean up old activity data (keep last 90 days)
 function cleanOldActivityData(data) {
   const today = new Date();
   const ninetyDaysAgo = new Date(today);
@@ -93,6 +92,7 @@ async function logReadingActivity({
 
 export default function useReadingProgress(translation) {
   const [completedReadings, setCompletedReadings] = useState({});
+  const [explanations, setExplanations] = useState({});
 
   // Load data on mount
   useEffect(() => {
@@ -100,11 +100,9 @@ export default function useReadingProgress(translation) {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
-        // Clean old data on load
         const cleaned = cleanOldActivityData(parsed);
         setCompletedReadings(cleaned);
 
-        // Save cleaned data back if anything was removed
         if (Object.keys(cleaned).length !== Object.keys(parsed).length) {
           localStorage.setItem("readingProgress", JSON.stringify(cleaned));
         }
@@ -112,9 +110,19 @@ export default function useReadingProgress(translation) {
         console.error("Error loading reading progress:", err);
       }
     }
+
+    // Load explanations
+    const savedExplanations = localStorage.getItem("readingExplanations");
+    if (savedExplanations) {
+      try {
+        setExplanations(JSON.parse(savedExplanations));
+      } catch (err) {
+        console.error("Error loading explanations:", err);
+      }
+    }
   }, []);
 
-  // Save to localStorage on changes
+  // Save completedReadings to localStorage
   useEffect(() => {
     if (Object.keys(completedReadings).length > 0) {
       localStorage.setItem(
@@ -124,7 +132,13 @@ export default function useReadingProgress(translation) {
     }
   }, [completedReadings]);
 
-  // Check if a reading is complete (checks activity dates from current year only)
+  // Save explanations to localStorage
+  useEffect(() => {
+    if (Object.keys(explanations).length > 0) {
+      localStorage.setItem("readingExplanations", JSON.stringify(explanations));
+    }
+  }, [explanations]);
+
   const isComplete = (
     lectionary_date,
     session,
@@ -151,12 +165,10 @@ export default function useReadingProgress(translation) {
     const alreadyComplete = isComplete(lectionary_date, session, type, ref);
     const today = getTodayDate();
 
-    // Update local state
     setCompletedReadings((prev) => {
       const updated = structuredClone(prev);
 
       if (alreadyComplete) {
-        // Remove from wherever it exists
         for (const activityDate in updated) {
           const readings =
             updated[activityDate]?.[lectionary_date]?.[session]?.[type];
@@ -165,7 +177,6 @@ export default function useReadingProgress(translation) {
             if (idx >= 0) {
               readings.splice(idx, 1);
 
-              // Clean up empty objects
               if (readings.length === 0) {
                 delete updated[activityDate][lectionary_date][session][type];
               }
@@ -189,7 +200,6 @@ export default function useReadingProgress(translation) {
           }
         }
       } else {
-        // Add to today's activity
         updated[today] ||= {};
         updated[today][lectionary_date] ||= {};
         updated[today][lectionary_date][session] ||= {};
@@ -212,5 +222,24 @@ export default function useReadingProgress(translation) {
     });
   };
 
-  return { completedReadings, isComplete, toggleComplete };
+  // Get cached explanation for a reference
+  const getExplanation = (reference) => {
+    return explanations[reference] || null;
+  };
+
+  // Save explanation to cache
+  const saveExplanation = (reference, explanation) => {
+    setExplanations((prev) => ({
+      ...prev,
+      [reference]: explanation,
+    }));
+  };
+
+  return {
+    completedReadings,
+    isComplete,
+    toggleComplete,
+    getExplanation,
+    saveExplanation,
+  };
 }
