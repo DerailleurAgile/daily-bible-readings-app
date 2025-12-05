@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Loader2, Info } from 'lucide-react';
+import { Loader2, Info } from 'lucide-react';
 
 export default function ReadingExplanationModal({ 
   reference, 
@@ -61,30 +61,36 @@ export default function ReadingExplanationModal({
   if (!isOpen) return null;
 
   return (
-    <div 
-      className="fixed inset-0 bg-black/70 flex items-center justify-center p-4 z-50"
+    <div
+      className="fixed inset-0 bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
       onClick={onClose}
     >
-      <div 
-        className="bg-gray-900 rounded-lg max-w-2xl w-full max-h-[80vh] overflow-hidden flex flex-col"
+      {/* Centered modal */}
+      <div
         onClick={(e) => e.stopPropagation()}
+        className={`w-[600px] max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg 
+        transform transition-all duration-300 shadow-2xl
+        ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
       >
+        {/* Close button */}
+        <button
+          onClick={onClose}
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 z-10"
+          aria-label="Close explanation"
+        >
+          ✕
+        </button>
+
         {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
+        <div className="p-6 border-b border-gray-700">
           <h2 className="text-lg font-semibold text-gray-100 flex items-center gap-2">
             <Info className="w-5 h-5 text-blue-400" />
             Understanding {reference}
           </h2>
-          <button
-            onClick={onClose}
-            className="p-1 hover:bg-gray-800 rounded transition-colors"
-          >
-            <X className="w-5 h-5 text-gray-400" />
-          </button>
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto flex-1">
+        <div className="p-6 overflow-y-auto max-h-[60vh]">
           {loading && (
             <div className="flex flex-col items-center justify-center py-12">
               <Loader2 className="w-8 h-8 text-blue-400 animate-spin mb-3" />
@@ -99,22 +105,10 @@ export default function ReadingExplanationModal({
           )}
 
           {explanation && !loading && (
-            <div className="prose prose-invert max-w-none">
-              <div className="text-gray-200 leading-relaxed whitespace-pre-line">
-                {explanation}
-              </div>
+            <div className="text-gray-200 leading-relaxed whitespace-pre-line" style={{ fontStyle: 'italic' }}>
+              {explanation}
             </div>
           )}
-        </div>
-
-        {/* Footer */}
-        <div className="p-4 border-t border-gray-700">
-          <button
-            onClick={onClose}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors font-medium"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>

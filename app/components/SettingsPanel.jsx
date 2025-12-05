@@ -198,6 +198,7 @@ export default function SettingsPanel({
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
                 <li>Upgraded to Next.js 16.0.7</li>
+                <li>Get AI-enhanced explanations for each reading by clicking the ? button. Powered by Google Gemini 2.5 Flash!</li>
               </ul>
             </div>
 

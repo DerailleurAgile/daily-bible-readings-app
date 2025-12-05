@@ -7,7 +7,8 @@ import {
   BookOpenCheck,
   ExternalLink,
   RotateCcw,
-  Info
+  Info,
+  MessageCircleQuestionMark
 } from 'lucide-react';
 import ClosedBookWithCross from './ClosedBookWithCross';
 import ReadingExplanationModal from './ReadingExplanationModal';
@@ -19,7 +20,7 @@ function getBibleUrl(reading, translation) {
     'ESV': '59',
     'NIV': '111',
     'KJV': '1',
-    'NRSVUE': '3523'
+    'NRSVUE': '3523',
   };
 
   const abbrevMap = {
@@ -146,7 +147,8 @@ export default function ReadingSession({
           className="p-3 bg-gray-800 hover:bg-blue-900/50 rounded-lg transition-colors group"
           aria-label={`Explain ${reading.reference}`}
         >
-          <Info className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
+          {/* <Info className="w-5 h-5 text-gray-400 group-hover:text-blue-400" /> */}
+          <MessageCircleQuestionMark className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
         </button>
       </div>
     );

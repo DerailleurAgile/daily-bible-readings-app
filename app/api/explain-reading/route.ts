@@ -30,16 +30,16 @@ export async function POST(req: Request) {
 
     // const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
-    const prompt = `Provide a succinct, mobile-friendly devotional explanation of ${reference} for the lay Christian reader.
+    const prompt = `Provide a concise, devotional explanation of ${reference} for a general Canadian Anglican reader.
+Write 2–3 short paragraphs with no headers, bullets, or formatting.
 
-Include:
-1. Historical/literary context (1-2 sentences)
-2. Key themes and spiritual significance (2-3 sentences)
-3. How this passage speaks to daily Christian life (1-2 sentences)
+Paragraph 1: Give a brief historical or literary context in one or two sentences. For Psalms, note the type of psalm or its place in Israel’s worship life. For any other reading, note the setting or purpose of the passage within its book.
 
-Keep the total response under 200 words and write in a warm, accessible tone suitable for morning or evening prayer reflection.
+Paragraph 2 (or 2–3): Explain the key spiritual themes and what the passage shows about God’s character, His work in the world, and His relationship with His people, using two or three sentences.
 
-Do not include markdown formatting or headers - just clear paragraphs.`;
+Final paragraph: Offer a gentle reflection on how this passage can guide or encourage a believer in their daily Christian life today, in one or two sentences using a warm, pastoral tone.
+
+Keep the entire response under 200 words and use plain text only.`;
 
     console.log("Sending request to Gemini...");
     const result = await model.generateContent(prompt);
