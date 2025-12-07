@@ -154,7 +154,8 @@ export default function BibleReadingApp() {
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
       <div className="max-w-2xl mx-auto space-y-6 relative">
-        <AppHeader 
+        <AppHeader
+          dateKey={displayDateKey}  
           onFeedbackClick={() => setShowFeedback(true)} 
           onSettingsClick={() => setSettingsOpen(true)}
         />

@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import ClosedBookWithCross from './ClosedBookWithCross';
 import ReadingExplanationModal from './ReadingExplanationModal';
+import { formatDateKey } from '../../utils/dateUtils';
 
 
 // Converts a reading record into a Bible.com URL based on translation
@@ -61,15 +62,6 @@ function getBibleUrl(reading, translation) {
   const verses = reading.verses ? `.${reading.verses}` : '';
 
   return `https://www.bible.com/bible/${version}/${abbrev}.${reading.chapter}${verses}.${translation}`;
-}
-
-// Format dateKey (MM-DD) to display format
-function formatDateKey(dateKey) {
-  const [month, day] = dateKey.split('-');
-  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
-                      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const monthName = monthNames[parseInt(month, 10) - 1];
-  return `${monthName} ${parseInt(day, 10)}`;
 }
 
 export default function ReadingSession({
@@ -160,7 +152,7 @@ export default function ReadingSession({
         <div className="flex items-center gap-2 mb-4">
           {icon}
           <h2 className="text-xl font-semibold leading-none m-0">
-            {label} Readings for {formattedDate}
+            {label} Readings
           </h2>
         </div>
 

@@ -1,7 +1,8 @@
 // app/components/AppHeader.jsx
 import { Church, Menu } from 'lucide-react';
+import { formatDateKey } from '../../utils/dateUtils'
 
-export default function AppHeader({ onFeedbackClick, onSettingsClick }) {
+export default function AppHeader({ dateKey, onFeedbackClick, onSettingsClick }) {
   return (
     <div className="relative text-center space-y-2">
 
@@ -20,12 +21,17 @@ export default function AppHeader({ onFeedbackClick, onSettingsClick }) {
       <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
       <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025)</p>
 
-      <button
+      {/* <button
         onClick={onFeedbackClick}
         className="text-blue-400 underline text-sm"
       >
         What do you think of the app?
-      </button>
+      </button> */}
+      <h2 className="text-xl font-bold text-gray-100 flex items-center justify-center gap-3">
+        <span className="text-gray-500 text-2xl transform scale-x-[-1]">〜</span>
+        {formatDateKey(dateKey)}
+        <span className="text-gray-500 text-2xl">〜</span>
+      </h2>
     </div>
   );
 }
