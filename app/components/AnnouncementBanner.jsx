@@ -1,26 +1,25 @@
 // components/AnnouncementBanner.jsx
-import { Megaphone, X } from 'lucide-react';
+import { X } from 'lucide-react';
 
 export default function AnnouncementBanner({ announcement, onDismiss }) {
   if (!announcement) return null;
 
   return (
-    <div className="bg-blue-600/10 border border-blue-500/50 p-3 rounded-lg mb-4 text-blue-100 flex justify-between items-center animate-in slide-in-from-top-2 duration-300">
-      <div className="flex items-center gap-3 flex-1">
-        <div className="bg-blue-500/20 p-1.5 rounded-full shrink-0">
-          <Megaphone size={16} className="text-blue-400" />
-        </div>
-        <div className="text-sm">
-          <span className="font-bold text-blue-300 mr-1">
-            {announcement.title}:
-          </span>
-          {announcement.message}
-        </div>
+    <div className="relative bg-blue-600/10 border border-blue-500/50 p-3 rounded-lg mb-4 text-blue-100 flex items-center justify-center animate-in slide-in-from-top-2 duration-300">
+      
+      {/* Centered Content */}
+      <div className="text-sm px-8 text-center leading-relaxed">
+        <span className="font-bold text-blue-300">
+          📢 {announcement.title}
+        </span>
+        {' '}
+        <span>{announcement.message}</span>
       </div>
       
+      {/* Dismiss Button - Positioned absolutely to not interfere with centering */}
       <button 
         onClick={onDismiss} 
-        className="text-blue-400/60 hover:text-blue-300 hover:bg-blue-500/10 p-1 rounded-md transition-all ml-2"
+        className="absolute right-2 text-blue-400/60 hover:text-blue-300 hover:bg-blue-500/10 p-1 rounded-md transition-all"
         aria-label="Dismiss announcement"
       >
         <X size={18} />
