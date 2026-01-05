@@ -19,7 +19,7 @@ export default function AppHeader({ dateKey, onFeedbackClick, onSettingsClick })
       <Church className="w-10 h-10 mx-auto text-blue-400" />
 
       <h1 className="text-3xl font-bold text-gray-100">Daily Prayer Readings</h1>
-      <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025)</p>
+      <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025/26)</p>
 
       {/* <button
         onClick={onFeedbackClick}

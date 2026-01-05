@@ -6,9 +6,10 @@ export default function useReadingsForMonth(month) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Version in your monthly JSON files
-  const version = 1;
-
+  // Lectionary JSON version
+  // This should be incremented whenever the Lectionary data changes so
+  // a new fetch is forced.
+  const version = 3;
   const storageKey = `readings_${month}_v${version}`;
 
   useEffect(() => {
