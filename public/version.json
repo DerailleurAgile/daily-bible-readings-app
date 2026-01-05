@@ -1,3 +1,9 @@
 {
-  "version": "0.8.1 Alpha"
+  "name": "daily-bible-readings-app",
+  "version": "0.8.3 Alpha",
+  "announcement": {
+    "id": "pwa-onboarding-2026",
+    "title": "Big Update: We're going mobile!",
+    "message": "Soon you'll be able to install this app directly on your home screen for offline reading. Stay tuned for the 'Install' button!"
+  }
 }

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 export default function useVersionCheck({ checkInterval = 60000 } = {}) {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [latestVersion, setLatestVersion] = useState(null);
+  const [announcement, setAnnouncement] = useState(null);
 
   const currentVersion = process.env.NEXT_PUBLIC_APP_VERSION?.trim();
 
@@ -15,30 +16,42 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
         if (!res.ok) return;
 
         const data = await res.json();
-        // const serverVersion = data.version?.trim();
         const serverVersion = process.env.NEXT_PUBLIC_TEST_LATEST_VERSION?.trim() || data.version?.trim();
 
         setLatestVersion(serverVersion);
         setUpdateAvailable(serverVersion !== currentVersion);
 
-        console.log("ENV Current version:", process.env.NEXT_PUBLIC_APP_VERSION);
-        console.log("ENV Test latest version:", process.env.NEXT_PUBLIC_TEST_LATEST_VERSION);
+        // --- NEW ANNOUNCEMENT LOGIC ---
+        if (data.announcement) {
+          const dismissedId = localStorage.getItem('dismissed_announcement_id');
+          // Only show if the ID in version.json is different from the dismissed one
+          if (dismissedId !== data.announcement.id) {
+            setAnnouncement(data.announcement);
+          } else {
+            setAnnouncement(null);
+          }
+        } else {
+          setAnnouncement(null);
+        }
+        // ------------------------------
 
-        console.log('serverVersion:', serverVersion);
-        console.log('currentVersion:', currentVersion);
-        console.log('updateAvailable:', serverVersion !== currentVersion);
       } catch (err) {
         console.warn('Version check failed:', err);
       }
     }
 
-    // run immediately
     check();
-
-    // poll
     const interval = setInterval(check, checkInterval);
     return () => clearInterval(interval);
   }, [checkInterval, currentVersion]);
 
-  return { updateAvailable, latestVersion };
+  // Helper to hide the announcement manually
+  const dismissAnnouncement = () => {
+    if (announcement?.id) {
+      localStorage.setItem('dismissed_announcement_id', announcement.id);
+      setAnnouncement(null);
+    }
+  };
+
+  return { updateAvailable, latestVersion, announcement, dismissAnnouncement };
 }

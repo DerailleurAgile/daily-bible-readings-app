@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import packageJson from '../../package.json';
 
 // Hooks
-import useAppVersionCheck from '../hooks/useAppVersionCheck';
+import useAppVersionCheck from '../hooks/useAppVersionCheck'; // Updated to return announcement
 import useDateNavigation from '../hooks/useDateNavigation';
 import useKeyboardNavigation from '../hooks/useKeyboardNavigation';
 import useMobilePlatform from '../hooks/useMobilePlatform';
@@ -22,6 +22,7 @@ import SessionSelector from './SessionSelector';
 import SettingsPanel from './SettingsPanel';
 import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
+import AnnouncementBanner from './AnnouncementBanner'; // New Component
 import SlideOver from './SlideOver';
 
 export function VersionTag() {
@@ -35,7 +36,13 @@ export default function BibleReadingApp() {
     return new Date(now.getFullYear(), now.getMonth(), now.getDate());
   };
 
-  const { updateAvailable } = useAppVersionCheck();
+  // --- VERSION & ANNOUNCEMENT LOGIC ---
+  const { 
+    updateAvailable, 
+    announcement, 
+    dismissAnnouncement 
+  } = useAppVersionCheck();
+
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
@@ -150,7 +157,15 @@ export default function BibleReadingApp() {
   // Main render
   return (
     <div className="min-h-screen bg-gray-950 text-gray-100 p-6 pb-24">
+      {/* 1. System Updates (Yellow) */}
       <UpdateBanner updateAvailable={updateAvailable} />
+
+      {/* 2. Feature Announcements (Blue) */}
+      <AnnouncementBanner 
+        announcement={announcement} 
+        onDismiss={dismissAnnouncement} 
+      />
+
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
       <div className="max-w-2xl mx-auto space-y-6 relative">
@@ -171,6 +186,7 @@ export default function BibleReadingApp() {
             setSettingsOpen={setSettingsOpen}
           />
         </SlideOver>
+        
         <SessionSelector
           displayReadings={displayReadings}
           activeSession={activeSession}
