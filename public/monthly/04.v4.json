@@ -81,7 +81,7 @@
         {
           "reference": "2 Corinthians 2:1-4",
           "book": "2 Corinthians",
-          "chapter": "1",
+          "chapter": "2",
           "verses": "1-4"
         }
       ]
@@ -111,7 +111,14 @@
       ]
     },
     "PM": {
-      "psalms": [],
+      "psalms": [
+        {
+          "reference": "Psalm 89:1-25",
+          "book": "Psalm",
+          "chapter": "89",
+          "verses": "1-25"
+        }
+      ],
       "lesson": [
         {
           "reference": "2 Corinthians 2:5-17",

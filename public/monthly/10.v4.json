@@ -141,7 +141,14 @@
       ]
     },
     "PM": {
-      "psalms": [],
+      "psalms": [
+        {
+          "reference": "Psalm 89:1-25",
+          "book": "Psalm",
+          "chapter": "89",
+          "verses": "1-25"
+        }
+      ],
       "lesson": [
         {
           "reference": "1 Peter 3:8-12",
@@ -154,7 +161,14 @@
   },
   "10-05": {
     "AM": {
-      "psalms": [],
+      "psalms": [
+        {
+          "reference": "Psalm 89:26-52",
+          "book": "Psalm",
+          "chapter": "89",
+          "verses": "26-52"
+        }
+      ],
       "lesson": [
         {
           "reference": "Luke 19:11-27",

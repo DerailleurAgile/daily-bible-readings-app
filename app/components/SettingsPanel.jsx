@@ -197,8 +197,9 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li>Upgraded to Next.js 16.0.7</li>
-                <li>Get AI-enhanced explanations for each reading by clicking the ? button. Powered by Google Gemini 2.5 Flash!</li>
+                <li>Updated app sub-title to reflect using 2025/26 St. Paul's lectionary.</li>
+                <li>Added announcements banner feature.</li>
+                <li>Fixed oodles of errors in the lectionary files (now v4).</li>
               </ul>
             </div>
 

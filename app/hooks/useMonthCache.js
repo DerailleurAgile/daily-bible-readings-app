@@ -1,6 +1,7 @@
+// app/hooks/useMonthCache.js
 import { useState, useEffect } from 'react';
 
-const CURRENT_VERSION = 'v3'; // Yes, it's hardcoded
+const CURRENT_VERSION = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v4';
 
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
@@ -15,6 +16,7 @@ export default function useMonthCache(currentMonth, monthReadings) {
         const month = String(i).padStart(2, '0');
         localStorage.removeItem(`readings_${month}_v1`);
         localStorage.removeItem(`readings_${month}_v2`);
+        localStorage.removeItem(`readings_${month}_v3`);
         // Future revisions here...
         // It's not the best solution, but it works for now
       }

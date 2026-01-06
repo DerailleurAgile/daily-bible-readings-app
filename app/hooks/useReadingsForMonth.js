@@ -9,8 +9,8 @@ export default function useReadingsForMonth(month) {
   // Lectionary JSON version
   // This should be incremented whenever the Lectionary data changes so
   // a new fetch is forced.
-  const version = 3;
-  const storageKey = `readings_${month}_v${version}`;
+  const version = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v4';
+  const storageKey = `readings_${month}_${version}`;
 
   useEffect(() => {
     let cancelled = false;
@@ -24,7 +24,7 @@ export default function useReadingsForMonth(month) {
       }
 
       try {
-        const res = await fetch(`/monthly/${m}.v${version}.json`);
+        const res = await fetch(`/monthly/${m}.${version}.json`);
         if (!res.ok) throw new Error('Failed to load readings');
         const data = await res.json();
         if (!cancelled) {
