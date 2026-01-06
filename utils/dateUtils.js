@@ -4,5 +4,6 @@ export function formatDateKey(dateKey) {
   const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 
                       'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const monthName = monthNames[parseInt(month, 10) - 1];
-  return `${monthName} ${parseInt(day, 10)}`;
+  const year = new Date().getFullYear();
+  return `${monthName} ${parseInt(day, 10)}, ${year}`;
 }

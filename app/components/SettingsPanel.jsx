@@ -187,7 +187,7 @@ export default function SettingsPanel({
             </h3>
 
             <p className="text-sm text-gray-300 text-center mb-4">
-              St. Paul's Bloor Street Anglican Church Lectionary (2025)
+              St. Paul's Bloor Street<br/>Lectionary (2025/26) {process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v4'}
               <br />
               <span className="text-xs text-amber-300">
                 Version {packageJson.version}
@@ -204,7 +204,7 @@ export default function SettingsPanel({
             </div>
 
             <div className="text-center text-xs text-gray-500">
-              © 2025 Chris R. Chapman
+              © {new Date().getFullYear()} Chris R. Chapman
             </div>
 
             {/* Share section */}
