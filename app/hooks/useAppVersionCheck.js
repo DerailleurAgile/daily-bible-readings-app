@@ -1,13 +1,15 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { version as bundledVersion } from '../../package.json';
 
 export default function useVersionCheck({ checkInterval = 60000 } = {}) {
   const [updateAvailable, setUpdateAvailable] = useState(false);
   const [latestVersion, setLatestVersion] = useState(null);
   const [announcement, setAnnouncement] = useState(null);
 
-  const currentVersion = process.env.NEXT_PUBLIC_APP_VERSION?.trim();
+  // currentVersion is baked into the JS bundle at build time
+  const currentVersion = bundledVersion.trim();
 
   useEffect(() => {
     async function check() {
@@ -16,15 +18,25 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
         if (!res.ok) return;
 
         const data = await res.json();
-        const serverVersion = process.env.NEXT_PUBLIC_TEST_LATEST_VERSION?.trim() || data.version?.trim();
+        
+        // Use Test Var in Dev, otherwise use server JSON
+        const serverVersion = (process.env.NODE_ENV === 'development' && process.env.NEXT_PUBLIC_TEST_LATEST_VERSION) 
+          ? process.env.NEXT_PUBLIC_TEST_LATEST_VERSION.trim() 
+          : data.version?.trim();
+
+        const isOutdated = serverVersion !== currentVersion;
 
         setLatestVersion(serverVersion);
-        setUpdateAvailable(serverVersion !== currentVersion);
+        setUpdateAvailable(isOutdated);
 
-        // --- NEW ANNOUNCEMENT LOGIC ---
-        if (data.announcement) {
+        // --- ENFORCED LOGIC SEQUENCE ---
+        // If an update is needed, suppress the announcement (Step 1)
+        if (isOutdated) {
+          setAnnouncement(null);
+        } 
+        // If app is up-to-date, check for announcement (Step 3)
+        else if (data.announcement) {
           const dismissedId = localStorage.getItem('dismissed_announcement_id');
-          // Only show if the ID in version.json is different from the dismissed one
           if (dismissedId !== data.announcement.id) {
             setAnnouncement(data.announcement);
           } else {
@@ -33,8 +45,6 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
         } else {
           setAnnouncement(null);
         }
-        // ------------------------------
-
       } catch (err) {
         console.warn('Version check failed:', err);
       }
@@ -45,7 +55,6 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
     return () => clearInterval(interval);
   }, [checkInterval, currentVersion]);
 
-  // Helper to hide the announcement manually
   const dismissAnnouncement = () => {
     if (announcement?.id) {
       localStorage.setItem('dismissed_announcement_id', announcement.id);

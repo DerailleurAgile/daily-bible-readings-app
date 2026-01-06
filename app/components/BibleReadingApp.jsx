@@ -161,7 +161,7 @@ export default function BibleReadingApp() {
       <UpdateBanner updateAvailable={updateAvailable} />
 
       {/* 2. Feature Announcements (Blue) */}
-      {!updateAvailable && (
+      {!updateAvailable && announcement && (
         <AnnouncementBanner 
           announcement={announcement} 
            onDismiss={dismissAnnouncement} 
