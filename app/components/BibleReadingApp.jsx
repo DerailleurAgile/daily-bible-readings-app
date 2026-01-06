@@ -161,10 +161,13 @@ export default function BibleReadingApp() {
       <UpdateBanner updateAvailable={updateAvailable} />
 
       {/* 2. Feature Announcements (Blue) */}
-      <AnnouncementBanner 
-        announcement={announcement} 
-        onDismiss={dismissAnnouncement} 
-      />
+      {!updateAvailable && (
+        <AnnouncementBanner 
+          announcement={announcement} 
+           onDismiss={dismissAnnouncement} 
+        />
+        )
+      }
 
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
