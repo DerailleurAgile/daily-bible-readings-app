@@ -51,6 +51,17 @@ export default function SettingsPanel({
     }
   };
 
+  // NEW! Handle "Install to Home Screen" click NEW!
+  const handleReInstallClick = () => {
+    // Clear the dismiss flag so the prompt can show again
+    localStorage.removeItem('pwa-install-dismissed');
+    
+    // Refresh the page to re-trigger beforeinstallprompt event
+    window.location.reload();
+    
+    setSettingsOpen(false);
+  };
+
   // Auto-hide tooltip after 5 seconds
   useEffect(() => {
     if (showTooltip) {
@@ -161,6 +172,15 @@ export default function SettingsPanel({
           {deviceId}
         </code>
       </div>
+
+      {/* New: Install to Home Screen button */}
+      <button
+        onClick={handleReInstallClick}
+        className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+      >
+        <Smartphone className="w-5 h-5" />
+        Install to Home Screen
+      </button>
 
       {/* About App button */}
       <button

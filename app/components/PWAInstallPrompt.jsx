@@ -92,7 +92,7 @@ export default function PWAInstallPrompt() {
         {/* Android/Desktop: Native install prompt */}
         {(platform === 'android' || platform === 'desktop') && deferredPrompt && (
           <div className="flex items-center gap-4">
-            <Download className="w-8 h-8 flex-shrink-0" />
+            <Download className="w-8 h-8 shrink-0" />
             <div className="flex-1">
               <h3 className="font-semibold text-lg">Install Daily Prayer Readings</h3>
               <p className="text-sm text-blue-100">
@@ -112,7 +112,7 @@ export default function PWAInstallPrompt() {
         {platform === 'ios' && (
           <div className="space-y-3">
             <div className="flex items-start gap-3">
-              <Share className="w-6 h-6 flex-shrink-0 mt-1" />
+              <Share className="w-6 h-6 shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-lg mb-1">Install on iPhone/iPad</h3>
                 <ol className="text-sm text-blue-100 space-y-1 list-decimal list-inside">
