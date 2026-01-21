@@ -8,6 +8,9 @@ import withPWA from 'next-pwa';
 const nextConfig: NextConfig = {
   compress: true,
 
+  // Silence TurboPack warnings...
+  turbopack: {},
+
   env: {
     NEXT_PUBLIC_APP_VERSION: version.trim(),
   },

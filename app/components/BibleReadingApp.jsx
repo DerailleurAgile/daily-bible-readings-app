@@ -173,7 +173,8 @@ export default function BibleReadingApp() {
 
       <div className="max-w-2xl mx-auto space-y-6 relative">
         <AppHeader
-          dateKey={displayDateKey}  
+          dateKey={displayDateKey}
+          selectedDate={selectedDate} // NEW!  
           onFeedbackClick={() => setShowFeedback(true)} 
           onSettingsClick={() => setSettingsOpen(true)}
         />
