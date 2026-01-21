@@ -51,6 +51,17 @@ export default function SettingsPanel({
     }
   };
 
+  // NEW! Handle "Install to Home Screen" click NEW!
+  const handleReInstallClick = () => {
+    // Clear the dismiss flag so the prompt can show again
+    localStorage.removeItem('pwa-install-dismissed');
+    
+    // Refresh the page to re-trigger beforeinstallprompt event
+    window.location.reload();
+    
+    setSettingsOpen(false);
+  };
+
   // Auto-hide tooltip after 5 seconds
   useEffect(() => {
     if (showTooltip) {
@@ -162,6 +173,15 @@ export default function SettingsPanel({
         </code>
       </div>
 
+      {/* New: Install to Home Screen button */}
+      <button
+        onClick={handleReInstallClick}
+        className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-4 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+      >
+        <Smartphone className="w-5 h-5" />
+        Install to Home Screen
+      </button>
+
       {/* About App button */}
       <button
         className="flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300"
@@ -197,9 +217,9 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li>Updated app sub-title to reflect using 2025/26 St. Paul's lectionary.</li>
-                <li>Added announcements banner feature.</li>
-                <li>Fixed oodles of errors in the lectionary files (now v4).</li>
+                <li>Migrated to PWA! Try installing the app on your mobile device for a better experience.</li>
+                <li>Fixed date to show correct year in header when navigating readings across years.</li>
+                <li>Added dismissable Install button for easier PWA installation.</li>
               </ul>
             </div>
 

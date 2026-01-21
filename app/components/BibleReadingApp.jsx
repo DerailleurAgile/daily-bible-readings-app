@@ -24,6 +24,7 @@ import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
 import AnnouncementBanner from './AnnouncementBanner'; // New Component
 import SlideOver from './SlideOver';
+import PWAInstallPrompt from './PWAInstallPrompt';
 
 export function VersionTag() {
   return <span>v {packageJson.version}</span>;
@@ -169,11 +170,14 @@ export default function BibleReadingApp() {
         )
       }
 
+      <PWAInstallPrompt />
+
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
       <div className="max-w-2xl mx-auto space-y-6 relative">
         <AppHeader
-          dateKey={displayDateKey}  
+          dateKey={displayDateKey}
+          selectedDate={selectedDate} // NEW!  
           onFeedbackClick={() => setShowFeedback(true)} 
           onSettingsClick={() => setSettingsOpen(true)}
         />
