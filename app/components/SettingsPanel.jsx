@@ -197,9 +197,9 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li>Updated app sub-title to reflect using 2025/26 St. Paul's lectionary.</li>
-                <li>Added announcements banner feature.</li>
-                <li>Fixed oodles of errors in the lectionary files (now v4).</li>
+                <li>Migrated to PWA! Try installing the app on your mobile device for a better experience.</li>
+                <li>Fixed date to show correct year in header when navigating readings across years.</li>
+                <li>Added dismissable Install button for easier PWA installation.</li>
               </ul>
             </div>
 

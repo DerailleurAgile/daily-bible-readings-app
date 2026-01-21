@@ -24,6 +24,7 @@ import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
 import AnnouncementBanner from './AnnouncementBanner'; // New Component
 import SlideOver from './SlideOver';
+import PWAInstallPrompt from './PWAInstallPrompt';
 
 export function VersionTag() {
   return <span>v {packageJson.version}</span>;
@@ -168,6 +169,8 @@ export default function BibleReadingApp() {
         />
         )
       }
+
+      <PWAInstallPrompt />
 
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
