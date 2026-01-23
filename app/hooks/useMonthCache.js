@@ -1,7 +1,7 @@
 // app/hooks/useMonthCache.js
 import { useState, useEffect } from 'react';
 
-const CURRENT_VERSION = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v4';
+const CURRENT_VERSION = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v5';
 
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
@@ -17,6 +17,7 @@ export default function useMonthCache(currentMonth, monthReadings) {
         localStorage.removeItem(`readings_${month}_v1`);
         localStorage.removeItem(`readings_${month}_v2`);
         localStorage.removeItem(`readings_${month}_v3`);
+        localStorage.removeItem(`readings_${month}_v4`);
         // Future revisions here...
         // It's not the best solution, but it works for now
       }

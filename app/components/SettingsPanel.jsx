@@ -207,7 +207,7 @@ export default function SettingsPanel({
             </h3>
 
             <p className="text-sm text-gray-300 text-center mb-4">
-              St. Paul's Bloor Street<br/>Lectionary (2025/26) {process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v4'}
+              St. Paul's Bloor Street<br/>Lectionary (2025/26) {process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v5'}
               <br />
               <span className="text-xs text-amber-300">
                 Version {packageJson.version}
