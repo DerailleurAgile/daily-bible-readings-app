@@ -170,20 +170,29 @@ export default function ReadingSession({
 
         <div className="space-y-4 animate-fadeIn">
 
+          {/* Opening prayer divider */}
+          <div className="flex items-center gap-3 py-1">
+            <div className="flex-1 border-t border-gray-800" />
+            <button
+              onClick={() => handlePrayerClick('opening')}
+              className={`${prayerButtonClass} flex items-center gap-1.5 text-xs font-sans tracking-wide`}
+              aria-label="Opening prayer"
+              title="Opening prayer"
+            >
+              <span>🙏</span>
+              <span className="text-gray-600 hover:text-amber-400 transition-colors">
+                opening prayer
+              </span>
+            </button>
+            <div className="flex-1 border-t border-gray-800" />
+          </div>
+
           {/* Psalms */}
           <div>
             <div className="flex items-center justify-between mb-2">
               <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide">
                 Psalms
               </h3>
-              <button
-                onClick={() => handlePrayerClick('opening')}
-                className={prayerButtonClass}
-                aria-label="Opening prayer"
-                title="Opening prayer"
-              >
-                🙏
-              </button>
             </div>
             <div className="space-y-2">
               {sessionData.psalms.map((p) => renderReading(p, 'psalms'))}
@@ -196,8 +205,8 @@ export default function ReadingSession({
             <button
               onClick={() => handlePrayerClick('between')}
               className={`${prayerButtonClass} flex items-center gap-1.5 text-xs font-sans tracking-wide`}
-              aria-label="Prayer between psalms and lesson"
-              title="Prayer between psalms and lesson"
+              aria-label="Prayer after psalms, before lesson"
+              title="Prayer after psalms, before lesson"
             >
               <span>🙏</span>
               <span className="text-gray-600 hover:text-amber-400 transition-colors">
@@ -225,12 +234,12 @@ export default function ReadingSession({
             <button
               onClick={() => handlePrayerClick('closing')}
               className={`${prayerButtonClass} flex items-center gap-1.5 text-xs font-sans tracking-wide`}
-              aria-label="Closing prayers"
-              title="Closing prayers"
+              aria-label="Post-Lesson prayers"
+              title="Post-Lesson prayers"
             >
               <span>🙏</span>
               <span className="text-gray-600 hover:text-amber-400 transition-colors">
-                closing prayers
+                after lesson prayers
               </span>
             </button>
             <div className="flex-1 border-t border-gray-800" />

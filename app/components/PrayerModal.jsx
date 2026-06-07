@@ -4,8 +4,8 @@ import { Loader2 } from 'lucide-react';
 
 const POSITION_LABELS = {
   opening: 'Opening Prayer',
-  between: 'Between Psalms & Lesson',
-  closing: 'Closing Prayers',
+  between: 'After Psalm(s) and Before Lesson Prayers',
+  closing: 'Post-Lesson Prayers',
 };
 
 export default function PrayerModal({ isOpen, onClose, session, position }) {
@@ -65,7 +65,13 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[60vh]">
+        <div
+          className="p-6 overflow-y-auto max-h-[60vh]"
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#374151 transparent',
+          }}
+        >
           {loading && (
             <div className="flex flex-col items-center justify-center py-12">
               <Loader2 className="w-8 h-8 text-amber-400 animate-spin mb-3" />
@@ -115,10 +121,15 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
                 if (
                   line.trim().startsWith('Begin by') ||
                   line.trim().startsWith('Tell God') ||
+                  line.trim().startsWith('your thoughts') ||
                   line.trim().startsWith('Take time') ||
                   line.trim().startsWith('Read the') ||
+                  line.trim().startsWith('After the') ||
+                  line.trim().startsWith('After reading') ||
+                  line.trim().startsWith('Before the') ||
                   line.trim().endsWith('Then say:') ||
-                  line.trim().endsWith('say:')
+                  line.trim().endsWith('say:') ||
+                  line.trim().endsWith('say')
                 ) {
                   return (
                     <p key={i} className="text-gray-400 italic font-sans text-sm">
