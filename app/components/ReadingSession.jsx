@@ -7,11 +7,11 @@ import {
   BookOpenCheck,
   ExternalLink,
   RotateCcw,
-  Info,
   MessageCircleQuestionMark
 } from 'lucide-react';
 import ClosedBookWithCross from './ClosedBookWithCross';
 import ReadingExplanationModal from './ReadingExplanationModal';
+import PrayerModal from './PrayerModal';
 import { formatDateKey } from '../../utils/dateUtils';
 
 
@@ -75,8 +75,11 @@ export default function ReadingSession({
   getExplanation,
   saveExplanation
 }) {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [explanationModalOpen, setExplanationModalOpen] = useState(false);
   const [selectedReference, setSelectedReference] = useState('');
+
+  const [prayerModalOpen, setPrayerModalOpen] = useState(false);
+  const [prayerPosition, setPrayerPosition] = useState(null);
 
   if (!sessionData) return null;
 
@@ -91,8 +94,18 @@ export default function ReadingSession({
     e.preventDefault();
     e.stopPropagation();
     setSelectedReference(reference);
-    setModalOpen(true);
+    setExplanationModalOpen(true);
   };
+
+  const handlePrayerClick = (position) => {
+    setPrayerPosition(position);
+    setPrayerModalOpen(true);
+  };
+
+  const prayerButtonClass = `
+    p-1.5 rounded-md transition-colors text-gray-500 hover:text-amber-400
+    hover:bg-amber-900/30 text-base leading-none
+  `;
 
   const renderReading = (reading, type) => {
     const completed = isComplete(dateKey, sessionKey, type, reading.reference, selectedYear);
@@ -133,13 +146,12 @@ export default function ReadingSession({
           )}
         </a>
 
-        {/* Info Button */}
+        {/* AI Explanation Button */}
         <button
           onClick={(e) => handleInfoClick(e, reading.reference)}
           className="p-3 bg-gray-800 hover:bg-blue-900/50 rounded-lg transition-colors group"
           aria-label={`Explain ${reading.reference}`}
         >
-          {/* <Info className="w-5 h-5 text-gray-400 group-hover:text-blue-400" /> */}
           <MessageCircleQuestionMark className="w-5 h-5 text-gray-400 group-hover:text-blue-400" />
         </button>
       </div>
@@ -157,34 +169,89 @@ export default function ReadingSession({
         </div>
 
         <div className="space-y-4 animate-fadeIn">
+
           {/* Psalms */}
           <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wide">
-              Psalms
-            </h3>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide">
+                Psalms
+              </h3>
+              <button
+                onClick={() => handlePrayerClick('opening')}
+                className={prayerButtonClass}
+                aria-label="Opening prayer"
+                title="Opening prayer"
+              >
+                🙏
+              </button>
+            </div>
             <div className="space-y-2">
               {sessionData.psalms.map((p) => renderReading(p, 'psalms'))}
             </div>
           </div>
 
-          {/* Lessons */}
+          {/* Between divider */}
+          <div className="flex items-center gap-3 py-1">
+            <div className="flex-1 border-t border-gray-800" />
+            <button
+              onClick={() => handlePrayerClick('between')}
+              className={`${prayerButtonClass} flex items-center gap-1.5 text-xs font-sans tracking-wide`}
+              aria-label="Prayer between psalms and lesson"
+              title="Prayer between psalms and lesson"
+            >
+              <span>🙏</span>
+              <span className="text-gray-600 hover:text-amber-400 transition-colors">
+                after psalms, before lesson
+              </span>
+            </button>
+            <div className="flex-1 border-t border-gray-800" />
+          </div>
+
+          {/* Lesson */}
           <div>
-            <h3 className="text-sm font-medium text-gray-400 mb-2 uppercase tracking-wide">
-              Lesson
-            </h3>
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-sm font-medium text-gray-400 uppercase tracking-wide">
+                Lesson
+              </h3>
+            </div>
             <div className="space-y-2">
               {sessionData.lesson.map((l) => renderReading(l, 'lesson'))}
             </div>
           </div>
+
+          {/* Closing prayer */}
+          <div className="flex items-center gap-3 pt-2">
+            <div className="flex-1 border-t border-gray-800" />
+            <button
+              onClick={() => handlePrayerClick('closing')}
+              className={`${prayerButtonClass} flex items-center gap-1.5 text-xs font-sans tracking-wide`}
+              aria-label="Closing prayers"
+              title="Closing prayers"
+            >
+              <span>🙏</span>
+              <span className="text-gray-600 hover:text-amber-400 transition-colors">
+                closing prayers
+              </span>
+            </button>
+            <div className="flex-1 border-t border-gray-800" />
+          </div>
+
         </div>
       </div>
 
       <ReadingExplanationModal
         reference={selectedReference}
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
+        isOpen={explanationModalOpen}
+        onClose={() => setExplanationModalOpen(false)}
         getExplanation={getExplanation}
         saveExplanation={saveExplanation}
+      />
+
+      <PrayerModal
+        isOpen={prayerModalOpen}
+        onClose={() => setPrayerModalOpen(false)}
+        session={sessionKey}
+        position={prayerPosition}
       />
     </>
   );
