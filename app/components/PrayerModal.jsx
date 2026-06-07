@@ -7,7 +7,7 @@ const getPositionLabel = (position, session) => {
     return session === 'AM' ? 'Morning Prayer' : 'Evening Prayer';
   }
   return {
-    between: 'After Psalm(s) and Before Lesson Prayers',
+    between: 'Prayers After Psalm(s), Before Lesson',
     closing: 'Post-Lesson Prayers',
   }[position] ?? 'Prayer';
 };
@@ -121,6 +121,16 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
                     </p>
                   );
                 }
+                // Intercession day lines (Sunday: / Monday: etc.)
+                if (/^(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday):/.test(line.trim())) {
+                  const colon = line.indexOf(':');
+                  return (
+                    <p key={i} className="text-gray-300 font-sans text-sm pl-2 border-l-2 border-gray-700 my-1">
+                      <span className="font-semibold text-gray-200">{line.slice(0, colon + 1)}</span>
+                      {line.slice(colon + 1)}
+                    </p>
+                  );
+                }
                 // Rubric lines (italicised instructions)
                 if (
                   line.trim().startsWith('Begin by') ||
@@ -131,6 +141,9 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
                   line.trim().startsWith('After the') ||
                   line.trim().startsWith('After reading') ||
                   line.trim().startsWith('Before the') ||
+                  line.trim().startsWith('The following') ||
+                  line.trim().startsWith('Any additional') ||
+                  line.trim().startsWith('Intercessions may') ||
                   line.trim().endsWith('Then say:') ||
                   line.trim().endsWith('say:') ||
                   line.trim().endsWith('say')

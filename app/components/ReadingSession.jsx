@@ -105,14 +105,14 @@ export default function ReadingSession({
   const isAM = sessionKey === 'AM';
 
   const sessionColor = {
-    divider:       isAM ? 'border-amber-900/60'                : 'border-blue-900/60',
+    divider:       isAM ? 'border-amber-700/60'                : 'border-blue-700/60',
     prayerText:    isAM ? 'text-amber-500 hover:text-amber-400' : 'text-blue-400 hover:text-blue-300',
-    sectionHeader: isAM ? 'text-amber-700/80'                   : 'text-blue-700/80',
+    sectionHeader: isAM ? 'text-amber-600/80'                   : 'text-blue-600/80',
   };
 
   const prayerButtonClass = `p-1.5 rounded-md transition-colors ${sessionColor.prayerText} text-base leading-none`;
 
-  const openingLabel = isAM ? 'morning prayer' : 'evening prayer';
+  const openingLabel = isAM ? 'Morning Prayer' : 'Evening Prayer';
 
   const renderReading = (reading, type) => {
     const completed = isComplete(dateKey, sessionKey, type, reading.reference, selectedYear);
@@ -187,7 +187,7 @@ export default function ReadingSession({
               title={openingLabel}
             >
               <span>🙏</span>
-              <span>{openingLabel}</span>
+              <span style={{ fontVariant: 'small-caps' }}>{openingLabel}</span>
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
@@ -214,7 +214,7 @@ export default function ReadingSession({
               title="Prayer after psalms, before lesson"
             >
               <span>🙏</span>
-              <span>after psalms, before lesson</span>
+              <span style={{ fontVariant: 'small-caps' }}>Prayers After Psalm(s), Before Lesson</span>
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
@@ -241,7 +241,7 @@ export default function ReadingSession({
               title="Post-Lesson prayers"
             >
               <span>🙏</span>
-              <span>after lesson prayers</span>
+              <span style={{ fontVariant: 'small-caps' }}>Post-Lesson Prayers</span>
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
