@@ -2,10 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
 
-const POSITION_LABELS = {
-  opening: 'Opening Prayer',
-  between: 'After Psalm(s) and Before Lesson Prayers',
-  closing: 'Post-Lesson Prayers',
+const getPositionLabel = (position, session) => {
+  if (position === 'opening') {
+    return session === 'AM' ? 'Morning Prayer' : 'Evening Prayer';
+  }
+  return {
+    between: 'After Psalm(s) and Before Lesson Prayers',
+    closing: 'Post-Lesson Prayers',
+  }[position] ?? 'Prayer';
 };
 
 export default function PrayerModal({ isOpen, onClose, session, position }) {
@@ -34,7 +38,7 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
 
   if (!isOpen) return null;
 
-  const label = POSITION_LABELS[position] ?? 'Prayer';
+  const label = getPositionLabel(position, session);
 
   return (
     <div
