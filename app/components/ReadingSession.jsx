@@ -168,12 +168,12 @@ export default function ReadingSession({
   return (
     <>
       <div className="bg-gray-900 rounded-lg p-6">
-        <div className="flex items-center gap-2 mb-4">
+        {/* <div className="flex items-center gap-2 mb-4">
           {icon}
           <h2 className="text-xl font-semibold leading-none m-0">
             {label} Readings
           </h2>
-        </div>
+        </div> */}
 
         <div className="space-y-4 animate-fadeIn">
 
