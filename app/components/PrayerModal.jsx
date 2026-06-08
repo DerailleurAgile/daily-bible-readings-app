@@ -94,10 +94,10 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
               className="text-gray-200 leading-relaxed whitespace-pre-line font-serif text-[0.95rem]"
             >
               {content.split('\n').map((line, i) => {
-                // Section headers (all-caps lines)
-                if (/^[A-Z][A-Z\s]+$/.test(line.trim()) && line.trim().length > 1) {
+                // Section headers (all-caps lines matching headers with potential punctuation like periods or parentheses)
+                if (/^[A-Z][A-Z\s\W]+$/.test(line.trim()) && line.trim().length > 1) {
                   return (
-                    <p key={i} className="text-xs font-medium tracking-widest text-gray-400 uppercase mt-6 mb-2 font-sans">
+                    <p key={i} className="text-xs font-semibold tracking-widest text-gray-400 text-center mt-6 mb-2 font-sans">
                       {line}
                     </p>
                   );
