@@ -1,7 +1,7 @@
 {
-  "name": "Daily Prayer Readings",
+  "name": "The Daily Office",
   "short_name": "Prayer Readings",
-  "description": "Daily prayer readings from the St. Paul's Bloor St. Daily Prayer Book",
+  "description": "The Daily Office from the St. Paul's Bloor St. Daily Prayer Book",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",

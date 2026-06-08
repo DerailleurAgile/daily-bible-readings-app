@@ -2,8 +2,8 @@
   "name": "daily-bible-readings-app",
   "version": "1.1.0",
   "announcement": {
-    "id": "pwa-launch-2026",
-    "title": "Daily Prayer Readings is now a PWA!",
-    "message": "You can now install the Daily Bible Readings App on your mobile device for a better experience. Look for the 'Add to Home Screen' option in your browser menu."
+    "id": "new-release-1.1.0",
+    "title": "Daily Prayer Readings is now The Daily Office!",
+    "message": "New for v1.1.0: We've re-branded to The Daily Office and added a new feature to integrate morning and evening prayers from the St. Paul's Bloor Street Daily Prayer Guide with the daily scripture readings from the lectionary. Now it is easier than ever to build a daily prayer habit wherever you are. Check out the new features and let us know what you think!"
   }
 }

@@ -203,7 +203,7 @@ export default function SettingsPanel({
             </button>
 
             <h3 className="text-gray-100 font-semibold mb-2 text-center">
-              Daily Prayer Readings
+              The Daily Office
             </h3>
 
             <p className="text-sm text-gray-300 text-center mb-4">

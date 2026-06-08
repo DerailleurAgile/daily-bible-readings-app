@@ -20,7 +20,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Daily Prayer Readings',
+  title: 'The Daily Office',
   description:
     "Daily Bible readings for morning and evening prayer from the St. Paul's Bloor Street Anglican Church lectionary (2025/26)",
   icons: {

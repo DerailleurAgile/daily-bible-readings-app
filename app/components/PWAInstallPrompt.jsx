@@ -94,7 +94,7 @@ export default function PWAInstallPrompt() {
           <div className="flex items-center gap-4">
             <Download className="w-8 h-8 shrink-0" />
             <div className="flex-1">
-              <h3 className="font-semibold text-lg">Install Daily Prayer Readings</h3>
+              <h3 className="font-semibold text-lg">Install The Daily Office</h3>
               <p className="text-sm text-blue-100">
                 Add to your home screen for quick access and offline reading
               </p>
