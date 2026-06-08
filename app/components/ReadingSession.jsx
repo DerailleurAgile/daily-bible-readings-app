@@ -7,7 +7,8 @@ import {
   BookOpenCheck,
   ExternalLink,
   RotateCcw,
-  MessageCircleQuestionMark
+  MessageCircleQuestionMark,
+  Sparkles
 } from 'lucide-react';
 import ClosedBookWithCross from './ClosedBookWithCross';
 import ReadingExplanationModal from './ReadingExplanationModal';
@@ -105,12 +106,14 @@ export default function ReadingSession({
   const isAM = sessionKey === 'AM';
 
   const sessionColor = {
-    divider:       isAM ? 'border-amber-700/60'                : 'border-blue-700/60',
-    prayerText:    isAM ? 'text-amber-500 hover:text-amber-400' : 'text-blue-400 hover:text-blue-300',
-    sectionHeader: isAM ? 'text-amber-600/80'                   : 'text-blue-600/80',
+    divider:       isAM ? 'border-amber-700/60' : 'border-blue-700/60',
+    // Added specific session selector outline borders here
+    prayerText:    isAM ? 'text-amber-500 border-amber-500 active:text-amber-400' : 'text-blue-400 border-blue-500 active:text-blue-300',
+    sectionHeader: isAM ? 'text-amber-600/80'    : 'text-blue-600/80',
   };
 
-  const prayerButtonClass = `p-1.5 rounded-md transition-colors ${sessionColor.prayerText} text-base leading-none`;
+  // Swapped static border-current/30 for dynamic border values handled within sessionColor.prayerText
+  const prayerButtonClass = `py-2 px-3.5 rounded-full border bg-gray-800/40 active:bg-gray-800 active:scale-95 transition-all duration-100 ${sessionColor.prayerText} text-base leading-none select-none`;
 
   const openingLabel = isAM ? 'Morning Prayer' : 'Evening Prayer';
 
@@ -188,6 +191,7 @@ export default function ReadingSession({
             >
               <span>🙏</span>
               <span style={{ fontVariant: 'small-caps' }}>{openingLabel}</span>
+              <Sparkles className="w-3 h-3 opacity-60 shrink-0" />
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
@@ -215,6 +219,7 @@ export default function ReadingSession({
             >
               <span>🙏</span>
               <span style={{ fontVariant: 'small-caps' }}>Prayers After Psalm(s), Before Lesson</span>
+              <Sparkles className="w-3 h-3 opacity-60 shrink-0" />
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
@@ -242,6 +247,7 @@ export default function ReadingSession({
             >
               <span>🙏</span>
               <span style={{ fontVariant: 'small-caps' }}>Post-Lesson Prayers</span>
+              <Sparkles className="w-3 h-3 opacity-60 shrink-0" />
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
           </div>
