@@ -217,9 +217,8 @@ export default function SettingsPanel({
             <div className="text-xs text-gray-400 space-y-2 mb-4">
               <p><strong>What's New?</strong></p>
               <ul className="list-disc list-outside ml-5 space-y-1">
-                <li>Migrated to PWA! Try installing the app on your mobile device for a better experience.</li>
-                <li>Fixed date to show correct year in header when navigating readings across years.</li>
-                <li>Added dismissable Install button for easier PWA installation.</li>
+                <li>Added morning and evening prayers from the St. Paul's Bloor Street Daily Prayer Book</li>
+                <li>UI improvements and bug fixes</li>
               </ul>
             </div>
 

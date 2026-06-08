@@ -90,7 +90,13 @@ export default function ReadingExplanationModal({
         </div>
 
         {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[60vh]">
+        <div
+          className="p-6 overflow-y-auto max-h-[60vh]"
+          style={{
+            scrollbarWidth: 'thin',
+            scrollbarColor: '#374151 transparent',
+          }}
+        >
           {loading && (
             <div className="flex flex-col items-center justify-center py-12">
               <Loader2 className="w-8 h-8 text-blue-400 animate-spin mb-3" />
