@@ -7,8 +7,8 @@ const getPositionLabel = (position, session) => {
     return session === 'AM' ? 'Morning Prayer' : 'Evening Prayer';
   }
   return {
-    between: 'Prayers After Psalm(s), Before Lesson',
-    closing: 'Post-Lesson Prayers',
+    between: 'Prayers After Psalm(s)',
+    closing: 'Prayers After Lesson',
   }[position] ?? 'Prayer';
 };
 

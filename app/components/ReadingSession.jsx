@@ -218,7 +218,7 @@ export default function ReadingSession({
               title="Prayer after psalms, before lesson"
             >
               <span>🙏</span>
-              <span style={{ fontVariant: 'small-caps' }}>Prayers After Psalm(s), Before Lesson</span>
+              <span style={{ fontVariant: 'small-caps' }}>Prayers After Psalm(s)</span>
               <Sparkles className="w-3 h-3 opacity-60 shrink-0" />
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
@@ -246,7 +246,7 @@ export default function ReadingSession({
               title="Post-Lesson prayers"
             >
               <span>🙏</span>
-              <span style={{ fontVariant: 'small-caps' }}>Post-Lesson Prayers</span>
+              <span style={{ fontVariant: 'small-caps' }}>Prayers After Lesson</span>
               <Sparkles className="w-3 h-3 opacity-60 shrink-0" />
             </button>
             <div className={`flex-1 border-t ${sessionColor.divider}`} />
