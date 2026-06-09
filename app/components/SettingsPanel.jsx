@@ -219,6 +219,8 @@ export default function SettingsPanel({
               <ul className="list-disc list-outside ml-5 space-y-1">
                 <li>Added morning and evening prayers from the St. Paul's Bloor Street Daily Prayer Book</li>
                 <li>UI improvements and bug fixes</li>
+                <li>Fixed verse citation for Psalm 105</li>
+                <li>Updated local lectionary data cache to automatically refresh after updates. Like Psalm 105.</li>
               </ul>
             </div>
 
