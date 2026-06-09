@@ -1,5 +1,5 @@
 {
-  "02-01": {
+  "06-01": {
     "AM": {
       "psalms": [
         {
@@ -10,10 +10,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 9:14-26",
-          "book": "Matthew",
-          "chapter": "9",
-          "verses": "14-26"
+          "reference": "John 3:1-21",
+          "book": "John",
+          "chapter": "3",
+          "verses": "1-21"
         }
       ]
     },
@@ -32,15 +32,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 11:11-16",
-          "book": "Romans",
-          "chapter": "11",
-          "verses": "11-16"
+          "reference": "Philippians 4:2-9",
+          "book": "Philippians",
+          "chapter": "4",
+          "verses": "2-9"
         }
       ]
     }
   },
-  "02-02": {
+  "06-02": {
     "AM": {
       "psalms": [
         {
@@ -56,10 +56,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 9:27-38",
-          "book": "Matthew",
-          "chapter": "9",
-          "verses": "27-38"
+          "reference": "John 3:22-36",
+          "book": "John",
+          "chapter": "3",
+          "verses": "22-36"
         }
       ]
     },
@@ -73,15 +73,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 11:17-24",
-          "book": "Romans",
-          "chapter": "11",
-          "verses": "17-24"
+          "reference": "Philippians 4:10-23",
+          "book": "Philippians",
+          "chapter": "4",
+          "verses": "10-23"
         }
       ]
     }
   },
-  "02-03": {
+  "06-03": {
     "AM": {
       "psalms": [
         {
@@ -97,33 +97,52 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 10:1-15",
-          "book": "Matthew",
-          "chapter": "10",
-          "verses": "1-15"
+          "reference": "John 4:1-26",
+          "book": "John",
+          "chapter": "4",
+          "verses": "1-26"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 89",
+          "reference": "Psalm 89:1-25",
           "book": "Psalm",
-          "chapter": "89"
+          "chapter": "89",
+          "verses": "1-25"
         }
       ],
       "lesson": [
         {
-          "reference": "Romans 11:25-36",
-          "book": "Romans",
-          "chapter": "11",
-          "verses": "25-36"
+          "reference": "Colossians 1:1-14",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "1-14"
         }
       ]
     }
   },
-  "02-04": {
+  "06-04": {
     "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 89:26-50",
+          "book": "Psalm",
+          "chapter": "89",
+          "verses": "26-50"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 4:27-45",
+          "book": "John",
+          "chapter": "4",
+          "verses": "27-45"
+        }
+      ]
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 90",
@@ -133,14 +152,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 10:16-23",
-          "book": "Matthew",
-          "chapter": "10",
-          "verses": "16-23"
+          "reference": "Colossians 1:15-23",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "15-23"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "06-05": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 91",
@@ -150,16 +171,14 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 12:1-8",
-          "book": "Romans",
-          "chapter": "12",
-          "verses": "1-8"
+          "reference": "John 4:46-54",
+          "book": "John",
+          "chapter": "4",
+          "verses": "46-54"
         }
       ]
-    }
-  },
-  "02-05": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 92",
@@ -169,14 +188,22 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 10:24-33",
-          "book": "Matthew",
-          "chapter": "10",
-          "verses": "24-33"
+          "reference": "Colossians 1:24-29",
+          "book": "Colossians",
+          "chapter": "1",
+          "verses": "24-29"
+        },
+        {
+          "reference": "Colossians 2:1-5",
+          "book": "Colossians",
+          "chapter": "2",
+          "verses": "1-5"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "06-06": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 93",
@@ -191,16 +218,14 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 12:9-21",
-          "book": "Romans",
-          "chapter": "12",
-          "verses": "9-21"
+          "reference": "John 5:1-18",
+          "book": "John",
+          "chapter": "5",
+          "verses": "1-18"
         }
       ]
-    }
-  },
-  "02-06": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 95",
@@ -215,14 +240,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 10:34-42",
-          "book": "Matthew",
-          "chapter": "10",
-          "verses": "34-42"
+          "reference": "Colossians 2:6-15",
+          "book": "Colossians",
+          "chapter": "2",
+          "verses": "6-15"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "06-07": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 97",
@@ -237,16 +264,14 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 13:1-10",
-          "book": "Romans",
-          "chapter": "13",
-          "verses": "1-10"
+          "reference": "John 5:19-29",
+          "book": "John",
+          "chapter": "5",
+          "verses": "19-29"
         }
       ]
-    }
-  },
-  "02-07": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 99",
@@ -266,14 +291,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 11:1-6",
-          "book": "Matthew",
-          "chapter": "11",
-          "verses": "1-6"
+          "reference": "Colossians 2:16-23",
+          "book": "Colossians",
+          "chapter": "2",
+          "verses": "16-23"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "06-08": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 102",
@@ -283,16 +310,14 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 13:11-14",
-          "book": "Romans",
-          "chapter": "13",
-          "verses": "11-14"
+          "reference": "John 5:30-47",
+          "book": "John",
+          "chapter": "5",
+          "verses": "30-47"
         }
       ]
-    }
-  },
-  "02-08": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 103",
@@ -302,32 +327,53 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 11:7-19",
-          "book": "Matthew",
-          "chapter": "11",
-          "verses": "7-19"
+          "reference": "Colossians 3:1-4",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "1-4"
+        }
+      ]
+    }
+  },
+  "06-09": {
+    "AM": {
+      "psalms": [
+        {
+          "reference": "Psalm 104:1-18",
+          "book": "Psalm",
+          "chapter": "104",
+          "verses": "1-18"
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 6:1-15",
+          "book": "John",
+          "chapter": "6",
+          "verses": "1-15"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 104",
+          "reference": "Psalm 104:19-35",
           "book": "Psalm",
-          "chapter": "104"
+          "chapter": "104",
+          "verses": "19-35"
         }
       ],
       "lesson": [
         {
-          "reference": "Romans 14:1-12",
-          "book": "Romans",
-          "chapter": "14",
-          "verses": "1-12"
+          "reference": "Colossians 3:5-11",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "5-11"
         }
       ]
     }
   },
-  "02-09": {
+  "06-10": {
     "AM": {
       "psalms": [
         {
@@ -339,33 +385,33 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 11:20-30",
-          "book": "Matthew",
-          "chapter": "11",
-          "verses": "20-30"
+          "reference": "John 6:26-24",
+          "book": "John",
+          "chapter": "6",
+          "verses": "26-24"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 105:23-44",
+          "reference": "Psalm 105:23-45",
           "book": "Psalm",
           "chapter": "105",
-          "verses": "23-44"
+          "verses": "23-45"
         }
       ],
       "lesson": [
         {
-          "reference": "Romans 14:13-23",
-          "book": "Romans",
-          "chapter": "14",
-          "verses": "13-23"
+          "reference": "Colossians 3:12-17",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "12-17"
         }
       ]
     }
   },
-  "02-10": {
+  "06-11": {
     "AM": {
       "psalms": [
         {
@@ -377,10 +423,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 12:1-8",
-          "book": "Matthew",
-          "chapter": "12",
-          "verses": "1-8"
+          "reference": "John 6:25-51",
+          "book": "John",
+          "chapter": "6",
+          "verses": "25-51"
         }
       ]
     },
@@ -395,15 +441,21 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 15:1-6",
-          "book": "Romans",
-          "chapter": "15",
+          "reference": "Colossians 3:18-25",
+          "book": "Colossians",
+          "chapter": "3",
+          "verses": "18-25"
+        },
+        {
+          "reference": "Colossians 4:1-6",
+          "book": "Colossians",
+          "chapter": "4",
           "verses": "1-6"
         }
       ]
     }
   },
-  "02-11": {
+  "06-12": {
     "AM": {
       "psalms": [
         {
@@ -415,10 +467,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 12:9-21",
-          "book": "Matthew",
-          "chapter": "12",
-          "verses": "9-21"
+          "reference": "John 6:52-71",
+          "book": "John",
+          "chapter": "6",
+          "verses": "52-71"
         }
       ]
     },
@@ -433,15 +485,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 15:7-13",
-          "book": "Romans",
-          "chapter": "15",
-          "verses": "7-13"
+          "reference": "Colossians 4:7-18",
+          "book": "Colossians",
+          "chapter": "4",
+          "verses": "7-18"
         }
       ]
     }
   },
-  "02-12": {
+  "06-13": {
     "AM": {
       "psalms": [
         {
@@ -452,10 +504,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 12:22-42",
-          "book": "Matthew",
-          "chapter": "12",
-          "verses": "22-42"
+          "reference": "John 7:1-24",
+          "book": "John",
+          "chapter": "7",
+          "verses": "1-24"
         }
       ]
     },
@@ -469,15 +521,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 15:14-21",
-          "book": "Romans",
-          "chapter": "15",
-          "verses": "14-21"
+          "reference": "1 Thessalonians 1:1-10",
+          "book": "1 Thessalonians",
+          "chapter": "1",
+          "verses": "1-10"
         }
       ]
     }
   },
-  "02-13": {
+  "06-14": {
     "AM": {
       "psalms": [
         {
@@ -493,10 +545,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 12:43-50",
-          "book": "Matthew",
-          "chapter": "12",
-          "verses": "43-50"
+          "reference": "John 7:25-36",
+          "book": "John",
+          "chapter": "7",
+          "verses": "25-36"
         }
       ]
     },
@@ -515,15 +567,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 15:22-33",
-          "book": "Romans",
-          "chapter": "15",
-          "verses": "22-33"
+          "reference": "1 Thessalonians 2:1-8",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "1-8"
         }
       ]
     }
   },
-  "02-14": {
+  "06-15": {
     "AM": {
       "psalms": [
         {
@@ -539,10 +591,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 13:1-23",
-          "book": "Matthew",
-          "chapter": "13",
-          "verses": "1-23"
+          "reference": "John 7:37-52",
+          "book": "John",
+          "chapter": "7",
+          "verses": "37-52"
         }
       ]
     },
@@ -556,15 +608,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 16:1-16",
-          "book": "Romans",
-          "chapter": "16",
-          "verses": "1-16"
+          "reference": "1 Thessalonians 2:9-16",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "9-16"
         }
       ]
     }
   },
-  "02-15": {
+  "06-16": {
     "AM": {
       "psalms": [
         {
@@ -581,10 +633,16 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 13:24-43",
-          "book": "Matthew",
-          "chapter": "13",
-          "verses": "24-43"
+          "reference": "John 7:53",
+          "book": "John",
+          "chapter": "7",
+          "verses": "53"
+        },
+        {
+          "reference": "John 8:1-11",
+          "book": "John",
+          "chapter": "8",
+          "verses": "1-11"
         }
       ]
     },
@@ -599,15 +657,15 @@
       ],
       "lesson": [
         {
-          "reference": "Romans 16:17-27",
-          "book": "Romans",
-          "chapter": "16",
-          "verses": "17-27"
+          "reference": "1 Thessalonians 2:17-3:5",
+          "book": "1 Thessalonians",
+          "chapter": "2",
+          "verses": "17-3:5"
         }
       ]
     }
   },
-  "02-16": {
+  "06-17": {
     "AM": {
       "psalms": [
         {
@@ -619,10 +677,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 13:44-58",
-          "book": "Matthew",
-          "chapter": "13",
-          "verses": "44-58"
+          "reference": "John 8:12-20",
+          "book": "John",
+          "chapter": "8",
+          "verses": "12-20"
         }
       ]
     },
@@ -637,15 +695,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 1:1-9",
-          "book": "1 Corinthians",
-          "chapter": "1",
-          "verses": "1-9"
+          "reference": "1 Thessalonians 3:6-13",
+          "book": "1 Thessalonians",
+          "chapter": "3",
+          "verses": "6-13"
         }
       ]
     }
   },
-  "02-17": {
+  "06-18": {
     "AM": {
       "psalms": [
         {
@@ -657,10 +715,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 14:1-12",
-          "book": "Matthew",
-          "chapter": "14",
-          "verses": "1-12"
+          "reference": "John 8:21-30",
+          "book": "John",
+          "chapter": "8",
+          "verses": "21-30"
         }
       ]
     },
@@ -675,15 +733,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 1:10-17",
-          "book": "1 Corinthians",
-          "chapter": "1",
-          "verses": "10-17"
+          "reference": "1 Thessalonians 4:1-8",
+          "book": "1 Thessalonians",
+          "chapter": "4",
+          "verses": "1-8"
         }
       ]
     }
   },
-  "02-18": {
+  "06-19": {
     "AM": {
       "psalms": [
         {
@@ -695,10 +753,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 14:13-21",
-          "book": "Matthew",
-          "chapter": "14",
-          "verses": "13-21"
+          "reference": "John 8:31-47",
+          "book": "John",
+          "chapter": "8",
+          "verses": "31-47"
         }
       ]
     },
@@ -713,15 +771,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 1:18-31",
-          "book": "1 Corinthians",
-          "chapter": "1",
-          "verses": "18-31"
+          "reference": "1 Thessalonians 4:9-18",
+          "book": "1 Thessalonians",
+          "chapter": "4",
+          "verses": "9-18"
         }
       ]
     }
   },
-  "02-19": {
+  "06-20": {
     "AM": {
       "psalms": [
         {
@@ -733,10 +791,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 14:22-36",
-          "book": "Matthew",
-          "chapter": "14",
-          "verses": "22-36"
+          "reference": "John 8:48-59",
+          "book": "John",
+          "chapter": "8",
+          "verses": "48-59"
         }
       ]
     },
@@ -751,15 +809,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 2:1-5",
-          "book": "1 Corinthians",
-          "chapter": "2",
-          "verses": "1-5"
+          "reference": "1 Thessalonians 5:1-11",
+          "book": "1 Thessalonians",
+          "chapter": "5",
+          "verses": "1-11"
         }
       ]
     }
   },
-  "02-20": {
+  "06-21": {
     "AM": {
       "psalms": [
         {
@@ -771,10 +829,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 15:1-20",
-          "book": "Matthew",
-          "chapter": "15",
-          "verses": "1-20"
+          "reference": "John 9:1-12",
+          "book": "John",
+          "chapter": "9",
+          "verses": "1-12"
         }
       ]
     },
@@ -789,15 +847,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 2:6-15",
-          "book": "1 Corinthians",
-          "chapter": "2",
-          "verses": "6-15"
+          "reference": "1 Thessalonians 5:12-28",
+          "book": "1 Thessalonians",
+          "chapter": "5",
+          "verses": "12-28"
         }
       ]
     }
   },
-  "02-21": {
+  "06-22": {
     "AM": {
       "psalms": [
         {
@@ -809,10 +867,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 15:21-31",
-          "book": "Matthew",
-          "chapter": "15",
-          "verses": "21-31"
+          "reference": "John 9:13-23",
+          "book": "John",
+          "chapter": "9",
+          "verses": "13-23"
         }
       ]
     },
@@ -831,15 +889,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 3:1-9",
-          "book": "1 Corinthians",
-          "chapter": "3",
-          "verses": "1-9"
+          "reference": "2 Thessalonians 1:1-12",
+          "book": "2 Thessalonians",
+          "chapter": "1",
+          "verses": "1-12"
         }
       ]
     }
   },
-  "02-22": {
+  "06-23": {
     "AM": {
       "psalms": [
         {
@@ -855,10 +913,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 15:32-39",
-          "book": "Matthew",
-          "chapter": "15",
-          "verses": "32-39"
+          "reference": "John 9:24-41",
+          "book": "John",
+          "chapter": "9",
+          "verses": "24-41"
         }
       ]
     },
@@ -877,15 +935,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 3:10-17",
-          "book": "1 Corinthians",
-          "chapter": "3",
-          "verses": "10-17"
+          "reference": "2 Thessalonians 2:1-12",
+          "book": "2 Thessalonians",
+          "chapter": "2",
+          "verses": "1-12"
         }
       ]
     }
   },
-  "02-23": {
+  "06-24": {
     "AM": {
       "psalms": [
         {
@@ -906,10 +964,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 16:1-12",
-          "book": "Matthew",
-          "chapter": "16",
-          "verses": "1-12"
+          "reference": "John 10:1-21",
+          "book": "John",
+          "chapter": "10",
+          "verses": "1-21"
         }
       ]
     },
@@ -933,15 +991,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 3:18-23",
-          "book": "1 Corinthians",
-          "chapter": "3",
-          "verses": "18-23"
+          "reference": "2 Thessalonians 2:13-17",
+          "book": "2 Thessalonians",
+          "chapter": "2",
+          "verses": "13-17"
         }
       ]
     }
   },
-  "02-24": {
+  "06-25": {
     "AM": {
       "psalms": [
         {
@@ -957,10 +1015,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 16:13-20",
-          "book": "Matthew",
-          "chapter": "16",
-          "verses": "13-20"
+          "reference": "John 10:22-42",
+          "book": "John",
+          "chapter": "10",
+          "verses": "22-42"
         }
       ]
     },
@@ -979,15 +1037,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 4:1-13",
-          "book": "1 Corinthians",
-          "chapter": "4",
-          "verses": "1-13"
+          "reference": "2 Thessalonians 3:1-5",
+          "book": "2 Thessalonians",
+          "chapter": "3",
+          "verses": "1-5"
         }
       ]
     }
   },
-  "02-25": {
+  "06-26": {
     "AM": {
       "psalms": [
         {
@@ -998,10 +1056,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 16:21-28",
-          "book": "Matthew",
-          "chapter": "16",
-          "verses": "21-28"
+          "reference": "John 11:1-16",
+          "book": "John",
+          "chapter": "11",
+          "verses": "1-16"
         }
       ]
     },
@@ -1020,15 +1078,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 4:14-21",
-          "book": "1 Corinthians",
-          "chapter": "4",
-          "verses": "14-21"
+          "reference": "2 Thessalonians 3:6-18",
+          "book": "2 Thessalonians",
+          "chapter": "3",
+          "verses": "6-18"
         }
       ]
     }
   },
-  "02-26": {
+  "06-27": {
     "AM": {
       "psalms": [
         {
@@ -1039,10 +1097,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 17:1-13",
-          "book": "Matthew",
-          "chapter": "17",
-          "verses": "1-13"
+          "reference": "John 11:17-27",
+          "book": "John",
+          "chapter": "11",
+          "verses": "17-27"
         }
       ]
     },
@@ -1066,22 +1124,34 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 5:1-13",
-          "book": "1 Corinthians",
-          "chapter": "5",
-          "verses": "1-13"
+          "reference": "1 Timothy 1:1-11",
+          "book": "1 Timothy",
+          "chapter": "1",
+          "verses": "1-11"
         }
       ]
     }
   },
-  "02-27": {
+  "06-28": {
     "AM": {
       "psalms": [
         {
           "reference": "Psalm 143",
           "book": "Psalm",
           "chapter": "143"
-        },
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:28-37",
+          "book": "John",
+          "chapter": "11",
+          "verses": "28-37"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
         {
           "reference": "Psalm 144",
           "book": "Psalm",
@@ -1090,20 +1160,34 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 17:14-21",
-          "book": "Matthew",
-          "chapter": "17",
-          "verses": "14-21"
+          "reference": "1 Timothy 1:12-20",
+          "book": "1 Timothy",
+          "chapter": "1",
+          "verses": "12-20"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "06-29": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 145",
           "book": "Psalm",
           "chapter": "145"
-        },
+        }
+      ],
+      "lesson": [
+        {
+          "reference": "John 11:38-44",
+          "book": "John",
+          "chapter": "11",
+          "verses": "38-44"
+        }
+      ]
+    },
+    "PM": {
+      "psalms": [
         {
           "reference": "Psalm 146",
           "book": "Psalm",
@@ -1112,15 +1196,15 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 6:1-11",
-          "book": "1 Corinthians",
-          "chapter": "6",
-          "verses": "1-11"
+          "reference": "1 Timothy 2:1-7",
+          "book": "1 Timothy",
+          "chapter": "2",
+          "verses": "1-7"
         }
       ]
     }
   },
-  "02-28": {
+  "06-30": {
     "AM": {
       "psalms": [
         {
@@ -1136,10 +1220,10 @@
       ],
       "lesson": [
         {
-          "reference": "Matthew 17:22-27",
-          "book": "Matthew",
-          "chapter": "17",
-          "verses": "22-27"
+          "reference": "John 11:45-57",
+          "book": "John",
+          "chapter": "11",
+          "verses": "45-57"
         }
       ]
     },
@@ -1158,10 +1242,10 @@
       ],
       "lesson": [
         {
-          "reference": "1 Corinthians 6:12-20",
-          "book": "1 Corinthians",
-          "chapter": "6",
-          "verses": "12-20"
+          "reference": "1 Timothy 2:8-15",
+          "book": "1 Timothy",
+          "chapter": "2",
+          "verses": "8-15"
         }
       ]
     }

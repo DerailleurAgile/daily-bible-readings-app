@@ -1,47 +1,5 @@
 {
-  "12-01": {
-    "AM": {
-      "psalms": [
-        {
-          "reference": "Psalm 79",
-          "book": "Psalm",
-          "chapter": "79"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Acts 15:1-21",
-          "book": "Acts",
-          "chapter": "15",
-          "verses": "1-21"
-        }
-      ]
-    },
-    "PM": {
-      "psalms": [
-        {
-          "reference": "Psalm 80",
-          "book": "Psalm",
-          "chapter": "80"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Revelation 8:13",
-          "book": "Revelation",
-          "chapter": "8",
-          "verses": "13"
-        },
-        {
-          "reference": "Revelation 9:1-12",
-          "book": "Revelation",
-          "chapter": "9",
-          "verses": "1-12"
-        }
-      ]
-    }
-  },
-  "12-02": {
+  "02-01": {
     "AM": {
       "psalms": [
         {
@@ -52,10 +10,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 15:22-35",
-          "book": "Acts",
-          "chapter": "15",
-          "verses": "22-35"
+          "reference": "Matthew 9:14-26",
+          "book": "Matthew",
+          "chapter": "9",
+          "verses": "14-26"
         }
       ]
     },
@@ -74,15 +32,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 9:13-21",
-          "book": "Revelation",
-          "chapter": "9",
-          "verses": "13-21"
+          "reference": "Romans 11:11-16",
+          "book": "Romans",
+          "chapter": "11",
+          "verses": "11-16"
         }
       ]
     }
   },
-  "12-03": {
+  "02-02": {
     "AM": {
       "psalms": [
         {
@@ -98,10 +56,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 15:36-16:5",
-          "book": "Acts",
-          "chapter": "15",
-          "verses": "36-16:5"
+          "reference": "Matthew 9:27-38",
+          "book": "Matthew",
+          "chapter": "9",
+          "verses": "27-38"
         }
       ]
     },
@@ -115,15 +73,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 10:1-11",
-          "book": "Revelation",
-          "chapter": "10",
-          "verses": "1-11"
+          "reference": "Romans 11:17-24",
+          "book": "Romans",
+          "chapter": "11",
+          "verses": "17-24"
         }
       ]
     }
   },
-  "12-04": {
+  "02-03": {
     "AM": {
       "psalms": [
         {
@@ -139,52 +97,33 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 16:6-24",
-          "book": "Acts",
-          "chapter": "16",
-          "verses": "6-24"
+          "reference": "Matthew 10:1-15",
+          "book": "Matthew",
+          "chapter": "10",
+          "verses": "1-15"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 89:1-25",
+          "reference": "Psalm 89",
           "book": "Psalm",
-          "chapter": "89",
-          "verses": "1-25"
+          "chapter": "89"
         }
       ],
       "lesson": [
         {
-          "reference": "Revelation 11:1-14",
-          "book": "Revelation",
+          "reference": "Romans 11:25-36",
+          "book": "Romans",
           "chapter": "11",
-          "verses": "1-14"
+          "verses": "25-36"
         }
       ]
     }
   },
-  "12-05": {
+  "02-04": {
     "AM": {
-      "psalms": [
-        {
-          "reference": "Psalm 89:26-51",
-          "book": "Psalm",
-          "chapter": "89",
-          "verses": "26-51"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Acts 16:25-40",
-          "book": "Acts",
-          "chapter": "16",
-          "verses": "25-40"
-        }
-      ]
-    },
-    "PM": {
       "psalms": [
         {
           "reference": "Psalm 90",
@@ -194,16 +133,14 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 11:15-19",
-          "book": "Revelation",
-          "chapter": "11",
-          "verses": "15-19"
+          "reference": "Matthew 10:16-23",
+          "book": "Matthew",
+          "chapter": "10",
+          "verses": "16-23"
         }
       ]
-    }
-  },
-  "12-06": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 91",
@@ -213,14 +150,16 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 17:1-21",
-          "book": "Acts",
-          "chapter": "17",
-          "verses": "1-21"
+          "reference": "Romans 12:1-8",
+          "book": "Romans",
+          "chapter": "12",
+          "verses": "1-8"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "02-05": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 92",
@@ -230,16 +169,14 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 12:1-6",
-          "book": "Revelation",
-          "chapter": "12",
-          "verses": "1-6"
+          "reference": "Matthew 10:24-33",
+          "book": "Matthew",
+          "chapter": "10",
+          "verses": "24-33"
         }
       ]
-    }
-  },
-  "12-07": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 93",
@@ -254,14 +191,16 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 17:22-34",
-          "book": "Acts",
-          "chapter": "17",
-          "verses": "22-34"
+          "reference": "Romans 12:9-21",
+          "book": "Romans",
+          "chapter": "12",
+          "verses": "9-21"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "02-06": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 95",
@@ -276,16 +215,14 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 12:7-17",
-          "book": "Revelation",
-          "chapter": "12",
-          "verses": "7-17"
+          "reference": "Matthew 10:34-42",
+          "book": "Matthew",
+          "chapter": "10",
+          "verses": "34-42"
         }
       ]
-    }
-  },
-  "12-08": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 97",
@@ -300,14 +237,16 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 18:1-17",
-          "book": "Acts",
-          "chapter": "18",
-          "verses": "1-17"
+          "reference": "Romans 13:1-10",
+          "book": "Romans",
+          "chapter": "13",
+          "verses": "1-10"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "02-07": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 99",
@@ -327,16 +266,14 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 13:1-10",
-          "book": "Revelation",
-          "chapter": "13",
-          "verses": "1-10"
+          "reference": "Matthew 11:1-6",
+          "book": "Matthew",
+          "chapter": "11",
+          "verses": "1-6"
         }
       ]
-    }
-  },
-  "12-09": {
-    "AM": {
+    },
+    "PM": {
       "psalms": [
         {
           "reference": "Psalm 102",
@@ -346,14 +283,16 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 18:18-28",
-          "book": "Acts",
-          "chapter": "18",
-          "verses": "18-28"
+          "reference": "Romans 13:11-14",
+          "book": "Romans",
+          "chapter": "13",
+          "verses": "11-14"
         }
       ]
-    },
-    "PM": {
+    }
+  },
+  "02-08": {
+    "AM": {
       "psalms": [
         {
           "reference": "Psalm 103",
@@ -363,53 +302,32 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 13:11-18",
-          "book": "Revelation",
-          "chapter": "13",
-          "verses": "11-18"
-        }
-      ]
-    }
-  },
-  "12-10": {
-    "AM": {
-      "psalms": [
-        {
-          "reference": "Psalm 104:1-18",
-          "book": "Psalm",
-          "chapter": "104",
-          "verses": "1-18"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Acts 19:1-10",
-          "book": "Acts",
-          "chapter": "19",
-          "verses": "1-10"
+          "reference": "Matthew 11:7-19",
+          "book": "Matthew",
+          "chapter": "11",
+          "verses": "7-19"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 104:19-35",
+          "reference": "Psalm 104",
           "book": "Psalm",
-          "chapter": "104",
-          "verses": "19-35"
+          "chapter": "104"
         }
       ],
       "lesson": [
         {
-          "reference": "Revelation 14:1-5",
-          "book": "Revelation",
+          "reference": "Romans 14:1-12",
+          "book": "Romans",
           "chapter": "14",
-          "verses": "1-5"
+          "verses": "1-12"
         }
       ]
     }
   },
-  "12-11": {
+  "02-09": {
     "AM": {
       "psalms": [
         {
@@ -421,33 +339,33 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 19:11-20",
-          "book": "Acts",
-          "chapter": "19",
-          "verses": "11-20"
+          "reference": "Matthew 11:20-30",
+          "book": "Matthew",
+          "chapter": "11",
+          "verses": "20-30"
         }
       ]
     },
     "PM": {
       "psalms": [
         {
-          "reference": "Psalm 105:23-44",
+          "reference": "Psalm 105:23-45",
           "book": "Psalm",
           "chapter": "105",
-          "verses": "23-44"
+          "verses": "23-45"
         }
       ],
       "lesson": [
         {
-          "reference": "Revelation 14:6-13",
-          "book": "Revelation",
+          "reference": "Romans 14:13-23",
+          "book": "Romans",
           "chapter": "14",
-          "verses": "6-13"
+          "verses": "13-23"
         }
       ]
     }
   },
-  "12-12": {
+  "02-10": {
     "AM": {
       "psalms": [
         {
@@ -459,10 +377,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 19:21-41",
-          "book": "Acts",
-          "chapter": "19",
-          "verses": "21-41"
+          "reference": "Matthew 12:1-8",
+          "book": "Matthew",
+          "chapter": "12",
+          "verses": "1-8"
         }
       ]
     },
@@ -477,15 +395,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 14:14-20",
-          "book": "Revelation",
-          "chapter": "14",
-          "verses": "14-20"
+          "reference": "Romans 15:1-6",
+          "book": "Romans",
+          "chapter": "15",
+          "verses": "1-6"
         }
       ]
     }
   },
-  "12-13": {
+  "02-11": {
     "AM": {
       "psalms": [
         {
@@ -497,10 +415,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 20:1-16",
-          "book": "Acts",
-          "chapter": "20",
-          "verses": "1-16"
+          "reference": "Matthew 12:9-21",
+          "book": "Matthew",
+          "chapter": "12",
+          "verses": "9-21"
         }
       ]
     },
@@ -515,15 +433,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 15:1-8",
-          "book": "Revelation",
+          "reference": "Romans 15:7-13",
+          "book": "Romans",
           "chapter": "15",
-          "verses": "1-8"
+          "verses": "7-13"
         }
       ]
     }
   },
-  "12-14": {
+  "02-12": {
     "AM": {
       "psalms": [
         {
@@ -534,10 +452,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 20:17-38",
-          "book": "Acts",
-          "chapter": "20",
-          "verses": "17-38"
+          "reference": "Matthew 12:22-42",
+          "book": "Matthew",
+          "chapter": "12",
+          "verses": "22-42"
         }
       ]
     },
@@ -551,15 +469,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 16:1-7",
-          "book": "Revelation",
-          "chapter": "16",
-          "verses": "1-7"
+          "reference": "Romans 15:14-21",
+          "book": "Romans",
+          "chapter": "15",
+          "verses": "14-21"
         }
       ]
     }
   },
-  "12-15": {
+  "02-13": {
     "AM": {
       "psalms": [
         {
@@ -575,10 +493,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 21:1-16",
-          "book": "Acts",
-          "chapter": "21",
-          "verses": "1-16"
+          "reference": "Matthew 12:43-50",
+          "book": "Matthew",
+          "chapter": "12",
+          "verses": "43-50"
         }
       ]
     },
@@ -597,15 +515,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 16:8-16",
-          "book": "Revelation",
-          "chapter": "16",
-          "verses": "8-16"
+          "reference": "Romans 15:22-33",
+          "book": "Romans",
+          "chapter": "15",
+          "verses": "22-33"
         }
       ]
     }
   },
-  "12-16": {
+  "02-14": {
     "AM": {
       "psalms": [
         {
@@ -621,10 +539,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 21:17-26",
-          "book": "Acts",
-          "chapter": "21",
-          "verses": "17-26"
+          "reference": "Matthew 13:1-23",
+          "book": "Matthew",
+          "chapter": "13",
+          "verses": "1-23"
         }
       ]
     },
@@ -638,15 +556,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 16:17-21",
-          "book": "Revelation",
+          "reference": "Romans 16:1-16",
+          "book": "Romans",
           "chapter": "16",
-          "verses": "17-21"
+          "verses": "1-16"
         }
       ]
     }
   },
-  "12-17": {
+  "02-15": {
     "AM": {
       "psalms": [
         {
@@ -663,10 +581,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 21:27-36",
-          "book": "Acts",
-          "chapter": "21",
-          "verses": "27-36"
+          "reference": "Matthew 13:24-43",
+          "book": "Matthew",
+          "chapter": "13",
+          "verses": "24-43"
         }
       ]
     },
@@ -681,15 +599,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 17:1-6",
-          "book": "Revelation",
-          "chapter": "17",
-          "verses": "1-6"
+          "reference": "Romans 16:17-27",
+          "book": "Romans",
+          "chapter": "16",
+          "verses": "17-27"
         }
       ]
     }
   },
-  "12-18": {
+  "02-16": {
     "AM": {
       "psalms": [
         {
@@ -701,16 +619,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 21:37-40",
-          "book": "Acts",
-          "chapter": "21",
-          "verses": "37-40"
-        },
-        {
-          "reference": "Acts 22:1-16",
-          "book": "Acts",
-          "chapter": "22",
-          "verses": "1-16"
+          "reference": "Matthew 13:44-58",
+          "book": "Matthew",
+          "chapter": "13",
+          "verses": "44-58"
         }
       ]
     },
@@ -725,15 +637,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 17:7-18",
-          "book": "Revelation",
-          "chapter": "17",
-          "verses": "7-18"
+          "reference": "1 Corinthians 1:1-9",
+          "book": "1 Corinthians",
+          "chapter": "1",
+          "verses": "1-9"
         }
       ]
     }
   },
-  "12-19": {
+  "02-17": {
     "AM": {
       "psalms": [
         {
@@ -745,10 +657,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 22:17-29",
-          "book": "Acts",
-          "chapter": "22",
-          "verses": "17-29"
+          "reference": "Matthew 14:1-12",
+          "book": "Matthew",
+          "chapter": "14",
+          "verses": "1-12"
         }
       ]
     },
@@ -763,15 +675,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 18:1-8",
-          "book": "Revelation",
-          "chapter": "18",
-          "verses": "1-8"
+          "reference": "1 Corinthians 1:10-17",
+          "book": "1 Corinthians",
+          "chapter": "1",
+          "verses": "10-17"
         }
       ]
     }
   },
-  "12-20": {
+  "02-18": {
     "AM": {
       "psalms": [
         {
@@ -783,16 +695,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 22:30",
-          "book": "Acts",
-          "chapter": "22",
-          "verses": "30"
-        },
-        {
-          "reference": "Acts 23:1-11",
-          "book": "Acts",
-          "chapter": "23",
-          "verses": "1-11"
+          "reference": "Matthew 14:13-21",
+          "book": "Matthew",
+          "chapter": "14",
+          "verses": "13-21"
         }
       ]
     },
@@ -807,15 +713,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 18:9-18",
-          "book": "Revelation",
-          "chapter": "18",
-          "verses": "9-18"
+          "reference": "1 Corinthians 1:18-31",
+          "book": "1 Corinthians",
+          "chapter": "1",
+          "verses": "18-31"
         }
       ]
     }
   },
-  "12-21": {
+  "02-19": {
     "AM": {
       "psalms": [
         {
@@ -827,10 +733,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 23:12-35",
-          "book": "Acts",
-          "chapter": "23",
-          "verses": "12-35"
+          "reference": "Matthew 14:22-36",
+          "book": "Matthew",
+          "chapter": "14",
+          "verses": "22-36"
         }
       ]
     },
@@ -845,15 +751,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 18:19-24",
-          "book": "Revelation",
-          "chapter": "18",
-          "verses": "19-24"
+          "reference": "1 Corinthians 2:1-5",
+          "book": "1 Corinthians",
+          "chapter": "2",
+          "verses": "1-5"
         }
       ]
     }
   },
-  "12-22": {
+  "02-20": {
     "AM": {
       "psalms": [
         {
@@ -865,10 +771,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 24:1-21",
-          "book": "Acts",
-          "chapter": "24",
-          "verses": "1-21"
+          "reference": "Matthew 15:1-20",
+          "book": "Matthew",
+          "chapter": "15",
+          "verses": "1-20"
         }
       ]
     },
@@ -883,15 +789,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 19:1-5",
-          "book": "Revelation",
-          "chapter": "19",
-          "verses": "1-5"
+          "reference": "1 Corinthians 2:6-15",
+          "book": "1 Corinthians",
+          "chapter": "2",
+          "verses": "6-15"
         }
       ]
     }
   },
-  "12-23": {
+  "02-21": {
     "AM": {
       "psalms": [
         {
@@ -903,16 +809,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 24:22-27",
-          "book": "Acts",
-          "chapter": "24",
-          "verses": "22-27"
-        },
-        {
-          "reference": "Acts 25:1-5",
-          "book": "Acts",
-          "chapter": "25",
-          "verses": "1-5"
+          "reference": "Matthew 15:21-31",
+          "book": "Matthew",
+          "chapter": "15",
+          "verses": "21-31"
         }
       ]
     },
@@ -931,15 +831,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 19:6-10",
-          "book": "Revelation",
-          "chapter": "19",
-          "verses": "6-10"
+          "reference": "1 Corinthians 3:1-9",
+          "book": "1 Corinthians",
+          "chapter": "3",
+          "verses": "1-9"
         }
       ]
     }
   },
-  "12-24": {
+  "02-22": {
     "AM": {
       "psalms": [
         {
@@ -955,10 +855,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 25:6-22",
-          "book": "Acts",
-          "chapter": "25",
-          "verses": "6-22"
+          "reference": "Matthew 15:32-39",
+          "book": "Matthew",
+          "chapter": "15",
+          "verses": "32-39"
         }
       ]
     },
@@ -977,15 +877,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 19:11-21",
-          "book": "Revelation",
-          "chapter": "19",
-          "verses": "11-21"
+          "reference": "1 Corinthians 3:10-17",
+          "book": "1 Corinthians",
+          "chapter": "3",
+          "verses": "10-17"
         }
       ]
     }
   },
-  "12-25": {
+  "02-23": {
     "AM": {
       "psalms": [
         {
@@ -1006,16 +906,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 25:23-27",
-          "book": "Acts",
-          "chapter": "25",
-          "verses": "23-27"
-        },
-        {
-          "reference": "Acts 26:1-11",
-          "book": "Acts",
-          "chapter": "26",
-          "verses": "1-11"
+          "reference": "Matthew 16:1-12",
+          "book": "Matthew",
+          "chapter": "16",
+          "verses": "1-12"
         }
       ]
     },
@@ -1039,15 +933,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 20:1-6",
-          "book": "Revelation",
-          "chapter": "20",
-          "verses": "1-6"
+          "reference": "1 Corinthians 3:18-23",
+          "book": "1 Corinthians",
+          "chapter": "3",
+          "verses": "18-23"
         }
       ]
     }
   },
-  "12-26": {
+  "02-24": {
     "AM": {
       "psalms": [
         {
@@ -1063,10 +957,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 26:12-32",
-          "book": "Acts",
-          "chapter": "26",
-          "verses": "12-32"
+          "reference": "Matthew 16:13-20",
+          "book": "Matthew",
+          "chapter": "16",
+          "verses": "13-20"
         }
       ]
     },
@@ -1085,15 +979,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 20:7-15",
-          "book": "Revelation",
-          "chapter": "20",
-          "verses": "7-15"
+          "reference": "1 Corinthians 4:1-13",
+          "book": "1 Corinthians",
+          "chapter": "4",
+          "verses": "1-13"
         }
       ]
     }
   },
-  "12-27": {
+  "02-25": {
     "AM": {
       "psalms": [
         {
@@ -1104,10 +998,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 27:1-12",
-          "book": "Acts",
-          "chapter": "27",
-          "verses": "1-12"
+          "reference": "Matthew 16:21-28",
+          "book": "Matthew",
+          "chapter": "16",
+          "verses": "21-28"
         }
       ]
     },
@@ -1126,15 +1020,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 21:1-8",
-          "book": "Revelation",
-          "chapter": "21",
-          "verses": "1-8"
+          "reference": "1 Corinthians 4:14-21",
+          "book": "1 Corinthians",
+          "chapter": "4",
+          "verses": "14-21"
         }
       ]
     }
   },
-  "12-28": {
+  "02-26": {
     "AM": {
       "psalms": [
         {
@@ -1145,10 +1039,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 27:13-26",
-          "book": "Acts",
-          "chapter": "27",
-          "verses": "13-26"
+          "reference": "Matthew 17:1-13",
+          "book": "Matthew",
+          "chapter": "17",
+          "verses": "1-13"
         }
       ]
     },
@@ -1172,34 +1066,22 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 21:9-21",
-          "book": "Revelation",
-          "chapter": "21",
-          "verses": "9-21"
+          "reference": "1 Corinthians 5:1-13",
+          "book": "1 Corinthians",
+          "chapter": "5",
+          "verses": "1-13"
         }
       ]
     }
   },
-  "12-29": {
+  "02-27": {
     "AM": {
       "psalms": [
         {
           "reference": "Psalm 143",
           "book": "Psalm",
           "chapter": "143"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Acts 27:27-44",
-          "book": "Acts",
-          "chapter": "27",
-          "verses": "27-44"
-        }
-      ]
-    },
-    "PM": {
-      "psalms": [
+        },
         {
           "reference": "Psalm 144",
           "book": "Psalm",
@@ -1208,40 +1090,20 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 21:22-27",
-          "book": "Revelation",
-          "chapter": "21",
-          "verses": "22-27"
-        },
-        {
-          "reference": "Revelation 22:1-5",
-          "book": "Revelation",
-          "chapter": "22",
-          "verses": "1-5"
-        }
-      ]
-    }
-  },
-  "12-30": {
-    "AM": {
-      "psalms": [
-        {
-          "reference": "Psalm 145",
-          "book": "Psalm",
-          "chapter": "145"
-        }
-      ],
-      "lesson": [
-        {
-          "reference": "Acts 28:1-16",
-          "book": "Acts",
-          "chapter": "28",
-          "verses": "1-16"
+          "reference": "Matthew 17:14-21",
+          "book": "Matthew",
+          "chapter": "17",
+          "verses": "14-21"
         }
       ]
     },
     "PM": {
       "psalms": [
+        {
+          "reference": "Psalm 145",
+          "book": "Psalm",
+          "chapter": "145"
+        },
         {
           "reference": "Psalm 146",
           "book": "Psalm",
@@ -1250,15 +1112,15 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 22:6-15",
-          "book": "Revelation",
-          "chapter": "22",
-          "verses": "6-15"
+          "reference": "1 Corinthians 6:1-11",
+          "book": "1 Corinthians",
+          "chapter": "6",
+          "verses": "1-11"
         }
       ]
     }
   },
-  "12-31": {
+  "02-28": {
     "AM": {
       "psalms": [
         {
@@ -1274,10 +1136,10 @@
       ],
       "lesson": [
         {
-          "reference": "Acts 28:17-31",
-          "book": "Acts",
-          "chapter": "28",
-          "verses": "17-31"
+          "reference": "Matthew 17:22-27",
+          "book": "Matthew",
+          "chapter": "17",
+          "verses": "22-27"
         }
       ]
     },
@@ -1296,10 +1158,10 @@
       ],
       "lesson": [
         {
-          "reference": "Revelation 22:16-21",
-          "book": "Revelation",
-          "chapter": "22",
-          "verses": "16-21"
+          "reference": "1 Corinthians 6:12-20",
+          "book": "1 Corinthians",
+          "chapter": "6",
+          "verses": "12-20"
         }
       ]
     }

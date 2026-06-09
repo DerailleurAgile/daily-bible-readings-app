@@ -1,9 +1,9 @@
 {
   "name": "daily-bible-readings-app",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "announcement": {
     "id": "new-release-1.1.0",
     "title": "Daily Prayer Readings is now The Daily Office!",
-    "message": "New for v1.1.0: We've re-branded to The Daily Office and added a new feature to integrate morning and evening prayers from the St. Paul's Bloor Street Daily Prayer Guide with the daily scripture readings from the lectionary. Now it is easier than ever to build a daily prayer habit wherever you are. Check out the new features and let us know what you think!"
+    "message": "New for v1.1.0: We've re-branded to The Daily Office and added a new feature to integrate morning and evening prayers from the St. Paul's Bloor Street Daily Prayer Guide with the daily scripture readings from the lectionary. Now it is easier than ever to build a daily prayer habit wherever you are."
   }
 }

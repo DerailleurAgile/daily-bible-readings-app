@@ -1,32 +1,57 @@
 // app/hooks/useMonthCache.js
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-const CURRENT_VERSION = process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v5';
+const MANIFEST_URL = '/monthly/manifest.json';
+
+async function fetchManifest() {
+  const res = await fetch(MANIFEST_URL, { cache: 'no-store' });
+  if (!res.ok) throw new Error('Failed to fetch lectionary manifest');
+  return res.json();
+}
+
+function getCacheKey(month, hash) {
+  return `readings_${month}_${hash}`;
+}
 
 export default function useMonthCache(currentMonth, monthReadings) {
   const [monthCache, setMonthCache] = useState({});
+  const manifestRef = useRef(null); // { "01": "a3f9c2", ... }
 
-  // One-time cleanup: remove old versions
+  // On mount: fetch manifest, evict stale entries, load valid ones
   useEffect(() => {
-    const cleanupKey = `cache_cleaned_${CURRENT_VERSION}`;
-    
-    if (!localStorage.getItem(cleanupKey)) {
-      // Remove all old versions
-      for (let i = 1; i <= 12; i++) {
-        const month = String(i).padStart(2, '0');
-        localStorage.removeItem(`readings_${month}_v1`);
-        localStorage.removeItem(`readings_${month}_v2`);
-        localStorage.removeItem(`readings_${month}_v3`);
-        localStorage.removeItem(`readings_${month}_v4`);
-        // Future revisions here...
-        // It's not the best solution, but it works for now
-      }
-      localStorage.setItem(cleanupKey, 'true');
-      console.log('Cache cleaned for', CURRENT_VERSION);
-    }
+    fetchManifest()
+      .then((manifest) => {
+        manifestRef.current = manifest;
+
+        // Evict any localStorage entry not matching current manifest hashes
+        const validKeys = new Set(
+          Object.entries(manifest).map(([m, hash]) => getCacheKey(m, hash))
+        );
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+          const key = localStorage.key(i);
+          if (key?.startsWith('readings_') && !validKeys.has(key)) {
+            localStorage.removeItem(key);
+          }
+        }
+
+        // Prime memory cache from localStorage for any month already stored
+        const initial = {};
+        for (const [month, hash] of Object.entries(manifest)) {
+          const stored = localStorage.getItem(getCacheKey(month, hash));
+          if (stored) {
+            try {
+              initial[month] = JSON.parse(stored);
+            } catch {
+              localStorage.removeItem(getCacheKey(month, hash));
+            }
+          }
+        }
+        setMonthCache(initial);
+      })
+      .catch((err) => console.error('Manifest fetch failed:', err));
   }, []);
 
-  // Store current month readings
+  // Store current month readings passed in as prop
   useEffect(() => {
     if (monthReadings) {
       setMonthCache((prev) => {
@@ -36,60 +61,50 @@ export default function useMonthCache(currentMonth, monthReadings) {
     }
   }, [currentMonth, monthReadings]);
 
-  // Preload adjacent months
+  // Preload current + adjacent months
   useEffect(() => {
+    const manifest = manifestRef.current;
+    if (!manifest) return; // Wait for manifest to load
+
     const monthNum = parseInt(currentMonth, 10);
-    const preloadMonths = [
+    const targets = [
       currentMonth,
-      String((monthNum % 12) + 1).padStart(2, '0'),        // Next month
-      String((monthNum + 10) % 12 + 1).padStart(2, '0'),   // Previous month
+      String((monthNum % 12) + 1).padStart(2, '0'),
+      String((monthNum + 10) % 12 + 1).padStart(2, '0'),
     ];
 
-    preloadMonths.forEach((m) => {
-      const key = `readings_${m}_${CURRENT_VERSION}`;
-      const cached = localStorage.getItem(key);
+    targets.forEach((m) => {
+      if (monthCache[m]) return; // Already in memory
 
-      // If already in memory cache, skip
-      if (monthCache[m]) return;
+      const hash = manifest[m];
+      if (!hash) return; // Month not in manifest (shouldn't happen)
 
-      // If in localStorage, load to memory
-      if (cached) {
+      const key = getCacheKey(m, hash);
+      const stored = localStorage.getItem(key);
+
+      if (stored) {
         try {
-          const parsed = JSON.parse(cached);
-          setMonthCache((prev) => ({ ...prev, [m]: parsed }));
+          setMonthCache((prev) => ({ ...prev, [m]: JSON.parse(stored) }));
           return;
-        } catch (e) {
-          // Corrupted cache, remove it
+        } catch {
           localStorage.removeItem(key);
         }
       }
 
-      // Fetch from server
-      const url = `/monthly/${m}.${CURRENT_VERSION}.json`;
-      
-      fetch(url, {
-        // Since files are versioned and immutable, browser cache is fine
-        // But we're being explicit for Android
-        cache: 'force-cache', // Use browser cache if available
-      })
+      fetch(`/monthly/${m}.json`, { cache: 'no-store' })
         .then((res) => {
           if (!res.ok) throw new Error(`Failed to load month ${m}`);
           return res.json();
         })
         .then((data) => {
-          // Save to localStorage
           try {
             localStorage.setItem(key, JSON.stringify(data));
-          } catch (e) {
+          } catch {
             console.warn('localStorage quota exceeded for', key);
           }
-          
-          // Save to memory cache
           setMonthCache((prev) => ({ ...prev, [m]: data }));
         })
-        .catch((err) => {
-          console.error('Failed to preload month', m, err);
-        });
+        .catch((err) => console.error('Failed to preload month', m, err));
     });
   }, [currentMonth, monthCache]);
 
