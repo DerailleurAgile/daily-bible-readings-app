@@ -221,6 +221,7 @@ export default function SettingsPanel({
                 <li>UI improvements and bug fixes</li>
                 <li>Fixed verse citation for Psalm 105</li>
                 <li>Updated local lectionary data cache to automatically refresh after updates. Like Psalm 105.</li>
+                <li>Current date in the header is shown in amber, other days in gray so you know when you've swiped to look ahead or behind.</li>
               </ul>
             </div>
 

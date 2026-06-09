@@ -19,3 +19,13 @@ export function formatDateKey(dateKey, year = new Date().getFullYear()) {
     year: 'numeric' 
   });
 }
+
+// Check if the given date is today
+export function isToday(selectedData) {
+  const today = new Date();
+  return (
+    selectedData.getDate() === today.getDate() &&
+    selectedData.getMonth() === today.getMonth() &&
+    selectedData.getFullYear() === today.getFullYear()
+  );
+}

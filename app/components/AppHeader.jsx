@@ -1,8 +1,10 @@
 // app/components/AppHeader.jsx
 import { Church, Menu } from 'lucide-react';
 import { formatDateKey } from '../../utils/dateUtils'
+import { isToday } from '../../utils/dateUtils';
 
 export default function AppHeader({ dateKey, selectedDate, onFeedbackClick, onSettingsClick }) {
+  const dateIsToday = isToday(selectedDate);
   return (
     <div className="relative text-center space-y-2">
       <button
@@ -18,11 +20,12 @@ export default function AppHeader({ dateKey, selectedDate, onFeedbackClick, onSe
       <h1 className="text-3xl font-bold text-gray-100">The Daily Office</h1>
       <p className="text-gray-400">St. Paul's Bloor Street Lectionary (2025/26)</p>
 
-      <h2 className="text-xl font-bold text-gray-100 flex items-center justify-center gap-3">
+      <h2 className={`text-xl font-bold flex items-center justify-center gap-3 ${dateIsToday ? 'text-amber-400' : 'text-gray-300'}`}>
         <span className="text-gray-500 text-2xl transform scale-x-[-1]">〜</span>
-        {formatDateKey(dateKey, selectedDate.getFullYear())}
+          {formatDateKey(dateKey, selectedDate.getFullYear())}
         <span className="text-gray-500 text-2xl">〜</span>
       </h2>
+
     </div>
   );
 }
