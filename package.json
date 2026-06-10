@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "prebuild": "node scripts/generate-version.js",
+    "prebuild": "node scripts/generate-version.js && node scripts/generate-manifest.mjs",
     "start": "next start",
     "lint": "eslint",
     "generate-manifest": "node scripts/generate-manifest.mjs",
