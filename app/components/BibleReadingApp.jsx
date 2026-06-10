@@ -16,6 +16,7 @@ import useSwipeNavigation from '../hooks/useSwipeNavigation';
 // Components
 import AppFooter from './AppFooter';
 import AppHeader from './AppHeader';
+import AppInfoModal from './AppInfoModal';
 import FeedbackForm from './FeedbackForm';
 import ReadingSession from './ReadingSession';
 import SessionSelector from './SessionSelector';
@@ -46,6 +47,7 @@ export default function BibleReadingApp() {
 
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
   const platform = useMobilePlatform();
   const [showFeedback, setShowFeedback] = useState(false);
@@ -174,6 +176,8 @@ export default function BibleReadingApp() {
 
       {showSwipeHint && <SwipeHint onClose={() => setShowSwipeHint(false)} />}
 
+      <AppInfoModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
+
       <div className="max-w-2xl mx-auto space-y-6 relative">
         <AppHeader
           dateKey={displayDateKey}
@@ -191,6 +195,7 @@ export default function BibleReadingApp() {
             handleTranslationChange={handleTranslationChange}
             settingsOpen={settingsOpen}
             setSettingsOpen={setSettingsOpen}
+            onShowAppInfo={() => setShowAbout(true)}
           />
         </SlideOver>
         
