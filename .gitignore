@@ -45,3 +45,6 @@ workbox-*.js
 
 # Worktrees
 .worktree
+
+# Lectionary Manifest
+/public/monthly/manifest.json
