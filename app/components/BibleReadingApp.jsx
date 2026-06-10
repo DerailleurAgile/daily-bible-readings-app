@@ -16,11 +16,11 @@ import useSwipeNavigation from '../hooks/useSwipeNavigation';
 // Components
 import AppFooter from './AppFooter';
 import AppHeader from './AppHeader';
-import AppInfoModal from './AppInfoModal';
 import FeedbackForm from './FeedbackForm';
 import ReadingSession from './ReadingSession';
 import SessionSelector from './SessionSelector';
-import SettingsPanel from './SettingsPanel';
+import SettingsPanelModal from './SettingsPanelModal';
+import AppInfoModal from './AppInfoModal'; // New for v1.1.4!
 import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
 import AnnouncementBanner from './AnnouncementBanner'; // New Component
@@ -184,18 +184,18 @@ export default function BibleReadingApp() {
           selectedDate={selectedDate} // NEW!  
           onFeedbackClick={() => setShowFeedback(true)} 
           onSettingsClick={() => setSettingsOpen(true)}
+          onInfoClick={() => setShowAbout(true)}  
         />
         {showFeedback && <FeedbackForm onClose={() => setShowFeedback(false)} />}
 
         <SlideOver isOpen={settingsOpen} onClose={() => setSettingsOpen(false)}>
-          <SettingsPanel
+          <SettingsPanelModal
             selectedDate={selectedDate}
             setSelectedDate={setSelectedDate}
             translation={translation}
             handleTranslationChange={handleTranslationChange}
             settingsOpen={settingsOpen}
             setSettingsOpen={setSettingsOpen}
-            onShowAppInfo={() => setShowAbout(true)}
           />
         </SlideOver>
         

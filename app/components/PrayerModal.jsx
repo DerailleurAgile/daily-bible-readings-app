@@ -1,6 +1,7 @@
 // components/PrayerModal.jsx
 import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
+import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
 
 const getPositionLabel = (position, session) => {
   if (position === 'opening') {
@@ -41,25 +42,8 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
   const label = getPositionLabel(position, session);
 
   return (
-    <div
-      className="fixed inset-0 bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
-      onClick={onClose}
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        className={`w-[600px] max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg
-          transform transition-all duration-300 shadow-2xl
-          ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
-      >
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 z-10"
-          aria-label="Close prayer"
-        >
-          ✕
-        </button>
-
+    <SlideOver isOpen={isOpen} onClose={onClose} width="w-[600px]" maxHeight="max-h-[80vh]">
+      <div>
         {/* Header */}
         <div className="p-6 border-b border-gray-700">
           <h2 className="text-lg font-semibold text-gray-100 flex items-center gap-2">
@@ -173,6 +157,6 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
           )}
         </div>
       </div>
-    </div>
+    </SlideOver>
   );
 }

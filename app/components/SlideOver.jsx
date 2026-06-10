@@ -1,5 +1,5 @@
 // app/components/SlideOver.jsx - Fully Centered Modal with Blur
-export default function SlideOver({ isOpen, onClose, children }) {
+export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80vh]', showCloseButton = true }) {
   return (
     <>
       {/* Blurred backdrop */}
@@ -11,7 +11,10 @@ export default function SlideOver({ isOpen, onClose, children }) {
           {/* Centered panel */}
           <div
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
-            className={`w-80 max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg 
+            onTouchStart={(e) => e.stopPropagation()}
+            onTouchMove={(e) => e.stopPropagation()}
+            onTouchEnd={(e) => e.stopPropagation()}
+            className={`${width} max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg 
             transform transition-all duration-300 shadow-2xl
             ${isOpen 
               ? 'scale-100 opacity-100' 
@@ -19,15 +22,17 @@ export default function SlideOver({ isOpen, onClose, children }) {
             }`}
           >
             {/* Close button */}
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 z-10"
-              aria-label="Close settings"
-            >
-              ✕
-            </button>
+            {showCloseButton && (
+              <button
+                onClick={onClose}
+                className="absolute top-4 right-4 text-gray-400 hover:text-gray-200 z-10"
+                aria-label="Close Modal"
+              >
+                ✕
+              </button>
+            )}
 
-            <div className="p-6 overflow-y-auto max-h-[80vh]">
+            <div className={`p-6 overflow-y-auto ${maxHeight}`}>
               {children}
             </div>
           </div>

@@ -3,13 +3,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { Calendar, Info, X, Smartphone } from 'lucide-react';
 
-export default function SettingsPanel({
+export default function SettingsPanelModal({
   selectedDate,
   setSelectedDate,
   translation,
   handleTranslationChange,
   setSettingsOpen, // Keep this to close from within
-  onShowAppInfo, // New prop to open the App Info modal
 }) {
   const [showTooltip, setShowTooltip] = useState(false);
   const [deviceId, setDeviceId] = useState('');
@@ -83,7 +82,7 @@ export default function SettingsPanel({
       {/* Header */}
       <div>
         <h2 className="text-2xl font-bold text-gray-100 mb-2">Settings</h2>
-        <p className="text-sm text-gray-400">
+        <p className="text-sm text-amber-300 mb-4">
           {formatDisplayDate(selectedDate)} • {translation}
         </p>
       </div>
@@ -177,14 +176,6 @@ export default function SettingsPanel({
       >
         <Smartphone className="w-5 h-5" />
         Install to Home Screen
-      </button>
-
-      {/* About App button */}
-      <button
-        className="flex items-center gap-1 text-sm text-blue-400 hover:text-blue-300"
-        onClick={onShowAppInfo}
-      >
-        <Info className="w-4 h-4" /> About This App
       </button>
 
       {/* Fade-in animation */}
