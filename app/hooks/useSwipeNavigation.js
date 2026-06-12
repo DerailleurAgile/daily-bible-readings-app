@@ -9,10 +9,12 @@ export default function useSwipeNavigation({ goNext, goPrev, resetToToday }) {
     let lastTap = 0;
 
     const handleStart = (e) => {
+      if (e.target.closest('[data-modal]')) return;
       touchStart = e.changedTouches[0].screenX;
     };
 
     const handleEnd = (e) => {
+      if (e.target.closest('[data-modal]')) return;
       touchEnd = e.changedTouches[0].screenX;
 
       // Double tap → today

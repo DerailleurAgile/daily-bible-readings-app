@@ -10,6 +10,7 @@ export default function SlideOver({ isOpen, onClose, children, width = 'w-80', m
         >
           {/* Centered panel */}
           <div
+            data-modal
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
             onTouchStart={(e) => e.stopPropagation()}
             onTouchMove={(e) => e.stopPropagation()}
