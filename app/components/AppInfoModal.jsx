@@ -28,10 +28,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
-          <li>Moved this panel out from the settings modal on its own</li>
-          <li>Standardized UI with cog for settings and (i) for AppInfo</li>
-          <li>Fixed verse citation for June 10th morning reading</li>
-          <li>Refactored how modals are handled to better reuse existing components</li>
+          <li>Finally squashed bug where swipe/touch navigation events were bubbling through to modals.</li>
         </ul>
       </div>
 
