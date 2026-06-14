@@ -1,7 +1,7 @@
 // app/components/SlideOver.jsx - Fully Centered Modal with Blur
 import { useEffect } from 'react';
 
-export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80vh]', showCloseButton = true }) {
+export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80dvh]', showCloseButton = true }) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';

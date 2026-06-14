@@ -18,7 +18,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <SlideOver isOpen={isOpen} onClose={onClose} width="w-80" maxHeight="max-h-[80vh]">
+    <SlideOver isOpen={isOpen} onClose={onClose} width="w-80" maxHeight="max-h-[80dvh]">
       <h3 className="text-gray-100 font-semibold mb-2 text-center">
         The Daily Office
       </h3>
