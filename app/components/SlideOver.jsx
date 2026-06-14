@@ -1,7 +1,7 @@
 // app/components/SlideOver.jsx - Fully Centered Modal with Blur
 import { useEffect } from 'react';
 
-export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80vh]', showCloseButton = true }) {
+export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80dvh]', showCloseButton = true }) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -14,7 +14,7 @@ export default function SlideOver({ isOpen, onClose, children, width = 'w-80', m
       {/* Blurred backdrop */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
+          className="fixed inset-0 min-h-[100dvh] bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
           onClick={onClose}
         >
           {/* Centered panel */}

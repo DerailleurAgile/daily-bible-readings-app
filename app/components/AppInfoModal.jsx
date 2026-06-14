@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Info, Share2, X } from 'lucide-react';
+import { Share2 } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 import packageJson from '../../package.json';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
@@ -18,7 +18,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <SlideOver isOpen={isOpen} onClose={onClose} width="w-80" maxHeight="max-h-[80vh]">
+    <SlideOver isOpen={isOpen} onClose={onClose} width="w-80" maxHeight="max-h-[80dvh]">
       <h3 className="text-gray-100 font-semibold mb-2 text-center">
         The Daily Office
       </h3>
@@ -35,6 +35,9 @@ export default function AppInfoModal({ isOpen, onClose }) {
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
           <li>Finally squashed bug where swipe/touch navigation events were bubbling through to modals.</li>
+          <li>Modals now politely stop the background from scrolling while they're open.</li>
+          <li>Fixed backdrop not covering the full screen on mobile. No more peeking.</li>
+          <li>YouVersion app store links actually work now. Oops.</li>
         </ul>
       </div>
 
