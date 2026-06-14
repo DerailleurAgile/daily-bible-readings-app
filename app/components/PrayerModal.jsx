@@ -45,7 +45,7 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
     <SlideOver isOpen={isOpen} onClose={onClose} width="w-[600px]" maxHeight="max-h-[80vh]">
       <div>
         {/* Header */}
-        <div className="p-6 border-b border-gray-700">
+        <div className="p-2 border-b border-gray-700">
           <h2 className="text-lg font-semibold text-gray-100 flex items-center gap-2">
             <span>🙏</span>
             {label}
@@ -54,7 +54,7 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
 
         {/* Content */}
         <div
-          className="p-6 overflow-y-auto max-h-[60vh]"
+          className="p-2 overflow-y-auto max-h-[60vh]"
           style={{
             scrollbarWidth: 'thin',
             scrollbarColor: '#374151 transparent',

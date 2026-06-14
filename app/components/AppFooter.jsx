@@ -17,7 +17,7 @@ export default function AppFooter({ platform }) {
 
       {/* New primary message */}
       <p className="text-gray-300 font-medium">
-        This app works best when paired with the <b>YouVersion Bible App.</b>
+        This app works best when paired<br/> with the <b>YouVersion Bible App.</b>
       </p>
 
       {/* Platform-based link */}

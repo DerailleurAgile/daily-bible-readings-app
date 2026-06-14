@@ -9,6 +9,12 @@ import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
 export default function AppInfoModal({ isOpen, onClose }) {
   const [showQR, setShowQR] = useState(false);
 
+  const platform = typeof navigator !== 'undefined'
+    ? /ipad|iphone|ipod/i.test(navigator.userAgent) ? 'ios'
+    : /android/i.test(navigator.userAgent) ? 'android'
+    : 'other'
+    : 'other';
+
   if (!isOpen) return null;
 
   return (
@@ -57,6 +63,30 @@ export default function AppInfoModal({ isOpen, onClose }) {
             <p className="text-xs text-gray-400 text-center">
               Scan to open the app on another device.
             </p>
+            <p className="text-xs text-gray-300">
+              This app works best when paired<br/> with the <b>YouVersion Bible App.</b>
+            </p>
+            {/* Platform-based link */}
+            {platform === 'ios' && (
+              <a
+                href="https://apps.apple.com/ca/app/bible/id282935706"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline block mt-2"
+              >
+                Open in the Apple App Store
+              </a>
+            )}
+            {platform === 'android' && (
+              <a
+                href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 underline block mt-2"
+              >
+                Open in Google Play
+              </a>
+            )}
           </div>
         )}
       </div>
