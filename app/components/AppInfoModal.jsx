@@ -57,7 +57,32 @@ export default function AppInfoModal({ isOpen, onClose }) {
             <p className="text-xs text-gray-400 text-center">
               Scan to open the app on another device.
             </p>
+            <p className="text-gray-300 font-medium">
+              This app works best when paired<br/> with the <b>YouVersion Bible App.</b>
+            </p>
           </div>
+        )}
+        {/* Platform-based link */}
+        {platform === 'ios' && (
+          <a 
+            href="https://apps.apple.com/ca/app/bible/id282935706"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline block"
+          >
+            Open in the Apple App Store
+          </a>
+        )}
+
+        {platform === 'android' && (
+          <a
+            href="https://play.google.com/store/apps/details?id=com.sirma.mobile.bible.android"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline block"
+          >
+            Open in Google Play
+          </a>
         )}
       </div>
     </SlideOver>
