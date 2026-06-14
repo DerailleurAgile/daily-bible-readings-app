@@ -1,5 +1,14 @@
 // app/components/SlideOver.jsx - Fully Centered Modal with Blur
+import { useEffect } from 'react';
+
 export default function SlideOver({ isOpen, onClose, children, width = 'w-80', maxHeight = 'max-h-[80vh]', showCloseButton = true }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   return (
     <>
       {/* Blurred backdrop */}
@@ -33,7 +42,7 @@ export default function SlideOver({ isOpen, onClose, children, width = 'w-80', m
               </button>
             )}
 
-            <div className={`p-6 overflow-y-auto ${maxHeight}`}>
+            <div className={`p-6 overflow-y-auto ${maxHeight}`} style={{ scrollbarWidth: 'thin', scrollbarColor: '#374151 transparent' }}>
               {children}
             </div>
           </div>
