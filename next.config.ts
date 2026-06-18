@@ -26,6 +26,15 @@ const nextConfig: NextConfig = {
           },
         ],
       },
+      {
+        source: '/prayers/:file.txt',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
     ];
   },
 };
@@ -67,6 +76,17 @@ const pwaConfig = withPWA({
         cacheName: 'lectionary-cache',
         expiration: {
           maxEntries: 50,
+          maxAgeSeconds: 365 * 24 * 60 * 60
+        }
+      }
+    },
+    {
+      urlPattern: /\/prayers\/.*\.txt$/i,
+      handler: 'CacheFirst',
+      options: {
+        cacheName: 'prayer-cache',
+        expiration: {
+          maxEntries: 10,
           maxAgeSeconds: 365 * 24 * 60 * 60
         }
       }

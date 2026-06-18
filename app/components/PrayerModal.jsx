@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
+import usePrayerCache from '../hooks/usePrayerCache';
 
 const getPositionLabel = (position, session) => {
   if (position === 'opening') {
@@ -17,17 +18,27 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const prayerCache = usePrayerCache();
 
   useEffect(() => {
     if (!isOpen || !session || !position) return;
+
+    const period = session === 'AM' ? 'morning' : 'evening';
+    const key = `${period}-${position}`;
+    const cached = prayerCache[key];
+
+    if (cached) {
+      setContent(cached);
+      setError(null);
+      setLoading(false);
+      return;
+    }
 
     setContent('');
     setError(null);
     setLoading(true);
 
-    const period = session === 'AM' ? 'morning' : 'evening';
-
-    fetch(`/prayers/${period}-${position}.txt`)
+    fetch(`/prayers/${key}.txt`)
       .then((res) => {
         if (!res.ok) throw new Error('Prayer file not found');
         return res.text();
@@ -35,7 +46,7 @@ export default function PrayerModal({ isOpen, onClose, session, position }) {
       .then((text) => setContent(text))
       .catch(() => setError('Unable to load prayer. Please try again.'))
       .finally(() => setLoading(false));
-  }, [isOpen, session, position]);
+  }, [isOpen, session, position, prayerCache]);
 
   if (!isOpen) return null;
 

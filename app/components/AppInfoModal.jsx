@@ -34,10 +34,8 @@ export default function AppInfoModal({ isOpen, onClose }) {
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
-          <li>Finally squashed bug where swipe/touch navigation events were bubbling through to modals.</li>
-          <li>Modals now politely stop the background from scrolling while they're open.</li>
-          <li>Fixed backdrop not covering the full screen on mobile. No more peeking.</li>
-          <li>YouVersion app store links actually work now. Oops.</li>
+          <li>Prayer texts are now cached locally — opens instantly and works offline.</li>
+          <li>Evicted a ghost URL from the readings loader that was causing 404s. Haunting over.</li>
         </ul>
       </div>
 
