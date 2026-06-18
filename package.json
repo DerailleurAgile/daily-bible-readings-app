@@ -5,12 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "prebuild": "node scripts/generate-version.js && node scripts/generate-manifest.mjs && node scripts/generate-prayers-manifest.mjs",
+    "prebuild": "node scripts/generate-version.js && node scripts/generate-manifests.mjs",
     "start": "next start",
     "lint": "eslint",
-    "generate-manifest": "node scripts/generate-manifest.mjs",
-    "generate-prayers-manifest": "node scripts/generate-prayers-manifest.mjs",
-    "predev": "node scripts/generate-manifest.mjs && node scripts/generate-prayers-manifest.mjs"
+    "generate-manifests": "node scripts/generate-manifests.mjs",
+    "predev": "node scripts/generate-manifests.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
