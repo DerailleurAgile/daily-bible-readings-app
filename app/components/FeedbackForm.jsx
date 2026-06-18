@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import { X } from "lucide-react";
-import { getDeviceInfo } from "@/utils/getDeviceInfo";
+import { UAParser } from 'ua-parser-js';
 
 export default function FeedbackForm({ open, onClose, userId }) {
     const [message, setMessage] = useState("");
@@ -17,16 +17,15 @@ export default function FeedbackForm({ open, onClose, userId }) {
 
         setSending(true);
 
-        // Capture device info from client at submission time and build payload
-        const deviceInfo = getDeviceInfo();
+        const parser = new UAParser();
         const payload = {
             message,
             userId: userId || null,
-            user_agent: deviceInfo.user_agent,
-            device_type: deviceInfo.device_type,
-            os_name: deviceInfo.os_name,
-            os_version: deviceInfo.os_version,
-            browser: deviceInfo.browser,
+            user_agent: navigator.userAgent || 'Unknown',
+            device_type: parser.getDevice().type || 'desktop',
+            os_name: parser.getOS().name || 'Unknown',
+            os_version: parser.getOS().version || '',
+            browser: parser.getBrowser().name || 'Unknown',
         };
 
         try {

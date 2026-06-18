@@ -28,37 +28,12 @@ module.exports = {
             maxHeight: '500px',
           },
         },
-        swipeLeft: {
-          '0%, 100%': {
-            transform: 'translateX(0)',
-            opacity: '1',
-          },
-          '50%': {
-            transform: 'translateX(-20px)',
-            opacity: '0.5',
-          },
-        },
-        swipeRight: {
-          '0%, 100%': {
-            transform: 'translateX(0)',
-            opacity: '1',
-          },
-          '50%': {
-            transform: 'translateX(20px)',
-            opacity: '0.5',
-          },
-        },
-        pulseScaleOnce: {
-          '0%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.2)' },
-          '100%': { transform: 'scale(1)' },
-        },
+
       },
       animation: {
         fadeIn: 'fadeIn 0.3s ease-out',
         slideDown: 'slideDown 0.3s ease-out',
-        swipeLeft: 'swipeLeft 1.5s ease-in-out infinite',
-        swipeRight: 'swipeRight 1.5s ease-in-out infinite',
+
       },
     },
   },
