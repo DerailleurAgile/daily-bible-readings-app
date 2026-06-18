@@ -10,7 +10,6 @@ import useKeyboardNavigation from '../hooks/useKeyboardNavigation';
 import useMobilePlatform from '../hooks/useMobilePlatform';
 import useMonthCache from '../hooks/useMonthCache';
 import useReadingProgress from '../hooks/useReadingProgress';
-import useReadingsForMonth from '../hooks/useReadingsForMonth';
 import useSwipeNavigation from '../hooks/useSwipeNavigation';
 
 // Components
@@ -77,11 +76,8 @@ export default function BibleReadingApp() {
   // Determine current month
   const currentMonth = String(selectedDate.getMonth() + 1).padStart(2, '0');
 
-  // Lazy-load monthly data
-  const { readings: monthReadings, loading, error } = useReadingsForMonth(currentMonth);
-
   // Month caching with preloading
-  const monthCache = useMonthCache(currentMonth, monthReadings);
+  const { monthCache, loading, error } = useMonthCache(currentMonth);
 
   // Derive date keys
   const getDateKey = (date) => {
@@ -97,14 +93,8 @@ export default function BibleReadingApp() {
     if (monthData && monthData[dateKey]) {
       setDisplayReadings(monthData[dateKey]);
       setDisplayDateKey(dateKey);
-      return;
     }
-
-    if (monthReadings && monthReadings[dateKey]) {
-      setDisplayReadings(monthReadings[dateKey]);
-      setDisplayDateKey(dateKey);
-    }
-  }, [currentMonth, dateKey, monthCache, monthReadings]);
+  }, [currentMonth, dateKey, monthCache]);
 
   // Reading progress with explanation cache
   const { isComplete, toggleComplete, getExplanation, saveExplanation } = useReadingProgress(translation);

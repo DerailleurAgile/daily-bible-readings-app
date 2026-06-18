@@ -13,8 +13,10 @@ function getCacheKey(month, hash) {
   return `readings_${month}_${hash}`;
 }
 
-export default function useMonthCache(currentMonth, monthReadings) {
+export default function useMonthCache(currentMonth) {
   const [monthCache, setMonthCache] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const manifestRef = useRef(null); // { "01": "a3f9c2", ... }
 
   // On mount: fetch manifest, evict stale entries, load valid ones
@@ -47,19 +49,14 @@ export default function useMonthCache(currentMonth, monthReadings) {
           }
         }
         setMonthCache(initial);
+        setLoading(false);
       })
-      .catch((err) => console.error('Manifest fetch failed:', err));
-  }, []);
-
-  // Store current month readings passed in as prop
-  useEffect(() => {
-    if (monthReadings) {
-      setMonthCache((prev) => {
-        if (prev[currentMonth] === monthReadings) return prev;
-        return { ...prev, [currentMonth]: monthReadings };
+      .catch((err) => {
+        console.error('Manifest fetch failed:', err);
+        setError(err.message);
+        setLoading(false);
       });
-    }
-  }, [currentMonth, monthReadings]);
+  }, []);
 
   // Preload current + adjacent months
   useEffect(() => {
@@ -108,5 +105,5 @@ export default function useMonthCache(currentMonth, monthReadings) {
     });
   }, [currentMonth, monthCache]);
 
-  return monthCache;
+  return { monthCache, loading, error };
 }
