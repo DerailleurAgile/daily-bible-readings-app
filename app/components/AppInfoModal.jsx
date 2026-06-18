@@ -32,6 +32,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
         <ul className="list-disc list-outside ml-5 space-y-1">
           <li>Prayer texts are now cached locally — opens instantly and works offline.</li>
           <li>Evicted a ghost URL from the readings loader that was causing 404s. Haunting over.</li>
+          <li>Made improvements you can't see, but they're there.</li>
         </ul>
       </div>
 
