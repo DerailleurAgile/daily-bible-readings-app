@@ -1,16 +1,15 @@
 {
   "name": "daily-bible-readings-app",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build --webpack",
-    "prebuild": "node scripts/generate-version.js && node scripts/generate-manifest.mjs && node scripts/generate-prayers-manifest.mjs",
+    "prebuild": "node scripts/generate-version.js && node scripts/generate-manifests.mjs",
     "start": "next start",
     "lint": "eslint",
-    "generate-manifest": "node scripts/generate-manifest.mjs",
-    "generate-prayers-manifest": "node scripts/generate-prayers-manifest.mjs",
-    "predev": "node scripts/generate-manifest.mjs && node scripts/generate-prayers-manifest.mjs"
+    "generate-manifests": "node scripts/generate-manifests.mjs",
+    "predev": "node scripts/generate-manifests.mjs"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
@@ -30,8 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.8.32",
-    "eslint": "^9",
+"eslint": "^9",
     "eslint-config-next": "16.0.3",
     "tailwindcss": "^4.1.17",
     "typescript": "^5"

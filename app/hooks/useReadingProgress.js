@@ -10,15 +10,10 @@ import { ensureUserSession } from "@/lib/supabaseClient";
 const IS_TEST = process.env.NEXT_PUBLIC_ENV !== "production";
 
 function getDeviceId() {
-  let id =
-    localStorage.getItem("device_id") || sessionStorage.getItem("device_id");
+  let id = localStorage.getItem("device_id");
   if (!id) {
     id = crypto.randomUUID();
     localStorage.setItem("device_id", id);
-    sessionStorage.setItem("device_id", id);
-  } else {
-    localStorage.setItem("device_id", id);
-    sessionStorage.setItem("device_id", id);
   }
   return id;
 }

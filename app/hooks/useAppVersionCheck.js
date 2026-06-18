@@ -19,10 +19,7 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
 
         const data = await res.json();
         
-        // Use Test Var in Dev, otherwise use server JSON
-        const serverVersion = (process.env.NODE_ENV === 'development' && process.env.NEXT_PUBLIC_TEST_LATEST_VERSION) 
-          ? process.env.NEXT_PUBLIC_TEST_LATEST_VERSION.trim() 
-          : data.version?.trim();
+        const serverVersion = data.version?.trim();
 
         const isOutdated = serverVersion !== currentVersion;
 

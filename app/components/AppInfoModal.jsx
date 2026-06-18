@@ -5,15 +5,11 @@ import { Share2 } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 import packageJson from '../../package.json';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
+import useMobilePlatform from '../hooks/useMobilePlatform';
 
 export default function AppInfoModal({ isOpen, onClose }) {
   const [showQR, setShowQR] = useState(false);
-
-  const platform = typeof navigator !== 'undefined'
-    ? /ipad|iphone|ipod/i.test(navigator.userAgent) ? 'ios'
-    : /android/i.test(navigator.userAgent) ? 'android'
-    : 'other'
-    : 'other';
+  const platform = useMobilePlatform();
 
   if (!isOpen) return null;
 
@@ -36,6 +32,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
         <ul className="list-disc list-outside ml-5 space-y-1">
           <li>Prayer texts are now cached locally — opens instantly and works offline.</li>
           <li>Evicted a ghost URL from the readings loader that was causing 404s. Haunting over.</li>
+          <li>Made improvements you can't see, but they're there.</li>
         </ul>
       </div>
 

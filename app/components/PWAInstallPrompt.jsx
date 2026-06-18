@@ -25,7 +25,7 @@ export default function PWAInstallPrompt() {
       return;
     }
 
-    // Detect platform
+    // ponytail: can't use useMobilePlatform() — beforeinstallprompt fires early; routing through hook risks missing it
     const userAgent = navigator.userAgent.toLowerCase();
     const isIOS = /iphone|ipad|ipod/.test(userAgent);
     const isAndroid = /android/.test(userAgent);
