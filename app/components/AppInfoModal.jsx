@@ -5,15 +5,11 @@ import { Share2 } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 import packageJson from '../../package.json';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
+import useMobilePlatform from '../hooks/useMobilePlatform';
 
 export default function AppInfoModal({ isOpen, onClose }) {
   const [showQR, setShowQR] = useState(false);
-
-  const platform = typeof navigator !== 'undefined'
-    ? /ipad|iphone|ipod/i.test(navigator.userAgent) ? 'ios'
-    : /android/i.test(navigator.userAgent) ? 'android'
-    : 'other'
-    : 'other';
+  const platform = useMobilePlatform();
 
   if (!isOpen) return null;
 

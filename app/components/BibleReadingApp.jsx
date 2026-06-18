@@ -105,6 +105,7 @@ export default function BibleReadingApp() {
 
   // Mobile swipe hint overlay
   useEffect(() => {
+    // ponytail: can't use useMobilePlatform() here — hook state not resolved at mount-time effect flush
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const seen = localStorage.getItem('hasSeenSwipeHint');
     if (isMobile && !seen) {
