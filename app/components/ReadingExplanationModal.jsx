@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Loader2, Info } from 'lucide-react';
 
 export default function ReadingExplanationModal({ 
@@ -58,17 +58,25 @@ export default function ReadingExplanationModal({
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    if (isOpen) document.body.style.overflow = 'hidden';
+    return () => { document.body.style.overflow = ''; };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
     <div
-      className="fixed inset-0 bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
+      className="fixed inset-0 min-h-dvh bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
       onClick={onClose}
     >
       {/* Centered modal */}
       <div
         onClick={(e) => e.stopPropagation()}
-        className={`w-[600px] max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg 
+        onTouchStart={(e) => e.stopPropagation()}
+        onTouchMove={(e) => e.stopPropagation()}
+        onTouchEnd={(e) => e.stopPropagation()}
+        className={`w-[600px] max-w-[calc(100%-2rem)] bg-gray-900 border border-gray-700 rounded-lg
         transform transition-all duration-300 shadow-2xl
         ${isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0'}`}
       >
