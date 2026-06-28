@@ -72,6 +72,7 @@ export default function ReadingExplanationModal({
     >
       {/* Centered modal */}
       <div
+        data-modal
         onClick={(e) => e.stopPropagation()}
         onTouchStart={(e) => e.stopPropagation()}
         onTouchMove={(e) => e.stopPropagation()}
