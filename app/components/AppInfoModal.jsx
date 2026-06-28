@@ -20,18 +20,30 @@ export default function AppInfoModal({ isOpen, onClose }) {
       </h3>
 
       <p className="text-sm text-gray-300 text-center mb-4">
-        St. Paul's Bloor Street<br/>Lectionary (2025/26) {process.env.NEXT_PUBLIC_LECTIONARY_DATA_VERSION || 'v5'}
+        St. Paul's Bloor Street<br/>Lectionary (2025/26)
         <br />
         <span className="text-xs text-amber-300">
           Version {packageJson.version}
         </span>
       </p>
 
+      <div className="text-center mb-4">
+        <a
+          href="https://www.stpaulsbloor.org/wp-content/uploads/2025/05/SPBS_DailyPrayerBook_2025_Final-combined.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-blue-400 hover:text-blue-300 underline"
+        >
+          Download the Daily Prayer Book PDF
+        </a>
+      </div>
+
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
+          <li>Download link for the St. Paul's Daily Prayer Book PDF.</li>
+          <li>Fixed the reading explanation modal — no longer hijacks swipes or leaks touch events.</li>
           <li>Prayer texts are now cached locally — opens instantly and works offline.</li>
-          <li>Evicted a ghost URL from the readings loader that was causing 404s. Haunting over.</li>
           <li>Made improvements you can't see, but they're there.</li>
         </ul>
       </div>
