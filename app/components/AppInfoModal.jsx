@@ -41,10 +41,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
-          <li>Download link for the St. Paul's Daily Prayer Book PDF.</li>
-          <li>Fixed the reading explanation modal — no longer hijacks swipes or leaks touch events.</li>
-          <li>Prayer texts are now cached locally — opens instantly and works offline.</li>
-          <li>Made improvements you can't see, but they're there.</li>
+          <li>Spring cleaning under the hood — cleared out old code and files for a leaner, tidier app.</li>
         </ul>
       </div>
 
