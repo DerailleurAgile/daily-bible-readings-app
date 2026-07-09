@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import packageJson from '../../package.json';
 
 // Hooks
 import useAppVersionCheck from '../hooks/useAppVersionCheck'; // Updated to return announcement
@@ -182,7 +181,6 @@ export default function BibleReadingApp() {
             setSelectedDate={setSelectedDate}
             translation={translation}
             handleTranslationChange={handleTranslationChange}
-            settingsOpen={settingsOpen}
             setSettingsOpen={setSettingsOpen}
           />
         </SlideOver>

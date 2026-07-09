@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react';
 import {
-  Sun,
-  Moon,
   BookOpenCheck,
   ExternalLink,
   RotateCcw,
@@ -84,11 +82,6 @@ export default function ReadingSession({
 
   if (!sessionData) return null;
 
-  const icon = sessionKey === 'AM'
-    ? <Sun className="w-5 h-5 text-amber-400" />
-    : <Moon className="w-5 h-5 text-blue-400" />;
-
-  const label = sessionKey === 'AM' ? 'Morning' : 'Evening';
   const formattedDate = formatDateKey(dateKey);
 
   const handleInfoClick = (e, reference) => {
@@ -171,13 +164,6 @@ export default function ReadingSession({
   return (
     <>
       <div className="bg-gray-900 rounded-lg p-6">
-        {/* <div className="flex items-center gap-2 mb-4">
-          {icon}
-          <h2 className="text-xl font-semibold leading-none m-0">
-            {label} Readings
-          </h2>
-        </div> */}
-
         <div className="space-y-4 animate-fadeIn">
 
           {/* Opening prayer divider */}

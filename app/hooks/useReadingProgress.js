@@ -231,7 +231,6 @@ export default function useReadingProgress(translation) {
   };
 
   return {
-    completedReadings,
     isComplete,
     toggleComplete,
     getExplanation,
