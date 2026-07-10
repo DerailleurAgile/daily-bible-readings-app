@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import packageJson from '../../package.json';
 
 // Hooks
 import useAppVersionCheck from '../hooks/useAppVersionCheck'; // Updated to return announcement
@@ -20,6 +19,7 @@ import ReadingSession from './ReadingSession';
 import SessionSelector from './SessionSelector';
 import SettingsPanelModal from './SettingsPanelModal';
 import AppInfoModal from './AppInfoModal'; // New for v1.1.4!
+import ReadingHistoryModal from './ReadingHistoryModal';
 import SwipeHint from './SwipeHint';
 import UpdateBanner from './UpdateBanner';
 import AnnouncementBanner from './AnnouncementBanner'; // New Component
@@ -44,6 +44,7 @@ export default function BibleReadingApp() {
   const [selectedDate, setSelectedDate] = useState(getLocalDate);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
+  const [showHistory, setShowHistory] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
   const platform = useMobilePlatform();
   const [showFeedback, setShowFeedback] = useState(false);
@@ -166,13 +167,21 @@ export default function BibleReadingApp() {
 
       <AppInfoModal isOpen={showAbout} onClose={() => setShowAbout(false)} />
 
+      <ReadingHistoryModal
+        isOpen={showHistory}
+        onClose={() => setShowHistory(false)}
+        isComplete={isComplete}
+        setSelectedDate={setSelectedDate}
+      />
+
       <div className="max-w-2xl mx-auto space-y-6 relative">
         <AppHeader
           dateKey={displayDateKey}
           selectedDate={selectedDate} // NEW!  
           onFeedbackClick={() => setShowFeedback(true)} 
           onSettingsClick={() => setSettingsOpen(true)}
-          onInfoClick={() => setShowAbout(true)}  
+          onInfoClick={() => setShowAbout(true)}
+          onHistoryClick={() => setShowHistory(true)}
         />
         {showFeedback && <FeedbackForm onClose={() => setShowFeedback(false)} />}
 
@@ -182,7 +191,6 @@ export default function BibleReadingApp() {
             setSelectedDate={setSelectedDate}
             translation={translation}
             handleTranslationChange={handleTranslationChange}
-            settingsOpen={settingsOpen}
             setSettingsOpen={setSettingsOpen}
           />
         </SlideOver>

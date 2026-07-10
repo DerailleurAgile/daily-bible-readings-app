@@ -1,9 +1,9 @@
 // app/components/AppHeader.jsx
-import { Church, Menu, Info, Settings } from 'lucide-react';
+import { Church, Menu, Info, Settings, CalendarDays } from 'lucide-react';
 import { formatDateKey } from '../../utils/dateUtils'
 import { isToday } from '../../utils/dateUtils';
 
-export default function AppHeader({ dateKey, selectedDate, onFeedbackClick, onSettingsClick, onInfoClick }) {
+export default function AppHeader({ dateKey, selectedDate, onFeedbackClick, onSettingsClick, onInfoClick, onHistoryClick }) {
   const dateIsToday = isToday(selectedDate);
   return (
     <div className="relative text-center space-y-2">
@@ -13,6 +13,13 @@ export default function AppHeader({ dateKey, selectedDate, onFeedbackClick, onSe
         aria-label="Open menu"
       >
         <Settings className="w-6 h-6" />
+      </button>
+      <button
+        onClick={onHistoryClick}
+        className="absolute top-0 left-10 p-2 text-gray-300 hover:text-white transition-colors"
+        aria-label="Reading history"
+      >
+        <CalendarDays className="w-6 h-6" />
       </button>
       <button
         onClick={onInfoClick}

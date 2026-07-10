@@ -321,10 +321,16 @@
       ],
       "lesson": [
         {
-          "reference": "1 Timothy 5:17-6:2",
+          "reference": "1 Timothy 5:17-25",
           "book": "1 Timothy",
           "chapter": "5",
-          "verses": "17-6:2"
+          "verses": "17-25"
+        },
+        {
+          "reference": "1 Timothy 6:1-2",
+          "book": "1 Timothy",
+          "chapter": "6",
+          "verses": "1-2"
         }
       ]
     }

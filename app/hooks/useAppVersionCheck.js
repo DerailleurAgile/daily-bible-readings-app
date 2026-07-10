@@ -3,9 +3,8 @@
 import { useEffect, useState } from 'react';
 import { version as bundledVersion } from '../../package.json';
 
-export default function useVersionCheck({ checkInterval = 60000 } = {}) {
+export default function useVersionCheck() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
-  const [latestVersion, setLatestVersion] = useState(null);
   const [announcement, setAnnouncement] = useState(null);
 
   // currentVersion is baked into the JS bundle at build time
@@ -23,7 +22,6 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
 
         const isOutdated = serverVersion !== currentVersion;
 
-        setLatestVersion(serverVersion);
         setUpdateAvailable(isOutdated);
 
         // --- ENFORCED LOGIC SEQUENCE ---
@@ -48,9 +46,9 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
     }
 
     check();
-    const interval = setInterval(check, checkInterval);
+    const interval = setInterval(check, 60000);
     return () => clearInterval(interval);
-  }, [checkInterval, currentVersion]);
+  }, [currentVersion]);
 
   const dismissAnnouncement = () => {
     if (announcement?.id) {
@@ -59,5 +57,5 @@ export default function useVersionCheck({ checkInterval = 60000 } = {}) {
     }
   };
 
-  return { updateAvailable, latestVersion, announcement, dismissAnnouncement };
+  return { updateAvailable, announcement, dismissAnnouncement };
 }

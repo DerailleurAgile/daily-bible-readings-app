@@ -85,6 +85,36 @@ async function logReadingActivity({
   }
 }
 
+// Lectionary corrections that split one reference into several.
+// If the old reference was marked complete, carry that over to the new ones.
+const SPLIT_READINGS = {
+  "1 Timothy 5:17-6:2": ["1 Timothy 5:17-25", "1 Timothy 6:1-2"],
+};
+
+function applySplitReadings(data) {
+  let changed = false;
+  for (const activityDate in data) {
+    for (const lectionaryDate in data[activityDate]) {
+      for (const session in data[activityDate][lectionaryDate]) {
+        const types = data[activityDate][lectionaryDate][session];
+        for (const type in types) {
+          const refs = types[type];
+          if (!Array.isArray(refs)) continue;
+          for (const oldRef in SPLIT_READINGS) {
+            if (refs.includes(oldRef)) {
+              types[type] = refs
+                .filter((r) => r !== oldRef)
+                .concat(SPLIT_READINGS[oldRef]);
+              changed = true;
+            }
+          }
+        }
+      }
+    }
+  }
+  return changed;
+}
+
 export default function useReadingProgress(translation) {
   const [completedReadings, setCompletedReadings] = useState({});
   const [explanations, setExplanations] = useState({});
@@ -96,9 +126,10 @@ export default function useReadingProgress(translation) {
       try {
         const parsed = JSON.parse(saved);
         const cleaned = cleanOldActivityData(parsed);
+        const split = applySplitReadings(cleaned);
         setCompletedReadings(cleaned);
 
-        if (Object.keys(cleaned).length !== Object.keys(parsed).length) {
+        if (split || Object.keys(cleaned).length !== Object.keys(parsed).length) {
           localStorage.setItem("readingProgress", JSON.stringify(cleaned));
         }
       } catch (err) {
@@ -231,7 +262,6 @@ export default function useReadingProgress(translation) {
   };
 
   return {
-    completedReadings,
     isComplete,
     toggleComplete,
     getExplanation,

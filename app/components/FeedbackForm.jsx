@@ -5,12 +5,10 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { UAParser } from 'ua-parser-js';
 
-export default function FeedbackForm({ open, onClose, userId }) {
+export default function FeedbackForm({ onClose, userId }) {
     const [message, setMessage] = useState("");
     const [sending, setSending] = useState(false);
     const [sent, setSent] = useState(false);
-
-    // if (!open) return null;
 
     const submit = async () => {
         if (!message.trim()) return;
