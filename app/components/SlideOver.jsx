@@ -14,6 +14,7 @@ export default function SlideOver({ isOpen, onClose, children, width = 'w-80', m
       {/* Blurred backdrop */}
       {isOpen && (
         <div
+          data-modal
           className="fixed inset-0 min-h-[100dvh] bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
           onClick={onClose}
         >

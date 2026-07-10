@@ -67,6 +67,7 @@ export default function ReadingExplanationModal({
 
   return (
     <div
+      data-modal
       className="fixed inset-0 min-h-dvh bg-black/30 backdrop-blur-sm transition-all duration-300 z-40 flex items-center justify-center"
       onClick={onClose}
     >
