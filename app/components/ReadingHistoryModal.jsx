@@ -121,18 +121,20 @@ export default function ReadingHistoryModal({ isOpen, onClose, isComplete, setSe
       </div>
 
       {/* Legend */}
-      <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-400">
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm bg-green-600 inline-block" /> Read
-        </span>
-        <span className="flex items-center gap-1.5">
-          <span className="w-3 h-3 rounded-sm grid grid-cols-2 grid-rows-2 overflow-hidden">
-            <span className="bg-green-600" /><span className="bg-gray-800" />
-            <span className="bg-gray-800" /><span className="bg-green-600" />
+      <div className="mt-4 space-y-1.5 text-xs text-gray-400 text-center">
+        <div className="flex items-center justify-center gap-4">
+          <span className="flex items-center gap-1.5">
+            <span className="w-3 h-3 rounded-sm bg-green-600 inline-block" /> Read
           </span>
-          Partial
-        </span>
-        <span className="text-gray-500">Quarters: AM psalm · AM lesson · PM psalm · PM lesson</span>
+          <span className="flex items-center gap-1.5">
+            <span className="w-3 h-3 rounded-sm grid grid-cols-2 grid-rows-2 overflow-hidden">
+              <span className="bg-green-600" /><span className="bg-gray-800" />
+              <span className="bg-gray-800" /><span className="bg-green-600" />
+            </span>
+            Partial
+          </span>
+        </div>
+        <p className="text-gray-500">Quarters: AM psalm · AM lesson · PM psalm · PM lesson</p>
       </div>
     </SlideOver>
   );
