@@ -41,7 +41,8 @@ export default function AppInfoModal({ isOpen, onClose }) {
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
-          <li>Spring cleaning under the hood — cleared out old code and files for a leaner, tidier app.</li>
+          <li>New reading history calendar! Tap the calendar icon in the header to see your completed readings at a glance — each day fills in as you read. Tap a day to jump to it.</li>
+          <li>Corrected the July 8 evening lesson — now split into 1 Timothy 5:17-25 and 6:1-2. Your progress carries over.</li>
         </ul>
       </div>
 
