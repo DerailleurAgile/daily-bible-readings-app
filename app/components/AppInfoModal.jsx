@@ -6,6 +6,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import packageJson from '../../package.json';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
 import useMobilePlatform from '../hooks/useMobilePlatform';
+import { getDeviceId } from '../hooks/useReadingProgress';
 
 export default function AppInfoModal({ isOpen, onClose }) {
   const [showQR, setShowQR] = useState(false);
@@ -41,8 +42,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
       <div className="text-xs text-gray-400 space-y-2 mb-4">
         <p className="text-amber-300"><strong>What's New?</strong></p>
         <ul className="list-disc list-outside ml-5 space-y-1">
-          <li>New reading history calendar! Tap the calendar icon in the header to see your completed readings at a glance — each day fills in as you read. Tap a day to jump to it.</li>
-          <li>Corrected the July 8 evening lesson — now split into 1 Timothy 5:17-25 and 6:1-2. Your progress carries over.</li>
+          <li>Sharing improvements! QR codes you share now help us see how the app spreads from person to person — anonymously, by device only.</li>
         </ul>
       </div>
 
@@ -62,7 +62,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
         {showQR && (
           <div className="flex flex-col items-center mt-4">
             <QRCodeCanvas
-              value={typeof window !== 'undefined' ? window.location.href : ''}
+              value={typeof window !== 'undefined' ? `${window.location.origin}/?ref=${getDeviceId()}` : ''}
               size={180}
               bgColor="#1f2937"
               fgColor="#f3f4f6"
