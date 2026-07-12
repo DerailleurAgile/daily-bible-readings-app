@@ -30,6 +30,15 @@ export default function useShareReferral() {
       post({ referrer_device_id: ref, recipient_device_id: myId });
     }
 
+    // Point the manifest at the ref-carrying version so an iOS "Add to Home
+    // Screen" (separate localStorage from Safari) still launches with ?ref
+    // and can record its own edge
+    if (ref && ref !== myId) {
+      document
+        .querySelector('link[rel="manifest"]')
+        ?.setAttribute("href", `/api/manifest?ref=${encodeURIComponent(ref)}`);
+    }
+
     // Strip ?ref so it doesn't linger in the address bar or get re-shared
     if (ref) {
       params.delete("ref");
