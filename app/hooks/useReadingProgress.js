@@ -9,7 +9,7 @@ import { ensureUserSession } from "@/lib/supabaseClient";
 
 const IS_TEST = process.env.NEXT_PUBLIC_ENV !== "production";
 
-function getDeviceId() {
+export function getDeviceId() {
   let id = localStorage.getItem("device_id");
   if (!id) {
     id = crypto.randomUUID();

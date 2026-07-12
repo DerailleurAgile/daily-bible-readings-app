@@ -6,6 +6,7 @@ import { QRCodeCanvas } from 'qrcode.react';
 import packageJson from '../../package.json';
 import SlideOver from './SlideOver'; // Reduce, reuse, recyle kids!
 import useMobilePlatform from '../hooks/useMobilePlatform';
+import { getDeviceId } from '../hooks/useReadingProgress';
 
 export default function AppInfoModal({ isOpen, onClose }) {
   const [showQR, setShowQR] = useState(false);
@@ -62,7 +63,7 @@ export default function AppInfoModal({ isOpen, onClose }) {
         {showQR && (
           <div className="flex flex-col items-center mt-4">
             <QRCodeCanvas
-              value={typeof window !== 'undefined' ? window.location.href : ''}
+              value={typeof window !== 'undefined' ? `${window.location.origin}/?ref=${getDeviceId()}` : ''}
               size={180}
               bgColor="#1f2937"
               fgColor="#f3f4f6"

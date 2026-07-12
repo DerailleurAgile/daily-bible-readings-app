@@ -10,6 +10,7 @@ import useMobilePlatform from '../hooks/useMobilePlatform';
 import useMonthCache from '../hooks/useMonthCache';
 import useReadingProgress from '../hooks/useReadingProgress';
 import useSwipeNavigation from '../hooks/useSwipeNavigation';
+import useShareReferral from '../hooks/useShareReferral';
 
 // Components
 import AppFooter from './AppFooter';
@@ -47,6 +48,7 @@ export default function BibleReadingApp() {
   const [showHistory, setShowHistory] = useState(false);
   const [activeSession, setActiveSession] = useState(null);
   const platform = useMobilePlatform();
+  useShareReferral();
   const [showFeedback, setShowFeedback] = useState(false);
   const [showSwipeHint, setShowSwipeHint] = useState(false);
 
